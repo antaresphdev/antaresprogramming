@@ -1,0 +1,19 @@
+{
+  "name": "antaresprogramming",
+  "version": "1.0.0",
+  "description": "The official website of Antares Programming",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manicadamantium/antaresprogramming.git"
+  },
+  "author": "Francis Rubio <francis@antaresph.dev>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/manicadamantium/antaresprogramming/issues"
+  },
+  "homepage": "https://github.com/manicadamantium/antaresprogramming#readme"
+}
