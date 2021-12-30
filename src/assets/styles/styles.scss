@@ -12,6 +12,8 @@
 @import "./layouts/stack";
 
 /* COMPONENTS */
+@import "./components/button";
+@import "./components/logo";
 
 /* UTILITIES */
 @import "utilities/alignment";
@@ -117,7 +119,7 @@ h6 {
   stroke-linecap: round;
 }
 
-a:not([class]) {
+a {
   color: hsl(var(--primary-700));
   text-decoration: dotted underline hsl(var(--primary-300));
 
@@ -126,20 +128,22 @@ a:not([class]) {
     text-decoration-color: hsl(var(--primary-700));
   }
 
-  &:focus,
+  &:focus-visible,
   &:hover {
+    color: hsl(var(--primary-900));
     background-color: hsl(var(--primary-100));
     box-shadow: 0 0 0 10px hsl(var(--primary-100));
     outline: 5px solid hsl(var(--primary-100));
 
     @media (prefers-color-scheme: dark) {
+      color: hsl(var(--primary-100));
       background-color: hsl(var(--primary-900));
       box-shadow: 0 0 0 10px hsl(var(--primary-900));
       outline: 5px solid hsl(var(--primary-900));
     }
   }
 
-  &:focus {
+  &:focus-visible {
     box-shadow: 0 0 0 10px hsl(var(--primary-300));
 
     @media (prefers-color-scheme: dark) {

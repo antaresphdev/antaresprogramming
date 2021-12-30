@@ -1,6 +1,7 @@
 {% extends "layouts/base.njk" %}
 {% block content %}
   <a href="#main" class="skip-link">Skip to content</a>
+  {% include "components/navigation.njk" %}
   <main id="main" tabindex="-1">
     {{ content | safe }}
   </main>

@@ -1,0 +1,33 @@
+.logo {
+  align-items: center;
+  display: flex;
+  gap: 1ch;
+  padding: var(--space-s);
+
+  &.small {
+    .logo__text {
+      display: none;
+    }
+  }
+
+  &.vertical {
+    flex-direction: column;
+
+    .logo__image {
+      width: 8rem;
+    }
+  }
+}
+
+.logo__image {
+  aspect-ratio: 1;
+  height: auto;
+  width: 4rem;
+}
+
+.logo__text {
+  display: flex;
+  font-family: var(--font-sans);
+  font-size: var(--type-size-5);
+  text-transform: lowercase;
+}

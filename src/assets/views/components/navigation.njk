@@ -1,0 +1,17 @@
+<nav class="spaced cluster">
+  <div class="logo">
+    <img class="logo__image" src="/assets/images/logo.svg" alt="logo" width="64" height="64">
+    <span class="logo__text">
+      <span class="weight-bold">Antares</span>
+      <span>Programming</span>
+    </span>
+  </div>
+
+  <ul class="cluster padding--s">
+    {% for nav in navigation %}
+      <li>
+        <a href="{{ nav.url }}" class="button">{{ nav.text }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

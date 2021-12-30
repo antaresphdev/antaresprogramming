@@ -10,25 +10,25 @@
   --l-subtle: 0 0% 50%;
   --l-non-essential: 0 0% 25%;
 
-  --primary-100: 220 53% 75%;
-  --primary-300: 220 52% 55%;
-  --primary-500: 220 52% 35%;
-  --primary-700: 220 53% 25%;
-  --primary-900: 221 53% 15%;
+  --primary-100: 342 98% 80%;
+  --primary-300: 337 87% 68%;
+  --primary-500: 335 71% 56%;
+  --primary-700: 338 68% 44%;
+  --primary-900: 341 82% 31%;
 
-  --secondary-100: 42 96% 91%;
-  --secondary-300: 43 94% 81%;
+  --secondary-100: 53 100% 79%;
+  --secondary-300: 48 100% 71%;
   --secondary-500: 43 94% 61%;
-  --secondary-700: 43 94% 41%;
-  --secondary-900: 43 94% 21%;
+  --secondary-700: 38 82% 46%;
+  --secondary-900: 33 100% 34%;
 }
 
 /* FONTS */
 :root {
-  --font-display: "Lora", sans-serif;
-  --font-sans: "Inter", sans-serif;
+  --font-display: "Livvic", sans-serif;
+  --font-sans: "Livvic", sans-serif;
   --font-serif: "Lora", serif;
-  --font-body: var(--font-serif);
+  --font-body: var(--font-sans);
 
   --type-size: 1rem;
   --type-size-1: 4.209rem;
