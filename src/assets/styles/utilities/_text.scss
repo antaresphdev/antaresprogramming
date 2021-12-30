@@ -1,0 +1,57 @@
+/* #region CASES */
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+/* #endregion */
+
+/* #region ALIGNMENT */
+.text-center {
+  text-align: center;
+}
+/* #endregion */
+
+/* #region WEIGHTS */
+.weight-bold {
+  font-weight: bold;
+}
+
+.weight-normal {
+  font-weight: normal;
+}
+/* #endregion */
+
+/* #region LETTER SPACING */
+.letter-space--m {
+  letter-spacing: 2px;
+}
+/* #endregion */
+
+/* #region FONTS */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+/* #endregion */
+
+/* #region FONT SIZES */
+@for $size from 1 through 9 {
+  .fs-#{$size} {
+    font-size: var(--type-size-#{$size});
+  }
+
+  .fs-#{$size}.responsive {
+    font-size: clamp(
+      var(--type-size-#{$size + 1}),
+      #{10 - $size}vw,
+      var(--type-size-#{$size})
+    );
+  }
+}
+/* #endregion */

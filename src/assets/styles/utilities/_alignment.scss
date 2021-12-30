@@ -1,0 +1,19 @@
+.align-self--center {
+  align-self: center;
+}
+
+.align-items--start {
+  align-items: start;
+}
+
+/* #region TEXT ALIGNMENT */
+$alignments: left, right, center, justify, start, end;
+
+.text-align-- {
+  @each $a in $alignments {
+		&#{$a} {
+			text-align: $a;
+		}
+	}
+}
+/* #endregion */

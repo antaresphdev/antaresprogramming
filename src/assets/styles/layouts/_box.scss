@@ -1,0 +1,23 @@
+.box {
+  padding         : var(--box-padding, var(--space-s));
+  color           : var(--box-fg);
+  background-color: var(--box-bg);
+  outline         : 0.125rem solid transparent;
+  outline-offset  : -0.125rem;
+
+  --box-fg: hsl(var(--fg-default));
+  --box-bg: hsl(var(--bg-1) / 25%);
+
+  * {
+    color: inherit;
+  }
+
+  &.inverted {
+    color           : var(--box-bg);
+    background-color: var(--box-fg);
+  }
+
+  &.bordered {
+    border: 1px solid hsl(var(--bg-1))
+  }
+}

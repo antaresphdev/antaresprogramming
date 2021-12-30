@@ -1,0 +1,15 @@
+.flex {
+  display: flex;
+
+  * {
+    flex-basis: var(--column-size);
+  }
+
+  &.wrapping {
+    flex-wrap: wrap;
+  }
+
+  .fill {
+    flex: 1;
+  }
+}
