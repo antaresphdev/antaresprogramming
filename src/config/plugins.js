@@ -1,6 +1,5 @@
 module.exports = {
-  // metagen: function () {
-  //   let metagen = require('eleventy-plugin-metagen');
-  //   return metagen;
-  // }
-}
+  readingTime: function() {
+    return require("eleventy-plugin-reading-time");
+  }
+};

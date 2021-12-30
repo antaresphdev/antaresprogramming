@@ -1,0 +1,28 @@
+{% extends "layouts/base.njk" %}
+{% block content %}
+  <a href="#main" class="skip-link">Skip to content</a>
+  {% include "components/navigation.njk" %}
+  <main class="post" id="main" tabindex="-1">
+    <header class="post__header" style="--post-cover: url('{{ image }}')">
+      <h1 class="post__title">{{ title }}</h1>
+      <p class="post__description">{{ description }}</p>
+      <div class="spaced cluster">
+        {% if author %}
+          {% set authorDetails = authors[author] %}
+          {% if authorDetails %}
+            <div class="cluster center-aligned">
+              <img src="{{ authorDetails.photo }}" alt="{{ authorDetails.name }}'s photo" width="64" height="64">
+              <address class="stack" style="font-style: normal;">
+                <span class="weight-bold fs-5">{{ authorDetails.name }}</span>
+                <span class="fs-6">{{ authorDetails.bio }}</span>
+              </address>
+            </div>
+          {% endif %}
+        {% endif %}
+
+        <p>{{ content | readingTime }} read &middot; <time datetime="{{ page.date | machineReadableDate }}">{{ page.date | humanReadableDate }}</time></p>
+      </div>
+    </header>
+    {{ content | safe }}
+  </main>
+{% endblock %}

@@ -6,7 +6,7 @@
   outline-offset  : -0.125rem;
 
   --box-fg: hsl(var(--fg-default));
-  --box-bg: hsl(var(--bg-1) / 25%);
+  --box-bg: hsl(var(--bg-secondary) / 25%);
 
   * {
     color: inherit;
@@ -18,6 +18,6 @@
   }
 
   &.bordered {
-    border: 1px solid hsl(var(--bg-1))
+    border: 1px solid hsl(var(--bg-secondary))
   }
 }

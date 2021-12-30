@@ -1,0 +1,23 @@
+{
+  "teacherbuknoy": {
+    "name": "Francis Rubio",
+    "bio": "Web developer, designer, and educator",
+    "url": "https://francisrubio.netlify.app",
+    "photo": "/assets/images/authors/teacherbuknoy.jpg",
+    "email": "francis@antaresph.dev",
+    "socials": [
+      {
+        "name": "Facebook",
+        "username": "teacherbuknoyofficial",
+        "url": "https://facebook.com/teacherbuknoyofficial",
+        "feathericon": "faceboook"
+      },
+      {
+        "name": "Twitter",
+        "username": "teacherbuknoy",
+        "url": "https://twitter.com/teacherbuknoy",
+        "feathericon": "twitter"
+      }
+    ]
+  }
+}

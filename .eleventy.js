@@ -3,7 +3,7 @@ const collections = require('./src/config/collections');
 const filters = require('./src/config/filters');
 const watchtargets = require('./src/config/watchtargets');
 const plugins = require('./src/config/plugins');
-const { srcset, src } =  require('./src/config/shortcodes')
+const { srcset, src } = require('./src/config/shortcodes')
 
 require('dotenv').config()
 

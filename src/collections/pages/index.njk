@@ -4,5 +4,14 @@ description: For Filipino web developers
 permalink: /
 ---
 
-<h1>{{ title }}</h1>
-<p>{{ description }}</p>
+<div class="padding--l">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+  <ul>
+    {% for item in collections.posts %}
+      <li>
+        <a href="{{ item.url }}">{{ item.data.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
