@@ -1,10 +1,16 @@
 .button {
+  border-radius: var(--ideal-radius);
   display: flex;
-  padding: var(--space-s) var(--space-m);
-  text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
-  border-radius: var(--ideal-radius);
+  padding: var(--space-s) var(--space-m);
+  text-align: center;
+  text-decoration: none;
+
+  &.primary {
+    background-color: hsl(var(--primary-500));
+    color: hsl(var(--l-contrast));
+  }
 }
 
 .button:hover {

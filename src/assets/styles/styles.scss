@@ -14,6 +14,7 @@
 /* COMPONENTS */
 @import "./components/button";
 @import "./components/logo";
+@import "./components/skip-link";
 
 /* UTILITIES */
 @import "utilities/alignment";
@@ -149,5 +150,21 @@ a {
     @media (prefers-color-scheme: dark) {
       box-shadow: 0 0 0 10px hsl(var(--primary-700));
     }
+  }
+}
+
+:target {
+  animation: notify 300ms;
+}
+
+@keyframes notify {
+  from {
+    outline: 5px solid hsl(var(--primary-500));
+    outline-offset: 0;
+  }
+
+  to {
+    outline: 5px solid hsl(var(--primary-500) / 0%);
+    outline-offset: 1rem;
   }
 }
