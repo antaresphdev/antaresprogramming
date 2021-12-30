@@ -1,0 +1,44 @@
+////
+/// @author Francis Rubio (@maniczirconium)
+////
+
+/// @name FocusRing
+/// Adds a focus ring around an element
+/// @parameter { color } $color the color of the focus ring
+/// @parameter { boolean } $inset whether the focus ring appears inside the element or not. Default: false
+@mixin focus-ring($color, $inset: false, $inset-value: 3px) {
+    outline: 3px solid $color;
+
+    @if $inset {
+        outline-offset: $inset-value * -1;
+    }
+
+    @else {
+        outline-offset: $inset-value;
+    }
+}
+
+// @name Focus
+/// Adds a focus ring around an element
+/// @parameter { color } $color the color of the focus ring
+/// @parameter { boolean } $inset whether the focus ring appears inside the element or not. Default: false
+/// @parameter { number } $inset-value the amount of inset. Negative numbers will cause offset. Default: 3px;
+/// @deprecated
+@mixin focus($color: currentColor, $inset: false, $inset-value: 3px) {
+    &:focus:not(:focus-visible) {
+        outline: none;
+    }
+
+    &:focus-visible,
+    &:focus {
+        @include focus-ring($color, $inset, $inset-value);
+    }
+}
+
+
+/// @name FitContent
+/// Width that uses the fit-content value;
+@mixin fit-content {
+    width: -moz-fit-content;
+    width: fit-content;
+}
