@@ -1,6 +1,6 @@
 .button {
   border-radius: var(--ideal-radius);
-  border: none;
+  border: 1px solid transparent;
   color: hsl(var(--primary-700));
   cursor: pointer;
   display: flex;
@@ -18,11 +18,13 @@
   &.primary {
     background-color: hsl(var(--primary-500));
     color: hsl(var(--l-contrast));
+    border-color: hsl(var(--primary-500));
   }
 
   &.secondary {
     background-color: hsl(var(--primary-100));
     color: hsl(var(--primary-900));
+    border-color: hsl(var(--primary-300));
 
     &:hover {
       filter: brightness(1.25) saturate(1.2);

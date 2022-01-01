@@ -28,3 +28,31 @@
     outline-offset: 3px;
   }
 }
+
+.form-group {
+  display: flex;
+  width: 100%;
+
+  & > * {
+    border: 1px solid hsl(var(--fg-non-essential));
+    border-radius: 0;
+  }
+
+  & > *:not(:first-child):not(.button) {
+    border-left: 0;
+  }
+
+  .form-control {
+    flex: 1;
+  }
+
+  :first-child {
+    border-top-left-radius: var(--ideal-radius);
+    border-bottom-left-radius: var(--ideal-radius);
+  }
+
+  :last-child {
+    border-top-right-radius: var(--ideal-radius);
+    border-bottom-right-radius: var(--ideal-radius);
+  }
+}
