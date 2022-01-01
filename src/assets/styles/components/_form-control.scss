@@ -1,0 +1,30 @@
+.input-field {
+  display: grid;
+  padding: var(--space-s);
+  gap: var(--space-xs);
+}
+
+.required {
+  &::after {
+    content: "*";
+    color: hsl(var(--error-700));
+  }
+}
+
+.form-control {
+  padding: 1ch;
+  font-size: 1rem;
+  border: 1px solid hsl(var(--fg-non-essential));
+  background-color: hsl(var(--bg-primary));
+  color: hsl(var(--fg-default));
+  border-radius: var(--ideal-radius);
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 3px solid hsl(var(--primary-500));
+    outline-offset: 3px;
+  }
+}

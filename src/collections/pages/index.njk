@@ -34,3 +34,30 @@ permalink: /
 <div class="cluster center-justified padding">
   <a href="/articles/" class="button secondary">Tingnan lahat</a>
 </div>
+
+<div class="newsletter">
+  <form action="/newsletter/success" style="--column-size: 35ch;" method="post">
+    <input type="hidden" name="form-name" value="form 1">
+    <div class="flex">
+      <div class="newsletter__image"></div>
+      <div class="form-contents">
+        <h2 class="margin--none fs-2">Mag-subscribe sa aming newsletter</h2>
+        <p class="margin--none">Maging updated sa mga bagong post, videos, at events ng Antares Programming</p>
+
+        <div class="input-field">
+          <label for="name" class="required">Pangalan</label>
+          <input class="form-control" required="" placeholder="Halimbawa: Francis Rubio" id="name" name="name" type="text" inputmode="text" autocomplete="name">
+        </div>
+
+        <div class="input-field">
+          <label for="email" class="required">Email address</label>
+          <input class="form-control" required="" placeholder="Halimbawa: you@example.com" id="email" name="email" type="email" inputmode="email" autocomplete="email">
+        </div>
+
+        <div class="margin-inline--s">
+          <button class="primary button touch margin-left--auto">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

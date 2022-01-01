@@ -44,6 +44,10 @@
 @for $size from 1 through 9 {
   .fs-#{$size} {
     font-size: var(--type-size-#{$size});
+
+    @if $size > 7 {
+      line-height: 1;
+    }
   }
 
   .fs-#{$size}.responsive {

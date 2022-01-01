@@ -1,9 +1,12 @@
 .button {
   border-radius: var(--ideal-radius);
+  border: none;
   color: hsl(var(--primary-700));
+  cursor: pointer;
   display: flex;
   font-size: 1rem;
   font-weight: bold;
+  justify-content: center;
   padding: var(--space-s) var(--space-m);
   text-align: center;
   text-decoration: none;
