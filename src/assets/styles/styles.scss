@@ -12,8 +12,10 @@
 @import "./layouts/stack";
 
 /* COMPONENTS */
+@import "./components/avatar";
 @import "./components/button";
 @import "./components/logo";
+@import "./components/post";
 @import "./components/skip-link";
 
 /* UTILITIES */
@@ -83,6 +85,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--type-size);
   scroll-behavior: smooth;
+  display: grid;
 }
 
 h1,
@@ -166,5 +169,13 @@ a {
   to {
     outline: 5px solid hsl(var(--primary-500) / 0%);
     outline-offset: 1rem;
+  }
+}
+
+#main {
+  margin-top: 5.5rem;
+
+  &.bleed {
+    margin-top: 0;
   }
 }
