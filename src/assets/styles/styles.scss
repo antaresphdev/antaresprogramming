@@ -16,6 +16,7 @@
 @import "./components/avatar";
 @import "./components/blobs";
 @import "./components/button";
+@import "./components/code";
 @import "./components/logo";
 @import "./components/post";
 @import "./components/skip-link";
@@ -180,4 +181,30 @@ a {
   &.bleed {
     margin-top: 0;
   }
+}
+
+code,
+var,
+samp {
+  font-family: var(--font-mono);
+}
+
+:root {
+  scrollbar-color: hsl(var(--bg-accent)) hsl(var(--bg-primary));
+}
+
+*::-webkit-scrollbar {
+  width: 0.75em;
+  height: 0.75em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--bg-accent));
+  border: 3px solid hsl(var(--bg-primary));
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: hsl(var(--bg-primary));
+  border-radius: var(--ideal-radius);
 }

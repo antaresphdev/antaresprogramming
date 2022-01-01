@@ -21,6 +21,44 @@
   --secondary-500: 43 94% 61%;
   --secondary-700: 38 82% 46%;
   --secondary-900: 33 100% 34%;
+
+  --error-100: 5 100% 75%;
+  --error-300: 0 81% 63%;
+  --error-500: 357 68% 46%;
+  --error-700: 1 94% 33%;
+  --error-900: 0 100% 24%;
+
+  --success-100: 82 100% 75%;
+  --success-300: 87 66% 58%;
+  --success-500: 92 68% 43%;
+  --success-700: 97 95% 29%;
+  --success-900: 102 100% 21%;
+
+  --warning-100: 32 100% 75%;
+  --warning-300: 27 100% 66%;
+  --warning-500: 22 89% 56%;
+  --warning-700: 17 98% 40%;
+  --warning-900: 12 100% 33%;
+
+  @media (prefers-color-scheme: dark) {
+    --error-900: 5 100% 75%;
+    --error-700: 0 81% 63%;
+    --error-500: 357 68% 46%;
+    --error-300: 1 94% 33%;
+    --error-100: 0 100% 24%;
+
+    --success-900: 82 100% 75%;
+    --success-700: 87 66% 58%;
+    --success-500: 92 68% 43%;
+    --success-300: 97 95% 29%;
+    --success-100: 102 100% 21%;
+
+    --warning-900: 32 100% 75%;
+    --warning-700: 27 100% 66%;
+    --warning-500: 22 89% 56%;
+    --warning-300: 17 98% 40%;
+    --warning-100: 12 100% 33%;
+  }
 }
 
 /* FONTS */
@@ -28,6 +66,7 @@
   --font-display: "Livvic", sans-serif;
   --font-sans: "Livvic", sans-serif;
   --font-serif: "Lora", serif;
+  --font-mono: "Recursive", monospace;
   --font-body: var(--font-sans);
 
   --type-size: 1rem;

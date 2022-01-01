@@ -10,11 +10,15 @@ tags: [html, deep dive]
 Ang `<address></address>` ang ginagamit para i-mark up ang contact information ng isang tao o organisasyon.
 
 <div class="code-sample">
-  <pre class="code-snippet"><code data-language="html">&lt;address>
-  Francis Rubio&lt;br>
-  &lt;a href="mailto:devFrancisRubio@gmail.com">✉️ Email&lt;/a>&lt;br>
-  &lt;a href="tel:+13115552368">📞 (311) 555-2368&lt;/a>
-&lt;/address></code></pre>
+
+```html
+<address>
+  Francis Rubio<br>
+  <a href="mailto:devFrancisRubio@gmail.com">✉️ Email</a><br>
+  <a href="tel:+13115552368">📞 (311) 555-2368</a>
+</address>
+```
+
   <div class="code-result">
     <iframe src="/assets/images/posts/address-element/example-1.html"></iframe>
   </div>
@@ -28,18 +32,24 @@ Puwedeng gumamit ng kahit na anong format ang content sa loob ng `address` eleme
 
 <div class="bordered box">
   <p><strong>Halimbawa:</strong> paglalagay ng geographic coordinates sa loob ng <code>address</code> element.</p>
-  <pre class="code-snippet"><code data-language="html">&lt;address>Lola the cat is at
+  
+```html
+<address>Lola the cat is at
 Latitude: 51.413126
 Longtitude: -0.298219
-&lt;/address></code></pre>
+</address>
+```
 
   <p><strong>Halimbawa:</strong> paglalagay ng address, telephone, at fax numbers sa loob ng <code>address</code> element.</p>
 
-  <pre class="code-snippet"><code data-language="html">&lt;address>      
-UNIVERSITY INTERSCHOLASTIC LEAGUE&lt;br>
-1701 Manor Road, Austin, TX 78722&lt;br>
+```html
+<address>      
+UNIVERSITY INTERSCHOLASTIC LEAGUE<br>
+1701 Manor Road, Austin, TX 78722<br>
 Tel: (512) 471-5883 | Fax: (512) 471-5908
-&lt;/address></code></pre>
+</address>
+```
+
 </div>
 
 Puwedeng gamitin ang `address` element sa maraming contexts, gaya ng contact information ng isang negosyo na nakalagay sa header ng webpage.
@@ -48,13 +58,17 @@ Puwedeng gamitin ang `address` element sa maraming contexts, gaya ng contact inf
   <p><b>Example</b>: markup para sa footer ng isang website. May laman itong contact information at copyright notice.</p>
 
   <div class="code-sample">
-    <pre class="code-snippet"><code data-language="html">&lt;footer>
-&lt;address>
+    
+```html
+<footer>
+<address>
   For more details, contact
-  &lt;a href="mailto:js@example.com">John Smith&lt;/a>.
-&lt;/address>
-&lt;p>&lt;small>© copyright 2038 Example Corp.&lt;/small>&lt;/p>
-&lt;/footer></code></pre>
+  <a href="mailto:js@example.com">John Smith</a>.
+</address>
+<p><small>© copyright 2038 Example Corp.</small></p>
+</footer>
+```
+    
     <div class="code-result">
       <iframe src="/assets/images/posts/address-element/example-3.html"></iframe>
     </div>

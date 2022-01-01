@@ -64,7 +64,13 @@ module.exports = function (eleventyConfig) {
       html: true,
       linkify: true,
       typographer: true,
-    }).use(markdownItAnchor, {})
+    })
+      .use(markdownItAnchor, {})
+      .use(require("markdown-it-deflist"))
+      .use(require("markdown-it-abbr"))
+      .use(require("markdown-it-footnote"))
+      .use(require("markdown-it-attrs"))
+      .disable("code")
   );
   // Always return
   return {

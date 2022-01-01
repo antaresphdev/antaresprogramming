@@ -1,6 +1,12 @@
 .content-grid {
-  display: grid;
   grid-template-columns: 1fr min(65ch, 100%) 1fr;
+  padding: var(--space);
+  max-width: 90vw;
+  margin: auto;
+
+  @media (min-width: 75ch) {
+    display: grid;
+  }
 
   & > * {
     grid-column: 2;
