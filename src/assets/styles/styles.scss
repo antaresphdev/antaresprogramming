@@ -3,6 +3,7 @@
 @import "./mixins";
 
 /* LAYOUTS */
+@import "./layouts/bleed";
 @import "./layouts/box";
 @import "./layouts/center";
 @import "./layouts/cluster";
@@ -13,6 +14,7 @@
 
 /* COMPONENTS */
 @import "./components/avatar";
+@import "./components/blobs";
 @import "./components/button";
 @import "./components/logo";
 @import "./components/post";

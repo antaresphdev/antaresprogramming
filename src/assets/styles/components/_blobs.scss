@@ -1,0 +1,29 @@
+.has-blobs {
+  --blob-size: 25ch;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+
+    filter: blur(var(--blob-size));
+    z-index: -1;
+  }
+
+  &::before {
+    background-color: hsl(var(--primary-500));
+    height: var(--blob-size);
+    top: calc(150vh + var(--blob-size));
+    width: var(--blob-size);
+    left: calc(var(--blob-size) / 2);
+  }
+
+  &::after {
+    background-color: hsl(var(--secondary-500));
+    height: calc(var(--blob-size) * 2);
+    right: 0;
+    top: var(--blob-size);
+    width: calc(var(--blob-size) * 2);
+  }
+}

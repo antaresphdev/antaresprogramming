@@ -20,14 +20,15 @@
           {% endif %}
         {% endif %}
 
-        <p>{{ content | readingTime }} read &middot; <time datetime="{{ page.date | machineReadableDate }}">{{ page.date | humanReadableDate }}</time></p>
+        <p>{{ content | readingTime }} read &middot; <time datetime="{{ page.date | machineReadableDate }}">{{ page.date | humanReadableDate }}</time>
+        </p>
       </div>
     </header>
-    <div class="with-sidebar">
+    <div class="with-sidebar has-blobs">
       <aside class="sidebar">
         {{ content | toc | safe }}
       </aside>
-      <div class="not-sidebar">
+      <div class="not-sidebar content-grid">
         {{ content | safe }}
       </div>
     </div>
