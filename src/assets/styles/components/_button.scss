@@ -16,6 +16,24 @@
     background-color: hsl(var(--primary-500));
     color: hsl(var(--l-contrast));
   }
+
+  &.secondary {
+    background-color: hsl(var(--primary-100));
+    color: hsl(var(--primary-900));
+
+    &:hover {
+      filter: brightness(1.25) saturate(1.2);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      background-color: hsl(var(--primary-900));
+      color: hsl(var(--primary-100));
+
+      &:hover {
+        filter: saturate(1.25);
+      }
+    }
+  }
 }
 
 .button:hover {

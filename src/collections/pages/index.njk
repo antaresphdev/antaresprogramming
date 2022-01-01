@@ -8,8 +8,9 @@ permalink: /
 
 <div class="padding--l cards-grid">
   {% for item in collections.posts | reverse %}
-    <article class="card">
-      {% if loop.index0 % 4 === 0 %}
+    {% set hasImage = loop.index0 % 4 === 0 %}
+    <article class="card{{ " has-image" if hasImage }}">
+      {% if hasImage %}
         <a href="{{ item.url }}" class="card__image" style="--bg-image: url({{ item.data.image }})"></a>
       {% endif %}
       <div class="card__body">
@@ -29,4 +30,7 @@ permalink: /
       </div>
     </article>
   {% endfor %}
+</div>
+<div class="cluster center-justified padding">
+  <a href="/articles/" class="button secondary">Tingnan lahat</a>
 </div>

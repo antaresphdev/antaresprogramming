@@ -3,8 +3,9 @@
   gap: var(--space);
   grid-template-columns: repeat(auto-fill, minmax(min(45ch, 100%), 1fr));
 
-  .card:nth-child(4),
-  .card:first-child {
+  .card.has-image {
+    padding: var(--space-l);
+    border-radius: calc(var(--ideal-radius) * 2.5);
     grid-column: 1/-1;
 
     .card__title {
@@ -14,16 +15,15 @@
 }
 
 .card {
-  padding: var(--space-l);
+  padding: 1.75rem;
   gap: var(--space-l);
   align-items: stretch;
-
   display: flex;
   flex-wrap: wrap;
-  border-radius: calc(var(--ideal-radius) * 2.5);
+  border-radius: var(--ideal-radius);
 
   &:hover {
-    background-color: hsl(var(--bg-secondary) / 50%)
+    background-color: hsl(var(--bg-secondary) / 50%);
   }
 }
 
