@@ -36,7 +36,13 @@ module.exports = function (eleventyConfig) {
 
   // Add Eleventy plugins from /src/config/plugins.js
   Object.keys(plugins).forEach((pluginName) => {
-    eleventyConfig.addPlugin(plugins[pluginName]());
+    const { plugin, options } = plugins[pluginName]();
+
+    if (options) {
+      eleventyConfig.addPlugin(plugin, options);
+    } else {
+      eleventyConfig.addPlugin(plugin);
+    }
   });
 
   // BrowserSync config

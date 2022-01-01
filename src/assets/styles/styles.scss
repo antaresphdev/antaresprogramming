@@ -81,6 +81,7 @@ body {
 }
 
 :root {
+  scroll-padding-top: 4rem;
   scroll-behavior: smooth;
 }
 
@@ -166,6 +167,7 @@ a {
 
 :target {
   animation: notify 300ms;
+  animation-delay: 1000ms;
 }
 
 @keyframes notify {
