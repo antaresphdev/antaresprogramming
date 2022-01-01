@@ -1,4 +1,7 @@
 .toc {
+  position: sticky;
+  top: calc(var(--space-xxl) * 2);
+
   .active {
     --border-color: hsl(var(--primary-500));
   }

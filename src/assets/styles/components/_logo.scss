@@ -6,7 +6,12 @@
 
   &.small {
     .logo__text {
-      display: none;
+      opacity: 0;
+      transition: opacity 300ms;
+    }
+
+    .logo__image {
+      width: 2rem;
     }
   }
 
@@ -30,4 +35,5 @@
   font-family: var(--font-sans);
   font-size: var(--type-size-5);
   text-transform: lowercase;
+  transition: opacity 300ms;
 }
