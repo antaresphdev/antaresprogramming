@@ -1,5 +1,23 @@
 <footer class="stack">
   <div class="spaced cluster padding--s bg--secondary">
     <p class="margin--none">&copy; 2022 Antares Programming</p>
+    <p class="margin--none">Powered by <a href="https://11ty.dev" target="_blank" rel="noopener">Eleventy</a> and <a href="https://netlify.com" target="_blank" rel="noopener">Netlify</a>.</p>
+  </div>
+  <div class="cluster gap" style="background-color: hsl(var(--bg-secondary) / .75)">
+    <div class="stack padding">
+      <div class="logo">
+        <img loading="lazy" src="/assets/images/logo.svg" class="logo__image" width="64" height="64">
+      </div>
+      {% set author = authors['teacherbuknoy'] %}
+      <p>Ang Antares Programming ay project ni <a href="{{ author.url }}" target="_blank" rel="noopener">{{ author.name }}</a>.</p>
+    </div>
+    <div class="stack padding">
+      <h2 class="fs-4">Social Media</h2>
+      <div class="stack margin-inline--l margin-block--l gap">
+        {% for item in site.socials %}
+          <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.text }}</a>
+        {% endfor %}
+      </div>
+    </div>
   </div>
 </footer>

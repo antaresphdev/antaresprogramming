@@ -1,0 +1,22 @@
+{
+  "title": "Antares Programming",
+  "description": "For Filipino web developers",
+  "socials": [
+    {
+      "text": "Facebook",
+      "url": "https://facebook.com/antaresprogramming"
+    },
+    {
+      "text": "Twitter",
+      "url": "https://twitter.com/antaresphdev"
+    },
+    {
+      "text": "Instagram",
+      "url": "https://instagram.com/antaresprogramming"
+    },
+    {
+      "text": "Youtube",
+      "url": "https://youtube.com/c/antaresprogramming"
+    }
+  ]
+}
