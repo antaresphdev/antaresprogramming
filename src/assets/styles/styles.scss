@@ -55,7 +55,7 @@
     --fg-non-essential: var(--l-non-essential);
 
     --bg-primary: var(--d-default);
-    --bg-secondary: var(--d-default);
+    --bg-secondary: var(--d-contrast);
     --bg-accent: var(--d-subtle);
     --bg-exception: var(--d-non-essential);
   }
@@ -127,16 +127,20 @@ h6 {
 }
 
 a {
-  color: hsl(var(--primary-700));
-  text-decoration: dotted underline hsl(var(--primary-300));
+  color: hsl(var(--fg-default));
+  text-decoration: underline solid hsl(var(--primary-500));
 
   @media (prefers-color-scheme: dark) {
     color: hsl(var(--primary-100));
     text-decoration-color: hsl(var(--primary-700));
   }
 
-  &:focus-visible,
   &:hover {
+    color: hsl(var(--primary-500));
+    text-decoration-color: hsl(var(--fg-default));
+  }
+
+  &:focus-visible {
     color: hsl(var(--primary-900));
     background-color: hsl(var(--primary-100));
     box-shadow: 0 0 0 10px hsl(var(--primary-100));

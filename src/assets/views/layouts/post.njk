@@ -3,7 +3,7 @@
   <a href="#main" class="skip-link">Skip to content</a>
   {% include "components/navigation.njk" %}
   <main class="post bleed" id="main" tabindex="-1">
-    <header class="post__header" style="--post-cover: url('{{ image }}')">
+    <header class="post__header" style="{% if image %}--post-cover: url('{{ image }}'){% endif %}">
       <h1 class="post__title">{{ title }}</h1>
       <p class="post__description">{{ description }}</p>
       <div class="spaced cluster">

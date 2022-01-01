@@ -12,18 +12,26 @@
   }
 
   &::before {
-    background-color: hsl(var(--primary-500));
+    background-color: hsl(var(--primary-500) / 50%);
     height: var(--blob-size);
     top: calc(150vh + var(--blob-size));
     width: var(--blob-size);
     left: calc(var(--blob-size) / 2);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: hsl(var(--primary-900) / 25%);
+    }
   }
 
   &::after {
-    background-color: hsl(var(--secondary-500));
+    background-color: hsl(var(--secondary-500) / 50%);
     height: calc(var(--blob-size) * 2);
     right: 0;
     top: var(--blob-size);
     width: calc(var(--blob-size) * 2);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: hsl(var(--secondary-900) / 25%);
+    }
   }
 }

@@ -1,13 +1,18 @@
 .code-snippet,
 pre[class^="language-"] {
-  background-color: hsl(var(--bg-secondary) / 75%);
+  background-color: hsl(var(--bg-secondary) / 25%);
   padding: var(--space-s);
   border-radius: var(--ideal-radius);
   border: 1px solid hsl(var(--bg-secondary));
   white-space: pre;
   overflow: auto;
-  scrollbar-color: transparent transparent;
+  scrollbar-color: hsl(var(--bg-accent) / 25%) transparent;
   transition: scrollbar-color 300ms;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: hsl(var(--bg-accent) / 25%);
+    border-color: hsl(var(--bg-accent));
+  }
 
   &::-webkit-scrollbar-track {
     background-color: hsl(var(--bg-primary) / 0);

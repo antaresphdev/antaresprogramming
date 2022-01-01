@@ -1,11 +1,16 @@
 .button {
   border-radius: var(--ideal-radius);
+  color: hsl(var(--primary-700));
   display: flex;
   font-size: 1rem;
   font-weight: bold;
   padding: var(--space-s) var(--space-m);
   text-align: center;
   text-decoration: none;
+
+  @media (prefers-color-scheme: dark) {
+    color: hsl(var(--primary-300));
+  }
 
   &.primary {
     background-color: hsl(var(--primary-500));
