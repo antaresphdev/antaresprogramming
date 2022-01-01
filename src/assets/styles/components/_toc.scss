@@ -1,0 +1,73 @@
+.toc {
+  .active {
+    --border-color: hsl(var(--primary-500));
+  }
+  ol {
+    list-style: none;
+    margin: 0;
+    padding-inline-start: var(--space);
+
+    li {
+      margin-inline-start: var(--space-xl);
+      position: relative;
+      --border-color: hsl(var(--fg-non-essential));
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+      }
+
+      &::before {
+        background-color: hsl(var(--bg-primary));
+        border-radius: 100%;
+        border: 2px solid var(--border-color);
+        height: 1.5ch;
+        left: calc((var(--space-l)) * -1);
+        top: 1.2ch;
+        transform: translateY(-50%);
+        width: 1.5ch;
+        z-index: 1;
+      }
+
+      &::after {
+        border-inline-start: 2px solid var(--border-color);
+        height: 4.5ch;
+        left: -1.9ch;
+        top: -1ch;
+      }
+
+      ol {
+        position: relative;
+        --border-color: hsl(var(--fg-non-essential));
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: var(--space-xxl);
+          border-top: 2px solid var(--border-color);
+          left: -1.9ch;
+        }
+
+        &::before {
+          top: 1ch;
+        }
+
+        &::after {
+          bottom: 1ch;
+        }
+      }
+    }
+
+    li:first-child::after {
+      height: 1.75ch;
+      top: 1.5ch;
+    }
+
+    li:last-child::after {
+      height: 2.75ch;
+      top: -1ch;
+    }
+  }
+}
