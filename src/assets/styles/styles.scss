@@ -16,6 +16,7 @@
 @import "./components/avatar";
 @import "./components/blobs";
 @import "./components/button";
+@import "./components/card";
 @import "./components/code";
 @import "./components/logo";
 @import "./components/post";
@@ -129,6 +130,7 @@ h6 {
 }
 
 a {
+  box-decoration-break: clone;
   color: hsl(var(--fg-default));
   text-decoration: underline solid hsl(var(--primary-500));
 

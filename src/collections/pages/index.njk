@@ -4,14 +4,29 @@ description: For Filipino web developers
 permalink: /
 ---
 
-<div class="padding--l">
-  <h1>{{ title }}</h1>
-  <p>{{ description }}</p>
-  <ul>
-    {% for item in collections.posts %}
-      <li>
-        <a href="{{ item.url }}">{{ item.data.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+<h1 class="sr-only">{{ title }}</h1>
+
+<div class="padding--l cards-grid">
+  {% for item in collections.posts | reverse %}
+    <article class="card">
+      {% if loop.index0 % 4 === 0 %}
+        <a href="{{ item.url }}" class="card__image" style="--bg-image: url({{ item.data.image }})"></a>
+      {% endif %}
+      <div class="card__body">
+        <h2 class="card__title">
+          <a class="card__link" href="{{ item.url }}">{{ item.data.title }}</a>
+        </h2>
+        <p>{{ item.data.description }}</p>
+        <div class="spaced cluster">
+          {% if item.data.author and authors[item.data.author] %}
+            {% set author = authors[item.data.author] %}
+            <a href="/authors/{{ item.data.author }}/" class="fg-theme-color card__link">{{ author.name }}</a>
+          {% else %}
+            <span class="weight-bold">Anonymous</span>
+          {% endif %}
+          <time datetime="{{ item.date | machineReadableDate }}">{{ item.date | humanReadableDate }}</time>
+        </div>
+      </div>
+    </article>
+  {% endfor %}
 </div>
