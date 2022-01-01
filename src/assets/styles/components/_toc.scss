@@ -2,7 +2,8 @@
   position: sticky;
   top: calc(var(--space-xxl) * 2);
 
-  .active {
+  .active,
+  .active ol {
     --border-color: hsl(var(--primary-500));
   }
   ol {
