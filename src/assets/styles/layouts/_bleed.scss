@@ -3,6 +3,7 @@
   padding: var(--space);
   max-width: 90vw;
   margin: auto;
+  min-width: 65% !important;
 
   @media (min-width: 75ch) {
     display: grid;
@@ -15,5 +16,30 @@
   .full-bleed {
     width: 100%;
     grid-column: 1/4;
+    margin-inline: 0;
+
+    img {
+      min-width: 50%;
+      max-width: 90%;
+    }
+  }
+
+  figure:not(.quotation) {
+    &:not(.full-bleed) {
+      img {
+        max-width: 70%;
+      }
+    }
+    figcaption {
+      text-align: center;
+      color: hsl(var(--fg-subtle));
+      max-width: 65ch;
+      margin: auto;
+
+      &::before {
+        content: "Figure: ";
+        font-weight: bold;
+      }
+    }
   }
 }

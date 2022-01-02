@@ -64,6 +64,8 @@ module.exports = function (eleventyConfig) {
 
   const markdownIt = require("markdown-it");
   const markdownItAnchor = require("markdown-it-anchor");
+  const slug = require("slug");
+
   eleventyConfig.setLibrary(
     "md",
     markdownIt({
@@ -71,7 +73,9 @@ module.exports = function (eleventyConfig) {
       linkify: true,
       typographer: true,
     })
-      .use(markdownItAnchor, {})
+      .use(markdownItAnchor, {
+        slugify: (s) => slug(s),
+      })
       .use(require("markdown-it-deflist"))
       .use(require("markdown-it-abbr"))
       .use(require("markdown-it-footnote"))

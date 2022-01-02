@@ -19,6 +19,7 @@
       hsl(var(--bg-primary) / 0.991353) 93.33%,
       hsl(var(--bg-primary)) 100%
     ),
+    linear-gradient(var(--scrim-color), var(--scrim-color)),
     var(--post-cover, url(/assets/images/mesh-gradient.png));
   background-position: center;
   background-repeat: no-repeat;

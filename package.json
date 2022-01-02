@@ -51,6 +51,7 @@
     "postcss-cli": "^9.1.0",
     "random-simple": "^2.0.0",
     "sass": "^1.45.0",
+    "slug": "^5.2.0",
     "uuid": "^8.3.2",
     "webpack": "^5.65.0"
   },

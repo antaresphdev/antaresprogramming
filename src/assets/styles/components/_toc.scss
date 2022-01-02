@@ -10,11 +10,15 @@
     list-style: none;
     margin: 0;
     padding-inline-start: var(--space);
+    --border-color: hsl(var(--fg-subtle));
 
     li {
       margin-inline-start: var(--space-xl);
       position: relative;
-      --border-color: hsl(var(--fg-non-essential));
+
+      &:only-child::after {
+        display: none;
+      }
 
       &::before,
       &::after {
@@ -43,7 +47,7 @@
 
       ol {
         position: relative;
-        --border-color: hsl(var(--fg-non-essential));
+        --border-color: hsl(var(--fg-default));
 
         &::before,
         &::after {

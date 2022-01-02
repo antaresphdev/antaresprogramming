@@ -4,10 +4,14 @@ module.exports = {
   // },
 
   images: function () {
-    return { 'src/assets/images': 'assets/images' }
+    return { "src/assets/images": "assets/images" };
   },
 
   fonts: function () {
-    return { 'src/assets/fonts': 'assets/fonts' }
+    return { "src/assets/fonts": "assets/fonts" };
   },
-}
+
+  files: function () {
+    return { "src/assets/files": "assets/files" };
+  },
+};

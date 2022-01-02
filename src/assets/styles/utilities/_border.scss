@@ -17,3 +17,7 @@
 .border-right {
   border-right: 1px solid hsl(var(--border-color, var(--fg-non-essential)));
 }
+
+.shadow {
+  @include box-shadow(15, 3, #0000000a);
+}

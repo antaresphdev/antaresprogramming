@@ -1,4 +1,4 @@
-<nav class="fixed spaced cluster navigation-bar" style="width: 100%; z-index: 999; transition: background 300ms;">
+<nav class="fixed spaced cluster navigation-bar" style="width: 100%; z-index: 999; transition: background 300ms, box-shadow 300ms;">
   <div class="logo">
     <img class="logo__image" src="/assets/images/logo.svg" alt="logo" width="64" height="64">
     <span class="logo__text">
@@ -10,7 +10,7 @@
   <ul class="cluster padding--s margin--none">
     {% for nav in navigation %}
       <li class="center-aligned cluster">
-        <a href="{{ nav.url }}" class="button">{{ nav.text }}</a>
+        <a href="{{ nav.url }}" class="button fg--default">{{ nav.text }}</a>
       </li>
     {% endfor %}
   </ul>

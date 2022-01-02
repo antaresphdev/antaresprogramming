@@ -31,7 +31,6 @@ Sa example na ito, dahil universal selector ang ginamit natin, magiging kulay pu
   Universal Selectors</a> by Francis Rubio (<a href="https://codepen.io/maniczirconium">@maniczirconium</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ### Class selector
 Sa lahat ng selectors, ito ang pinakamadalas mong gagamitin. Sine-select nito ang HTML elements gamit ang value na nasa `class=""` attribute nito. Halimbawa, para ma-select ang HTML element na ito:

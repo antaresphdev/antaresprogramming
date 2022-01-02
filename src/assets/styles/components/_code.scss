@@ -47,13 +47,30 @@ pre[class^="language-"] {
   }
 }
 
-.token {
-  &.tag {
-    color: hsl(var(--warning-900));
+.tag {
+  color: hsl(var(--warning-900));
+}
 
-    .punctuation {
-      color: hsl(var(--warning-900) / 50%);
-    }
+.attr-equals,
+.punctuation {
+  color: hsl(var(--fg-default) / 50%);
+}
+
+.attr-name,
+.property {
+  color: hsl(var(--primary-700));
+  filter: hue-rotate(-30deg);
+
+  @media (prefers-color-scheme: dark) {
+    color: hsl(var(--primary-100));
+  }
+}
+
+.selector {
+  color: hsl(var(--primary-700));
+
+  @media (prefers-color-scheme: dark) {
+    color: hsl(var(--primary-300));
   }
 }
 
@@ -65,7 +82,7 @@ pre[class^="language-"] {
   &-active {
     background: linear-gradient(
       to right,
-      hsl(var(--secondary-500) / 50%),
+      hsl(var(--secondary-500) / 50%) 50%,
       hsl(var(--secondary-500) / 0%)
     );
   }
