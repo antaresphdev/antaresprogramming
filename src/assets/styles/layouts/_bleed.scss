@@ -20,14 +20,14 @@
 
     img {
       min-width: 50%;
-      max-width: 90%;
     }
   }
 
   figure:not(.quotation) {
     &:not(.full-bleed) {
       img {
-        max-width: 70%;
+        max-width: 100%;
+        margin: auto;
       }
     }
     figcaption {

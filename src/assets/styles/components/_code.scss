@@ -87,3 +87,14 @@ pre[class^="language-"] {
     );
   }
 }
+
+.code-result {
+  width: 100%;
+  border: 1px solid hsl(var(--fg-non-essential));
+  border-radius: var(--ideal-radius);
+  background-color: hsl(var(--bg-primary));
+}
+
+iframe.code-result {
+  background-color: white;
+}

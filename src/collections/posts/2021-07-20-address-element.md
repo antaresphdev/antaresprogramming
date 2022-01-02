@@ -13,15 +13,13 @@ Ang `<address></address>` ang ginagamit para i-mark up ang contact information n
 
 ```html
 <address>
-  Francis Rubio<br>
-  <a href="mailto:devFrancisRubio@gmail.com">✉️ Email</a><br>
+  Francis Rubio<br />
+  <a href="mailto:devFrancisRubio@gmail.com">✉️ Email</a><br />
   <a href="tel:+13115552368">📞 (311) 555-2368</a>
 </address>
 ```
 
-  <div class="code-result">
-    <iframe src="/assets/images/posts/address-element/example-1.html"></iframe>
-  </div>
+  <iframe class="code-result" src="/assets/images/posts/address-element/example-1.html"></iframe>
 </div>
 
 ## Details
@@ -43,10 +41,10 @@ Longtitude: -0.298219
   <p><strong>Halimbawa:</strong> paglalagay ng address, telephone, at fax numbers sa loob ng <code>address</code> element.</p>
 
 ```html
-<address>      
-UNIVERSITY INTERSCHOLASTIC LEAGUE<br>
-1701 Manor Road, Austin, TX 78722<br>
-Tel: (512) 471-5883 | Fax: (512) 471-5908
+<address>
+  UNIVERSITY INTERSCHOLASTIC LEAGUE<br />
+  1701 Manor Road, Austin, TX 78722<br />
+  Tel: (512) 471-5883 | Fax: (512) 471-5908
 </address>
 ```
 
@@ -69,9 +67,8 @@ Puwedeng gamitin ang `address` element sa maraming contexts, gaya ng contact inf
 </footer>
 ```
     
-    <div class="code-result">
-      <iframe src="/assets/images/posts/address-element/example-3.html"></iframe>
-    </div>
+  <iframe class="code-result" src="/assets/images/posts/address-element/example-3.html"></iframe>
+
   </div>
 </div>
 
@@ -92,9 +89,7 @@ Puwede rin itong gamitin para i-mark up ang pangalan ng author kung ilalagay ang
   &lt;/header>
   &hellip;
 &lt;/article></code></pre>
-  <div class="code-result">
-    <iframe src="/assets/images/posts/address-element/example-2.html"></iframe>
-  </div>
+    <iframe class="code-result" src="/assets/images/posts/address-element/example-2.html"></iframe>
   </div>
 </div>
 

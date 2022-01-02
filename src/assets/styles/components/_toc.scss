@@ -2,6 +2,10 @@
   position: sticky;
   top: calc(var(--space-xxl) * 2);
 
+  & > ol {
+    margin-inline: auto;
+  }
+
   .active,
   .active ol {
     --border-color: hsl(var(--primary-500));
@@ -45,6 +49,14 @@
         top: -1ch;
       }
 
+      a {
+        display: block;
+        max-width: 35ch;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
       ol {
         position: relative;
         --border-color: hsl(var(--fg-default));
@@ -70,7 +82,7 @@
 
     li:first-child::after {
       height: 1.75ch;
-      top: 1.5ch;
+      top: 1.8ch;
     }
 
     li:last-child::after {
