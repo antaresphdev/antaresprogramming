@@ -1,0 +1,48 @@
+---
+title: Articles &middot; Antares Programming
+description: Mga article tungkol sa web development para sa mga Filipino web developer
+pagination:
+  data: collections.posts
+  reverse: true
+  size: 12
+permalink: /articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html
+---
+
+<h1 class="margin-inline--xl margin-block--none">Articles</h1>
+
+<div class="padding--l cards-grid">
+  {% set posts = collections.posts | reverse %}
+  {% for item in pagination.items %}
+    {% set hasImage = loop.index0 % 4 === 0 %}
+    <article class="card{{ " has-image" if hasImage }}">
+      {% if hasImage %}
+        <a href="{{ item.url }}" class="card__image" style="--bg-image: url({{ item.data.image }})"></a>
+      {% endif %}
+      <div class="card__body">
+        <h2 class="card__title">
+          <a class="card__link" href="{{ item.url }}">{{ item.data.title }}</a>
+        </h2>
+        <p>{{ item.data.description }}</p>
+        <div class="spaced cluster">
+          {% if item.data.author and authors[item.data.author] %}
+            {% set author = authors[item.data.author] %}
+            <a href="/authors/{{ item.data.author }}/" class="fg-theme-color card__link">{{ author.name }}</a>
+          {% else %}
+            <span class="weight-bold">Anonymous</span>
+          {% endif %}
+          <time datetime="{{ item.date | machineReadableDate }}">{{ item.date | humanReadableDate }}</time>
+        </div>
+      </div>
+    </article>
+  {% endfor %}
+</div>
+
+<div class="center-justified cluster padding--l">
+  {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous }}" class="button">Previous</a>
+  {% endif %}
+
+  {% if pagination.href.next %}
+    <a href="{{ pagination.href.next }}" class="button">Next</a>
+  {% endif %}
+</div>

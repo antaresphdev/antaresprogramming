@@ -6,7 +6,14 @@
   <div class="cluster gap" style="background-color: hsl(var(--bg-secondary) / .75)">
     <div class="stack padding">
       <div class="logo">
-        <img loading="lazy" src="/assets/images/logo.svg" class="logo__image" width="64" height="64">
+        <img class="logo__image" src="/assets/images/logo.svg" alt="logo" width="64" height="64">
+        <div class="stack">
+          <span class="logo__text">
+            <span class="weight-bold">Antares</span>
+            <span>Programming</span>
+          </span>
+          <span>For Filipino web developers</span>
+        </div>
       </div>
       {% set author = authors['teacherbuknoy'] %}
       <p>Ang Antares Programming ay project ni <a href="{{ author.url }}" target="_blank" rel="noopener">{{ author.name }}</a>.</p>
