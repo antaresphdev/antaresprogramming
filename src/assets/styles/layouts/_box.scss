@@ -22,10 +22,34 @@
   }
 
   &.bordered {
-    border: 1px solid hsl(var(--bg-secondary));
+    border: 1px solid var(--box-border, hsl(var(--bg-secondary)));
   }
 
   &.rounded {
     border-radius: calc(var(--ideal-radius) * 2);
+  }
+}
+
+.box + .box {
+  margin-top: var(--space-xs);
+}
+
+
+.box {
+  --code-border: var(--box-border);
+
+  &.error {
+    --box-border: hsl(var(--error-500));
+    --box-bg: hsl(var(--error-100));
+  }
+
+  &.success {
+    --box-border: hsl(var(--success-500));
+    --box-bg: hsl(var(--success-100));
+  }
+
+  &.success {
+    --box-border: hsl(var(--success-500));
+    --box-bg: hsl(var(--success-100));
   }
 }

@@ -77,19 +77,23 @@ Puwede rin itong gamitin para i-mark up ang pangalan ng author kung ilalagay ang
 <div class="bordered-box">
   <p><strong>Note:</strong> puwede ring gamitin ang <code>a</code> element para i-mark up ang pangalan ng author kung lalagyan ito ng `rel="author"` attribute. Siguruhin lang na may kasama rin itong URL sa <code>href</code> kung saan makikita ang mas detalyadong information tungkol sa author.</p>
   <div class="code-sample">
-    <pre class="code-snippet"><code data-language="html">&lt;article>
-  &lt;header>
-    &hellip;
-    &lt;p>
+
+```html
+<article>
+  <header>
+    …
+    <p>
       Written by: 
-      &lt;a href="/author/francis-rubio" rel="author">
+      <a href="/author/francis-rubio" rel="author">
         Francis Rubio
-      &lt;/a>
-    &lt;/p>
-  &lt;/header>
-  &hellip;
-&lt;/article></code></pre>
-    <iframe class="code-result" src="/assets/images/posts/address-element/example-2.html"></iframe>
+      </a>
+    </p>
+  </header>
+  …
+</article>
+```
+
+  <iframe class="code-result" src="/assets/images/posts/address-element/example-2.html"></iframe>
   </div>
 </div>
 
@@ -97,11 +101,22 @@ Puwede rin itong gamitin para i-mark up ang pangalan ng author kung ilalagay ang
 
 <div class="bordered error box">
   <p><strong>Halimbawa:</strong> Mali ito!</p>
-  <pre class="code-snippet"><code data-language="html">&lt;p>
-  In-interview namin sila. Bago kami nagpunta sa kanilang opisina,
-  nagpadala muna kami ng sulat sa kanilang postal address
-  &lt;address>3102 Highway 98 Mexico Beach, FL&lt;/address>.
-&lt;/p></code></pre>
+
+```html
+<article>
+  <header>
+    …
+    <p>
+      Written by: 
+      <a href="/author/francis-rubio" rel="author">
+        Francis Rubio
+      </a>
+    </p>
+  </header>
+  …
+</article>
+```
+
 </div>
 
 **Hindi dapat** magkaroon ng ibang laman ang `address` element maliban sa pangalan at contact information ng tao, grupo, o organisasyon.
@@ -111,12 +126,14 @@ Kung ginagamit mo ito para i-mark up ang author ng article, **huwag isama rito**
 <div class="bordered error box">
   <p><strong>Halimbawa:</strong> Mali ito!</p>
 
-  <pre class="code-snippet"><code data-language="html">&lt;p>
+```html
+<p>
   Isinulat ni:
-  &lt;address>
+  <address>
     Francis Rubio (May 21, 2020)
-  &lt;/address>
-&lt;/p></code></pre>
+  </address>
+</p>
+```
 </div>
 
 <div class="bordered success box">
@@ -128,6 +145,17 @@ Kung ginagamit mo ito para i-mark up ang author ng article, **huwag isama rito**
   &lt;/address>
   (&lt;time datetime="2020-05-21">May 21, 2020&lt;/time>)
 &lt;/p></code></pre>
+
+```html
+<p>
+  Isinulat ni:
+  <address>
+    Francis Rubio
+  </address>
+  (<time datetime="2020-05-21">May 21, 2020</time>)
+</p>
+```
+
 </div>
 
 By default, pare-parehas ang styling ng `<i>`, `<em>`, at `<address>`. Pero tandaan na **meaning** ang dapat nating tingnan kapag pumipili ng HTML tags na gagamitin. Gamitin ang `i` para sa mga text na iba kumpara sa context nito. Gamitin ang `em` para lagyan ng emphasis ang isang salita, phrase, o pangungusap kapag binabasa ito. Gamitin ang `address` para i-mark up ang contact information ng tao, grupo, o organisasyong may-ari ng webpage o sumulat ng article.
