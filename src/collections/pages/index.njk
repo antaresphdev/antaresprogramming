@@ -7,7 +7,9 @@ permalink: /
 <h1 class="sr-only">{{ title }}</h1>
 
 <div class="padding--l cards-grid">
-  {% for item in collections.posts | reverse %}
+  {% set posts = collections.posts | reverse %}
+  {% for index in range(0, 4) %}
+    {% set item = posts[index] %}
     {% set hasImage = loop.index0 % 4 === 0 %}
     <article class="card{{ " has-image" if hasImage }}">
       {% if hasImage %}
