@@ -5,7 +5,8 @@ image: /assets/images/posts/css-custom-scrollbars/cover.png
 seo_image: /assets/images/posts/css-custom-scrollbars/seo_cover.png
 author: teacherbuknoy
 slug: /css-custom-scrollbars/
-tags: [css, web development]
+tags:
+  - css
 ---
 
 Two years ago, inilabas ng W3C ang [CSS Scrollbars specification](https://www.w3.org/TR/2018/WD-css-scrollbars-1-20180925). Idinagdag nito ang bagong CSS properties na magagamit natin para ma-customize ang styling ng mga scrollbar. Sa ngayon, Firefox pa lang ang browser na nag-i-implement ng specification na ito dahil nasa <i>working draft</i> stage pa lang ang CSS Scrollbars specification.

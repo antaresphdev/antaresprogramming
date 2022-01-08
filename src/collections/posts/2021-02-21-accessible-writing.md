@@ -4,7 +4,8 @@ description: Ilang tips para maging accessible ang text mo
 image: /assets/images/posts/accessible-writing/cover.png
 seo_image: /assets/images/posts/accessible-writing/seo-cover.png
 author: teacherbuknoy
-tags: [accessibility]
+tags:
+  - accessibility
 ---
 
 Ang WCAG o [Web Content Accessibility Guidelines](https://www.w3.org/TR/WCAG20/) ay isang set ng guidelines para sa mga website. Kapag sinusunod ito ng isang website, nagiging mas accessible ito para sa lahat, lalo na sa mga may disabilities, kasama na ang mga bulag, malabo ang mata, bingi o mahina ang pandinig, mga may learning disabilities, cognitive limitations, mga nahihirapang igalaw ang ilang bahagi ng katawan nila, mga may speech disability, photosensitivity o mga sensitive sa ilang kulay o maliliwanag na ilaw, at iba pa.

@@ -4,7 +4,8 @@ description: Mga nakakalitong concepts ng CSS, at kung paano sila gumagana.
 image: /assets/images/posts/cascading-inheritance-specificity/cover.png
 seo_image: /assets/images/posts/cascading-inheritance-specificity/seo-cover.png
 author: teacherbuknoy
-tags: [css]
+tags:
+  - css
 ---
 Ang cascade ay isang algorithm na ginagamit ng browser para malaman kung paano pagsasama-samahin ang mga style rule mula sa iba't ibang locations. Ito ang mismong core ng CSS, kaya ito tinawag na *Cascading* Style Sheets.
 

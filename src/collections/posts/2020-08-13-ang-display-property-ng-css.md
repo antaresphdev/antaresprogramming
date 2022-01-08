@@ -4,7 +4,8 @@ description: Tingnan nating muli ang display property ng CSS.
 image: /assets/images/posts/ang-display-property-ng-css/cover.png
 author: teacherbuknoy
 slug: /ang-display-property-ng-css/
-tags: [web development, CSS]
+tags:
+  - css
 ---
 Pamilyar tayo sa common values ng `display` property. Nandiyan ang `inline`, `block`, at `inline-block`. Recently, nakita rin natin na nadagdag sa mga ito ang `flex` at `grid`. Pero karamihan sa atin, hindi alam na may 28 values[^1] pala na puwedeng ilagay sa `display` property!
 

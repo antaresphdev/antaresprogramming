@@ -3,7 +3,8 @@ title: "Mga link pabalik sa parent directory"
 description: "Isang quick post para maipakita kung paano magagamit ang '..' sa mga anchor tags."
 author: teacherbuknoy
 image: /assets/images/posts/creating-links-to-up-one-directory/cover.png
-tags: [web development]
+tags: 
+  - web development
 ---
 
 Habang kino-code ang bagong Web site ng Antares Programming, specifically ang part para sa courses, nagkaroon ako ng maliit na problema. Sa lessons page, may dalawa akong link na nakalagay: isang link pabalik sa course page, at isang link papunta sa susunod na lesson.

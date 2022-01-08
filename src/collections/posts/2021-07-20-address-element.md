@@ -4,7 +4,9 @@ description: Ang HTML tag na ito ang ginagamit para i-mark up ang contact inform
 image: /assets/images/posts/address-element/cover.png
 seo_image: /assets/images/posts/address-element/seo-cover.png
 author: teacherbuknoy
-tags: [html, deep dive]
+tags: 
+  - html
+  - deep dive
 ---
 
 Ang `<address></address>` ang ginagamit para i-mark up ang contact information ng isang tao o organisasyon.

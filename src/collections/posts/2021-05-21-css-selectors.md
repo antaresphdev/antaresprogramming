@@ -4,7 +4,8 @@ description: Bukod sa HTML tags, puwede tayong gumamit ng patterns, o selectors,
 image: /assets/images/posts/css-selectors/cover.png
 seo_image: /assets/images/posts/css-selectors/seo-cover.png
 author: teacherbuknoy
-tags: [css]
+tags:
+  - css
 ---
 ## Mga Selector
 Bukod sa HTML tags, puwede tayong gumamit ng patterns, o selectors, para sabihin sa CSS kung sa aling HTML elements lang mag-a-apply ang styling natin.

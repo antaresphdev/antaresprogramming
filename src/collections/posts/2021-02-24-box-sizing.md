@@ -4,7 +4,9 @@ description: Pag-usapan natin kung paano nakaka-influence sa layout ang box sizi
 image: /assets/images/posts/box-sizing/cover.png
 seo_image: /assets/images/posts/box-sizing/seo-cover.png
 author: teacherbuknoy
-tags: [css, layout]
+tags:
+  - css
+  - layout
 ---
 
 Isa sa mga fundamental concepts ng CSS na dapat nating tandaan ay ang box model: **lahat sa CSS ay box**. Anuman ang hitsura ng isang element visually, box pa rin ito para sa CSS.
