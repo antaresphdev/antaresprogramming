@@ -9,9 +9,11 @@
 
   <ul class="cluster padding--s margin--none">
     {% for nav in navigation %}
-      <li class="center-aligned cluster">
-        <a href="{{ nav.url }}" class="button fg--default">{{ nav.text }}</a>
-      </li>
+      {% if not nav.hidden %}
+        <li class="center-aligned cluster">
+          <a href="{{ nav.url }}" class="button fg--default">{{ nav.text }}</a>
+        </li>
+      {% endif %}
     {% endfor %}
   </ul>
 </nav>
