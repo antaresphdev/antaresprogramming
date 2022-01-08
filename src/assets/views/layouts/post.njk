@@ -39,5 +39,18 @@
         {{ content | safe }}
       </div>
     </div>
-  </main>
-{% endblock %}
+
+    <footer class="stack padding--l">
+      <div class="content-wrapper margin--auto">
+        <h2 class="fs-4 text-center">Share</h2>
+        <div class="cluster center-justified padding">
+          <a class="button" href="{{ url }}">
+            <svg class="feathericon" aria-hidden="true">
+              <use href="/assets/images/feather-sprite.svg#link"></svg>
+              <span class="visually-hidden">Direct Link</span>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  {% endblock %}

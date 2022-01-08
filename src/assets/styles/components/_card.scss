@@ -1,15 +1,20 @@
 .cards-grid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--space);
-  grid-template-columns: repeat(auto-fill, minmax(min(45ch, 100%), 1fr));
 
-  .card.has-image {
-    padding: var(--space-l);
-    border-radius: calc(var(--ideal-radius) * 2.5);
-    grid-column: 1/-1;
+  .card {
+    flex-basis: 35ch;
+    flex-grow: 1;
 
-    .card__title {
-      font-size: var(--type-size-1);
+    &.has-image {
+      flex-basis: 100%;
+      padding: var(--space-l);
+      border-radius: calc(var(--ideal-radius) * 2.5);
+
+      .card__title {
+        font-size: var(--type-size-1);
+      }
     }
   }
 }
