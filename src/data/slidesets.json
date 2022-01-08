@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Ang bagong responsive design",
+    "tags": [ "css" ],
+    "base-path": "/assets/images/slidesets/new-responsive/",
+    "slides": [
+      {
+        "image": "Cover.png",
+        "caption": {
+          "title": "Ang bagong responsive design"
+        },
+        "alt": "A slide, saying \"Bagong Responsive Design\". Indicates 6 slides."
+      },
+      {
+        "image": "1.png",
+        "caption": {
+          "title": "Ang bagong responsive design"
+        },
+        "alt": "text, saying \"Hindi na lang sa size ng viewport nagre-respond ang mga web page natin ngayon. Sa slideset na ito tingnan ang iba pang paraan para maging responsive ang designs mo.\""
+      },
+      {
+        "image": "2.png",
+        "caption": {
+          "title": "Responsive sa viewport",
+          "body": "Sa traditional na responsive web design, nagre-respond ang mga web page sa size ng viewport. Nire-rearrange nito ang mga element ng page depende sa width, at minsan height, ng viewport.\n\nSa bagong responsive web design, nagre-respond pa rin ang web pages sa size ng viewport, pero sa halip na dumepende lagi sa mga media query, ang browser na ang kusang nagde-decide ng layout na pwede sa current size ng viewport. Gamit ang CSS Grid at Flexbox, sa halip na i-specify ang lahat ng width na kailangan nating gawan ng layout, binibigyan na lang natin ang browser ng hint kung paano nito ire-rearrange ang mga element ng page kapag hindi na kasya ang content. Sa bagong responsive web design, content na—hindi viewport—ang nagde-decide ng iba't ibang layouts."
+        },
+        "alt": "A slide, saying \"Responsive sa viewport\"."
+      },
+      {
+        "image": "3.png",
+        "caption": {
+          "title": "Responsive sa size ng container",
+          "body": "Sa paparating na Container Queries, pwede na tayong mag-specify ng iba't ibang layout na nakadepende, hindi sa size ng viewport, kundi sa size ng parent element. **Note**: experimental pa ito."
+        },
+        "alt": "A slide, saying \"Responsive sa size ng container. Container Queries. Sa halip na size ng browser window o viewport, ang size ng parent element ang tinitingnan ng container queries. Note: bagong feature ito at hindi pa available sa lahat ng browsers.\""
+      },
+      {
+        "image": "4.png",
+        "caption": {
+          "title": "Responsive sa preferences ng users: Dark Mode",
+          "body": "Gamit ang Color Scheme Query, puwedeng tingnan gamit ang CSS kung naka-on ang dark mode ng user. Puwede mong i-adjust ang colors ng web design mo para sa dark mode."
+        },
+        "alt": "A slide, saying \"Dark Mode\""
+      },
+      {
+        "image": "4.png",
+        "caption": {
+          "title": "Responsive sa preferences ng users: Animation",
+          "body": "May ilang users na sensitive sa maraming motion at animation, kaya naman para sa kanila ginawa ang Reduced Motion Media Queries. Gamit ito, pwede nating itanong sa browser kung mas gusto ng user na wala gaanong animation sa web page natin, at i-adjust ayon dito ang designs ng web page natin."
+        },
+        "alt": "A slide, saying \"Responsive sa preferences ng user: Animation. Reduced motion. Pwede mong bawasan ang mga animation at transition kapag ayaw ng user nito.\""
+      }
+    ]
+  },  {
+    "name": "Ang bagong responsive design",
+    "tags": [ "css", "responsive design", "flexbox" ],
+    "base-path": "/assets/images/slidesets/responsive-sidebars/",
+    "slides": [
+      {
+        "image": "1.png",
+        "caption": {
+          "title": "Responsive Sidebars"
+        },
+        "alt": "A slide, saying \"Responsive sidebars\". Indicates 6 slides."
+      },
+      {
+        "image": "2.png",
+        "caption": {
+          "title": "Ang gagawin natin...",
+          "body": "Gagawa tayo ng responsive sidebar nang walang media queries or JavaScript"
+        },
+        "alt": "A slide, saying \"Ang gagawin natin... gagawa tayo ng responsive sidebar nang walang media queries or JavaScript\"."
+      },
+      {
+        "image": "3.png",
+        "caption": {
+          "title": "Container",
+          "body": "Para sa container element, gagawin nating `flex` ang `display` nito, at bibigyan natin ito ng `flex-wrap: wrap`.\n\nKapag hindi na kasya ang mga element, ilalagay ng `flex-wrap: wrap` ang susunod na mga items sa susunod na rows. Kapag mas maliit na ang viewport, magiging vertical ang container natin dahil sa declaration na ito."
+        },
+        "alt": "A slide, saying \"Kapag hindi na kasya ang mga element, ilalagay ng `flex-wrap: wrap` ang susunod na mga items sa susunod na rows. Kapag mas maliit na ang viewport, magiging vertical ang container natin dahil sa declaration na ito.\"."
+      },
+      {
+        "image": "4.png",
+        "caption": {
+          "title": "Sidebar",
+          "body": "Para sa sidebar element, bibigyan natin ito ng `flex-grow: 1`. Sinasabi ng `flex-grow` property kung gaano kalaking part ng kabuuang available space ang ibibigay sa element. Sa case na ito, bibigyan natin ang sidebar element ng isang part lang ng kabuuang available space. Kaya naman kapag naka-vertical ang position ng ating sidebars, kukunin nito ang buong space na available dahil wala siyang magiging kahati sa row na iyon."
+        },
+        "alt": "A slide, saying \"flex-grow: 1. Kapag mas mataas sa 0 ang flex-grow, kukunin nito ang lahat ng available space na puwede. Kapag mas mataas ang value, mas malaking part ng available space ang makukuha ng element. Para sa sidebar, kapag naka-vertical ang container, kukunin ng sidebar ang lahat ng available space, at mapupunta sa next row ang main content\"."
+      },
+      {
+        "image": "5.png",
+        "caption": {
+          "title": "Main Content",
+          "body": "Para sa main content, bibigyan natin ito ng minimum width na 50%. Ito ang pupuwersa sa layout natin na mag-wrap kapag mas mababa na sa 50% ang width ng main content.\n\nBibigyan din natin ang main content ng flex-grow na may mataas na value. Dahil dito magiging mas malaki ang part na sasakupin ng main content sa horizontal na layout kaysa sa sidebar. Pero kukunin nito ang buong space sa vertical layout."
+        },
+        "alt": "A slide, saying \"Main Content. min-width: 50%. Hindi puwedeng maging mas maliit sa 50% ng container ang width ng main content. Kapag nangyari ito, mapupunta na sa next row ang main content. Flex-grow: 999. Dahil mas mataas ang value ng flex-grow nito kaysa sa sidebar, mas malaking part ng available space ang kukunin ng main content sa horizontal na container. Pero kukunin nito ang space ng isang buong row sa vertical na container.\""
+      }
+    ]
+  }
+]
