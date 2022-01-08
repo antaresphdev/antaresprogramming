@@ -6,6 +6,13 @@
     <header class="post__header" style="{% if image %}--post-cover: url('{{ image }}'){% endif %}">
       <h1 class="post__title">{{ title }}</h1>
       <p class="post__description">{{ description }}</p>
+      {% if tags %}
+        <div class="cluster gap padding-block--s end-justified">
+          {% for tag in tags %}
+            <a href="/tags/{{ tag | slugify }}" class="topic">{{ tag }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
       <div class="spaced cluster">
         {% if author %}
           {% set authorDetails = authors[author] %}
