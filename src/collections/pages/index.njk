@@ -6,7 +6,7 @@ permalink: /
 
 <h1 class="sr-only">{{ title }}</h1>
 
-<div class="padding--l cards-grid">
+<section class="padding--l cards-grid">
   {% set posts = collections.posts | reverse %}
   {% for index in range(0, 4) %}
     {% set item = posts[index] %}
@@ -32,12 +32,12 @@ permalink: /
       </div>
     </article>
   {% endfor %}
-</div>
+</section>
 <div class="cluster center-justified padding">
   <a href="/articles/" class="button secondary">Tingnan lahat</a>
 </div>
 
-<div class="newsletter">
+<section class="newsletter">
   <form action="/newsletter/success" style="max-width: 65ch;" method="post">
     <input type="hidden" name="form-name" value="form 1">
     <div class="flex">
@@ -61,7 +61,21 @@ permalink: /
       </div>
     </div>
   </form>
-</div>
+</section>
+
+<section class="padding--l bordered box">
+  <h2>Latest slides</h2>
+  <div class="padding--l gap--l horizontal scroller" style="justify-content: center">
+    {% for slide in collections.slidesets %}
+      {% if not slide.data.hidden %}
+        <a href="{{ slide.url }}" class="slideset-link">
+          <img src="{{ slide.data.cover }}" alt="{{ slide.data.title }}" class="slide-cover">
+          <span class="sr-only">{{ slide.data.title }}</span>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
 
 <div class="padding--xxxl margin--auto" style="max-width: 100ch;">
   <h2>Tumatanggap kami ng donations!</h2>

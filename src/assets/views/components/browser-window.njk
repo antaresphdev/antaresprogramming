@@ -1,0 +1,20 @@
+<div class="browser-window {{ browserClass | safe }}"
+  {% if browserStyle %}
+  style="{{ browserStyle | safe }}"
+  {% endif %}
+  {% if browserId %}
+  id="{{ browserId | safe }}"
+  {% endif %}
+>
+  <div class="headerbar">
+    <div class="window-actions">
+      <div class="close"></div>
+      <div class="minimize"></div>
+      <div class="maximize"></div>
+    </div>
+    <div class="browser-tabs">
+      <div class="browser-tab"></div>
+    </div>
+  </div>
+  <div class="viewport">{{ viewportContent | safe }}</div>
+</div>

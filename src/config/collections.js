@@ -26,4 +26,12 @@ module.exports = {
       "src/collections/posts/*.md",
     ]);
   },
+
+  slidesets: function (collection) {
+    return collection.getFilteredByGlob([
+      "src/collections/slidesets/*.html",
+      "src/collections/slidesets/*.njk",
+      "src/collections/slidesets/*.md",
+    ]);
+  },
 };

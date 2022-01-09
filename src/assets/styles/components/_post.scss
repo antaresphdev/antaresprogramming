@@ -94,5 +94,10 @@
   padding: var(--space-xxxs) var(--space-xs);
   text-decoration: none;
   border-radius: var(--ideal-radius);
-  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+
+  &:is(a[href], button) {
+    cursor: pointer;
+  }
 }

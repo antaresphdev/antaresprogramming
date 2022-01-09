@@ -1,0 +1,181 @@
+---
+title: Ang bagong responsive design
+cover: /assets/images/slidesets/new-responsive/Cover.png
+tags:
+  - css
+---
+
+<section class="padding--l center-aligned slide">
+  <div class="stack gap--m">
+    <h1 class="slideset-title">Ang Bagong Responsive Design</h1>
+    <span class="topic">Cascading Stylesheets</span>
+  </div>
+</section>
+<section class="slide padding--l center-aligned">
+  <div class="stack content-wrapper">
+    <h2>Ang bagong responsive design</h2>
+    <p class="fs-4">Hindi na lang sa size ng viewport nagrerespond ang mga web page natin ngayon. Sa slideset na ito, tingnan ang iba pang paraan para maging responsive ang designs mo.</p>
+  </div>
+</section>
+
+<section class="slide padding--l center-aligned">
+  <div class="stack">
+    <h2>Responsive sa viewport</h2>
+    <div class="with-sidebar margin-top--m">
+      <div class="not-sidebar cluster center-aligned center-justified">
+        <div class="margin--auto" style="width: min(auto, 100%)">
+          {% set viewportContent %}
+          <div class="padding--m with-sidebar">
+            <div class="sidebar" style="border: 1px solid hsl(var(--warning-500)); background-color: hsl(var(--warning-100)); flex-basis: 10ch"></div>
+            <div class="not-sidebar" style="border: 1px solid hsl(var(--success-500)); background-color: hsl(var(--success-100));"></div>
+          </div>
+          {% endset %}
+          {% set browserStyle = "width: 25ch;" %}
+          {% set browserClass = "resizable" %}
+          {% include "components/browser-window.njk" %}
+        </div>
+      </div>
+      <div class="sidebar" style="flex-basis: 45ch;">
+        <div class="content-wrapper margin--auto">
+          <p>Kapag sinasabing <i>responsive web design</i>, ang unang pumapasok sa isip ng marami ay ang pagre-rearrange ng layout depende sa width ng viewport gamit ang media queries. Sa bagong responsive web design, nagre-respond pa rin ang layout sa size ng viewport, pero ngayon, bukod sa manual na override gamit ang media queries, ang browser na mismo ang nagde-decide kung anong arrangement ang gagawin nito base sa dami ng content at laki ng available space. Ito ang <b>intrinsic web design</b>.</p>
+          <h3 class="fs-5 uppercase">Technologies</h3>
+          <ul>
+            <li>CSS Grid <span class="topic">Stable</span></li>
+            <li>Flexbox <span class="topic">Stable</span></li>
+            <li>Viewport Media Query <span class="topic">Stable</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide padding--l center-aligned">
+  <div class="stack">
+    <h2>Responsive sa size ng container</h2>
+    <div class="with-sidebar">
+      <div class="not-sidebar">
+        {% set viewportContent %}
+        <div class="padding--xs resizable margin--s" style="display: grid; background-color: hsl(var(--warning-500) / 25%); border: 1px solid hsl(var(--warning-500));">
+          <div class="padding--m with-sidebar">
+            <div class="sidebar" style="border: 1px solid hsl(var(--success-500)); background-color: hsl(var(--success-100)); flex-basis: 10ch"></div>
+            <div class="not-sidebar" style="border: 1px solid hsl(var(--success-500)); background-color: hsl(var(--success-100));"></div>
+          </div>
+        </div>
+        {% endset %}
+        {% set browserStyle = "width: 90%;" %}
+        {% set browserClass = "margin--auto" %}
+        {% include "components/browser-window.njk" %}
+      </div>
+      <div class="sidebar" style="flex-basis: 45ch;">
+        <p>Bukod sa size ng browser window o viewport, puwede na rin nating gamitan ng media queries ang mga element para i-adjust ang layout ng mga child nito. Ito ang <b>Container Queries</b>.</p>
+        <p>
+          <strong>Note:</strong> bagong feature ito, at hindi pa available sa lahat ng browsers.</p>
+        <h3 class="uppercase fs-4">Technologies</h3>
+        <ul>
+          <li>Container Queries <span class="topic">Experimental</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide padding--l center-aligned">
+  <div class="stack">
+    <h2>
+      <span class="fs-6 weight-normal">Responsive sa preferences ng user</span><br>Dark Mode</h2>
+    <div class="with-sidebar margin-top--m">
+      <div class="not-sidebar cluster center-aligned center-justified">
+        <div class="margin--auto stack gap--m" style="width: min(auto, 100%); align-items: center;">
+          <button class="secondary button"
+            onclick="colorSchemeBrowser.classList.toggle('light');
+            colorSchemeBrowser.classList.toggle('dark');
+            lightLabel.classList.toggle('hidden');
+            darkLabel.classList.toggle('hidden');"
+          >
+            <code>
+              prefers-color-scheme:
+              <span id="lightLabel">light</span>
+              <span id="darkLabel" class="hidden">dark</span>
+            </code>
+          </button>
+          {% set viewportContent %}
+          <div class="padding--m with-sidebar" style="background: hsl(var(--bg-primary))">
+            <div class="sidebar" style="border: 1px solid hsl(var(--warning-500)); background-color: hsl(var(--warning-100)); flex-basis: 10ch"></div>
+            <div class="not-sidebar" style="border: 1px solid hsl(var(--success-500)); background-color: hsl(var(--success-100));"></div>
+          </div>
+          {% endset %}
+          {% set browserStyle = "width: 25ch;" %}
+          {% set browserClass = "light" %}
+          {% set browserId = "colorSchemeBrowser" %}
+          {% include "components/browser-window.njk" %}
+        </div>
+      </div>
+      <div class="sidebar" style="flex-basis: 45ch;">
+        <div class="content-wrapper margin--auto">
+          <p>Kapag sinasabing <i>responsive web design</i>, ang unang pumapasok sa isip ng marami ay ang pagre-rearrange ng layout depende sa width ng viewport gamit ang media queries. Sa bagong responsive web design, nagre-respond pa rin ang layout sa size ng viewport, pero ngayon, bukod sa manual na override gamit ang media queries, ang browser na mismo ang nagde-decide kung anong arrangement ang gagawin nito base sa dami ng content at laki ng available space. Ito ang <b>intrinsic web design</b>.</p>
+          <h3 class="fs-5 uppercase">Technologies</h3>
+          <ul>
+            <li>CSS Grid <span class="topic">Stable</span></li>
+            <li>Flexbox <span class="topic">Stable</span></li>
+            <li>Viewport Media Query <span class="topic">Stable</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide padding--l center-aligned">
+  <div class="stack">
+    <h2>
+      <span class="fs-6 weight-normal">Responsive sa preferences ng user</span><br>Dark Mode</h2>
+    <div class="with-sidebar margin-top--m">
+      <div class="not-sidebar cluster center-aligned center-justified">
+        <div class="margin--auto stack gap--m" style="width: min(auto, 100%); align-items: center;">
+          <button class="secondary button"
+            onclick="circleContainer.classList.toggle('animating');
+            reducedLabel.classList.toggle('hidden');
+            noPreferenceLabel.classList.toggle('hidden');"
+          >
+            <code>
+              prefers-reduced-motion:
+              <span id="reducedLabel" class="hidden">reduced</span>
+              <span id="noPreferenceLabel">no-preference</span>
+            </code>
+          </button>
+          {% set viewportContent %}
+          <div id="circleContainer" class="padding--m animating" style="background: hsl(var(--bg-primary))">
+            <style>
+              #circleContainer:hover #circleAnimating {
+                transform: translate(100%, 100%)
+              }
+
+              #circleContainer.animating #circleAnimating {
+                transition: transform 300ms;
+              }
+            </style>
+            <p>Hover over this window</p>
+            <div id="circleAnimating" style="aspect-ratio: 1; border-radius: 100%; width: 5ch; background-color: hsl(var(--secondary-500));"></div>
+          </div>
+          {% endset %}
+          {% set browserStyle = "width: 25ch;" %}
+          {% set browserClass = "light" %}
+          {% set browserId = "colorSchemeBrowser" %}
+          {% include "components/browser-window.njk" %}
+        </div>
+      </div>
+      <div class="sidebar" style="flex-basis: 45ch;">
+        <div class="content-wrapper margin--auto">
+          <p>Kapag sinasabing <i>responsive web design</i>, ang unang pumapasok sa isip ng marami ay ang pagre-rearrange ng layout depende sa width ng viewport gamit ang media queries. Sa bagong responsive web design, nagre-respond pa rin ang layout sa size ng viewport, pero ngayon, bukod sa manual na override gamit ang media queries, ang browser na mismo ang nagde-decide kung anong arrangement ang gagawin nito base sa dami ng content at laki ng available space. Ito ang <b>intrinsic web design</b>.</p>
+          <h3 class="fs-5 uppercase">Technologies</h3>
+          <ul>
+            <li>CSS Grid <span class="topic">Stable</span></li>
+            <li>Flexbox <span class="topic">Stable</span></li>
+            <li>Viewport Media Query <span class="topic">Stable</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

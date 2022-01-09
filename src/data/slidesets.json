@@ -1,7 +1,8 @@
 [
   {
+    "url": "/slidesets/responsive-design",
     "name": "Ang bagong responsive design",
-    "tags": [ "css" ],
+    "tags": ["css"],
     "base-path": "/assets/images/slidesets/new-responsive/",
     "slides": [
       {
@@ -51,9 +52,11 @@
         "alt": "A slide, saying \"Responsive sa preferences ng user: Animation. Reduced motion. Pwede mong bawasan ang mga animation at transition kapag ayaw ng user nito.\""
       }
     ]
-  },  {
-    "name": "Ang bagong responsive design",
-    "tags": [ "css", "responsive design", "flexbox" ],
+  },
+  {
+    "url": "/slidesets/responsive-sidebars",
+    "name": "Responsive sidebars",
+    "tags": ["css", "responsive design", "flexbox"],
     "base-path": "/assets/images/slidesets/responsive-sidebars/",
     "slides": [
       {

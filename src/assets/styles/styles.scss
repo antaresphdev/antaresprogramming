@@ -16,6 +16,8 @@
 @import "./components/avatar";
 @import "./components/blobs";
 @import "./components/button";
+@import "./components/browser-window";
+@import "./components/slides";
 @import "./components/card";
 @import "./components/code";
 @import "./components/fonts";
@@ -74,7 +76,7 @@
   --fg-non-essential: var(--l-non-essential);
 
   --bg-primary: var(--d-default);
-  --bg-secondary: var(--d-default);
+  --bg-secondary: var(--d-contrast);
   --bg-accent: var(--d-subtle);
   --bg-exception: var(--d-non-essential);
 }
