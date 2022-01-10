@@ -18,17 +18,19 @@
   <div class="relative show-on-mobile cluster center-aligned padding-right--xs">
     <button class="button" data-popover="mobile-nav">
       <svg class="feathericon">
-        <use href="/assets/images/feather-sprite.svg#menu"></svg>
-      </button>
-      <ul id="mobile-nav" class="cluster padding--s margin--none gap--none popover" hidden>
-        {% for nav in navigation %}
-          {% if not nav.hidden %}
-            <li class="center-aligned cluster">
-              <a href="{{ nav.url }}" class="button fg--default">{{ nav.text }}</a>
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
-  </nav>
-  <div data-intersection-trigger></div>
+        <use href="/assets/images/feather-sprite.svg#menu"></use>
+      </svg>
+      <span class="sr-only">Toggle Menu</span>
+    </button>
+    <ul id="mobile-nav" class="cluster padding--s margin--none gap--none popover" hidden>
+      {% for nav in navigation %}
+        {% if not nav.hidden %}
+          <li class="center-aligned cluster">
+            <a href="{{ nav.url }}" class="button fg--default">{{ nav.text }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+<div data-intersection-trigger></div>
