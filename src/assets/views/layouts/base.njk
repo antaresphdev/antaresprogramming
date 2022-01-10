@@ -11,6 +11,32 @@
     <link rel="icon" href="/icon.svg" sizes="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="{{ title | safe }}">
+    <meta name="description" content="{{ description | safe }}">
+
+    {% if seo_image %}
+      {% set og_cover = seo_image.og %}
+      {% set twitter_cover = seo_image.twitter %}
+    {% else %}
+      {% set og_cover = site.seo.images.og %}
+      {% set twitter_cover = site.seo.images.twitter %}
+    {% endif %}
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.domain }}">
+    <meta property="og:title" content="{{ title | safe }}">
+    <meta property="og:description" content="{{ description | safe }}">
+    <meta property="og:image" content="{{ site.domain }}{{ og_cover }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ site.domain }}">
+    <meta property="twitter:title" content="{{ title | safe }}">
+    <meta property="twitter:description" content="{{ description | safe }}">
+    <meta property="twitter:image" content="{{ site.domain }}{{ twitter_cover }}">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
