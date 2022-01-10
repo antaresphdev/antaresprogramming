@@ -14,3 +14,15 @@
 .hidden {
   display: none;
 }
+
+.hide-on-mobile {
+  @media (max-width: 560px) {
+    display: none;
+  }
+}
+
+.show-on-mobile {
+  @media (min-width: 561px) {
+    display: none;
+  }
+}
