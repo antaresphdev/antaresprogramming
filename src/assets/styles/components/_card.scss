@@ -38,10 +38,8 @@
   border-radius: calc(var(--ideal-radius) * 1.5);
   flex-grow: 1;
   flex-basis: 55ch;
-  background-image: var(--bg-image);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  object-fit: cover;
+  object-position: center;
   min-height: 35ch;
 }
 

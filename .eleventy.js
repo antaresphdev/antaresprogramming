@@ -62,6 +62,10 @@ module.exports = function (eleventyConfig) {
   );
   eleventyConfig.addGlobalData("EMAIL_ENDPOINT", process.env.EMAIL_ENDPOINT);
 
+  /* CLOUDINARY */
+  eleventyConfig.cloudinaryCloudName = "do1qcjos9";
+  eleventyConfig.hostname = "https://www.antaresph.dev";
+
   const markdownIt = require("markdown-it");
   const markdownItAnchor = require("markdown-it-anchor");
   const slug = require("slug");
