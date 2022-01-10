@@ -16,4 +16,8 @@ module.exports = {
   responsiveImages: function () {
     return { plugin: require("eleventy-plugin-responsive-images") };
   },
+
+  eleventyGoogleFonts: function () {
+    return { plugin: require("eleventy-google-fonts") };
+  },
 };
