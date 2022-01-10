@@ -44,12 +44,19 @@
     <link rel="stylesheet" href="/assets/styles/styles.css">
   </head>
   <body>
+    <div id="top"></div>
     {% block content %}
       {{ content | safe }}
     {% endblock %}
 
     {% include "components/footer.njk" %}
 
+    <a href="#top" class="button circle primary fixed" style="bottom: var(--space-l);z-index: 999;right: var(--space-l);width: 5ch;align-items: center;">
+      <svg class="feathericon" aria-hidden="true">
+        <use href="/assets/images/feather-sprite.svg#chevron-up"></use>
+      </svg>
+      <span class="sr-only">Back to top</span>
+    </a>
     <div class="notification-container" aria-live="polite" role="log" data-notification-container></div>
 
     <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
