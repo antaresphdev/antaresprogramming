@@ -28,6 +28,7 @@
   aspect-ratio: 1;
   height: auto;
   width: 4rem;
+  transition: width 300ms, height 300ms;
 }
 
 .logo__text {
