@@ -1,3 +1,4 @@
+const CleanCSS = require('clean-css')
 module.exports = {
   markdown: function (value) {
     let markdown = require("markdown-it")({
@@ -41,5 +42,5 @@ module.exports = {
           return "Sunday";
       }
     }
-  },
+  }
 };

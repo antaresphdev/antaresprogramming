@@ -17,7 +17,6 @@ const isProd = process.env.ELEVENTY_ENV === 'production'
 module.exports = class {
   // Configure Webpack in Here
   async data() {
-    const entryPath = path.join(__dirname, `/${ENTRY_FILE_NAME}`)
     const outputPath = path.resolve(__dirname, '../../memory-fs/js/')
 
     // Transform .js files, run through Babel
@@ -54,7 +53,7 @@ module.exports = class {
 
     // Main Config
     const webpackConfig = {
-      mode: isProd ? 'production' : 'development',
+      mode: 'production',
       entry: ENTRY_POINTS,
       output: { path: outputPath },
       module: { rules },

@@ -20,4 +20,14 @@ module.exports = {
   eleventyGoogleFonts: function () {
     return { plugin: require("eleventy-google-fonts") };
   },
+
+  purgeCss: function () {
+    return {
+      plugin: require("eleventy-plugin-purgecss"),
+      options: {
+        config: "./purgecss.config.js",
+        quiet: false
+      }
+    };
+  },
 };
