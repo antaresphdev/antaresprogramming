@@ -18,10 +18,14 @@
   }
 }
 
+.slideset-contents {
+  scroll-snap-type: y mandatory;
+}
+
 .slide {
-  background-color: hsl(var(--bg-secondary) / 25%);
   display: grid;
   min-height: 80vh;
+  scroll-snap-align: start;
 
   &.center-aligned {
     align-items: center;

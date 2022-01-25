@@ -5,6 +5,7 @@
 const ENTRY_FILE_NAME = 'main.js'
 const ENTRY_POINTS = {
   index: './src/assets/scripts/index.js',
+  'slideset-position': './src/assets/scripts/slideset-position.js'
 }
 
 const fs = require('fs')

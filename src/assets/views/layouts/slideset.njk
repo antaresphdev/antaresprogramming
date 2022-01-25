@@ -1,0 +1,18 @@
+{% extends "layouts/base.njk" %}
+{% block content %}
+  <a href="#main" class="skip-link">Skip to content</a>
+  {% include "components/navigation.njk" %}
+  <main class="slideset-contents" id="main" tabindex="-1">
+    {{ content | safe }}
+  </main>
+{% endblock %}
+
+{% block pageStyles %}
+  #main {
+    display: grid;
+  }
+
+  #main .slide {
+    z-index: 1;
+  }
+{% endblock %}

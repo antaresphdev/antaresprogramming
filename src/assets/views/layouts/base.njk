@@ -42,6 +42,9 @@
 
     {% eleventyGoogleFonts "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Livvic:ital,wght@0,400;0,700;1,400;1,700&display=swap" %}
     <link rel="stylesheet" href="/assets/styles/styles.css">
+    <style>
+    {% block pageStyles %}{% endblock %}
+    </style>
   </head>
   <body>
     <div id="top"></div>
@@ -61,6 +64,11 @@
 
     <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
     <script src="/assets/scripts/index.js"></script>
+    {% if pageScripts %}
+      {% for script in pageScripts %}
+        <script src="/assets/scripts/{{ script }}"></script>
+      {% endfor %}
+    {% endif %}
 
     <script type="module">
       // Import the functions you need from the SDKs you need

@@ -15,6 +15,7 @@
 /* COMPONENTS */
 @import "./components/avatar";
 @import "./components/blobs";
+@import "./components/blurred-decoration";
 @import "./components/button";
 @import "./components/browser-window";
 @import "./components/slides";
@@ -230,4 +231,8 @@ em,
 i {
   font-family: var(--font-serif);
   color: hsl(var(--primary-500));
+}
+
+footer {
+  z-index: 1;
 }

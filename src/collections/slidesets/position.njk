@@ -1,0 +1,130 @@
+---
+title: Position
+cover: /assets/images/slidesets/position/Cover.png
+tags:
+  - css
+pageScripts:
+  - slideset-position.js
+---
+
+<section class="padding--l center-aligned slide blurred-decoration">
+  <div class="stack gap--m" style="z-index: 3">
+    <h1 class="slideset-title">position</h1>
+    <span class="topic">Cascading Stylesheets</span>
+    <p class="fs-5 content-wrapper">Ino-override nito ang normal na layout ng isang element. Sa maraming kaso, binibigyan tayo nito ng ability nito na sabihin sa browser ang exact na posisyon ng isang element gamit ang coordinates.</p>
+  </div>
+</section>
+<section class="slide padding--l center-aligned" style="padding-bottom: var(--space-xxl);">
+  <div class="stack">
+    <h2>Ang <code>position</code> Property</h2>
+    <div class="with-sidebar margin-top--m">
+      <div class="sidebar cluster center-aligned center-justified" style="flex-basis: 45ch;">
+        <div class="margin--auto" style="width: min(65ch, 100%)">
+          {% set viewportContent %}
+          <div class="padding--m">
+            <div class="bordered box blue stack" style="height: 100%; --box-bg: #c4bdf0; --box-border: #4d3c85">
+              <div class="bordered box green stack" style="min-height: 75%; --box-bg: #afeca6; --box-border: #444e4c; display: flex; gap: 1ch; flex-direction: row; flex-wrap: wrap;">
+                <div class="orange-container">
+                  <div data-position="orange" class="bordered box orange stack" style="min-height: 5ch; min-width: 5ch; --box-bg: #fad8c2; --box-border: #f37c42"></div>
+                </div>
+                <div class="bordered box stack" style="margin: 0; height: 5ch; width: 5ch;"></div>
+                <div class="bordered box stack" style="margin: 0; height: 5ch; width: 5ch;"></div>
+                <div class="bordered box stack" style="margin: 0; height: 5ch; width: 5ch;"></div>
+              </div>
+            </div>
+          </div>
+          <style>
+            .orange-container {
+              display: grid;
+              border: 3px dashed #f37c42;
+              background-color: #fad8c2aa;
+              height: 5ch;
+              width: 5ch;
+              --top: auto;
+              --left: auto;
+              --right: auto;
+              --bottom: auto;
+
+              transition: top 300ms, left 300ms, right 300ms, bottom 300ms;
+            }
+
+            .orange-container .orange {
+              margin-top: -3px;
+              margin-left: -3px;
+              transition: top 300ms, left 300ms, right 300ms, bottom 300ms;
+              position: static;
+              top: var(--top, auto);
+              bottom: var(--bottom, auto);
+              left: var(--left, auto);
+              right: var(--right, auto);
+            }
+
+            .orange-container.p-relative .orange {
+              position: relative;
+            }
+
+            .orange-container.p-absolute,
+            .orange-container.p-fixed {
+              position: static;
+              display: contents;
+            }
+
+            .orange-container.p-fixed .orange,
+            .orange-container.p-absolute .orange {
+              position: absolute;
+            }
+
+            .blue.box.p-relative {
+              position: relative;
+            }
+
+          </style>
+          {% endset %}
+          {% set browserStyle = "width: 100%, position: relative;" %}
+          {% set browserClass = "resizable" %}
+          {% set viewportStyle = "position: relative;" %}
+          {% include "components/browser-window.njk" %}
+        </div>
+      </div>
+      <div class="not-sidebar">
+        <div class="content-wrapper margin--auto">
+          <div class="interactive-code-sample">
+            <div id="styles-blue" hidden class="code-sample__inner-wrapper margin-bottom--l">
+              <span><span style="color: hsl(var(--primary-300))">.blue</span> {</span>
+              <span class="indent declaration"><span style="color: hsl(var(--success-300))">position</span>: <span style="color: hsl(var(--secondary-300))">relative</span>;</span>
+              <span>}</span>
+            </div>
+            <span><span style="color: hsl(var(--primary-300))">.orange</span> {</span>
+            <span class="indent declaration"><span style="color: hsl(var(--success-300))">position</span>: <select style="color: hsl(var(--secondary-300));" class="control" id="css-position">
+                <option value="static">static</option>
+                <option value="relative">relative</option>
+                <option value="absolute">absolute</option>
+                <option value="fixed">fixed</option>
+              </select>;</span>
+            <span class="indent declaration" hidden><span style="color: hsl(var(--success-300))">top</span>: <input style="color: hsl(var(--secondary-300));" id="css-top" type="text" class="control" value="auto">;</span>
+            <span class="indent declaration" hidden><span style="color: hsl(var(--success-300))">left</span>: <input style="color: hsl(var(--secondary-300));" id="css-left" type="text" class="control" value="auto">;</span>
+            <span class="indent declaration" hidden><span style="color: hsl(var(--success-300))">bottom</span>: <input style="color: hsl(var(--secondary-300));" id="css-bottom" type="text" class="control" value="auto">;</span>
+            <span class="indent declaration" hidden><span style="color: hsl(var(--success-300))">right</span>: <input style="color: hsl(var(--secondary-300));" id="css-right" type="text" class="control" value="auto">;</span>
+            <span>}</span>
+          </div>
+          <div class="stack margin-top--m" data-show-on-position="static">
+            <h3 class="fs-4">Static positioning</h3>
+            <p>Static ang default value ng position property. Sa kasong ito, walang effect ang top, left, right, at bottom properties.</p>
+          </div>
+          <div class="stack margin-top--m" data-show-on-position="relative" hidden>
+            <h3 class="fs-4">Relative positioning</h3>
+            <p>Kapag relative ang position ng isang element, kasali pa rin ito sa normal flow ng layout, pero puwede nating iusog ang element gamit ang top, left, right, at bottom properties nang hindi naaapektuhan ang ibang elements sa paligid nito.</p>
+          </div>
+          <div class="stack margin-top--m" data-show-on-position="absolute" hidden>
+            <h3 class="fs-4">Absolute positioning</h3>
+            <p>Kapag absolute ang position ng isang element, matatanggal ito sa normal flow ng layout. Gamit ang <code>top</code>, <code>left</code>, <code>right</code>, at <code>bottom</code> properties, puwede natin itong i-position manually na para bang mayroon tayong coordinate system. Naka-contain ang element sa pinakamalapit nitong parent na hindi static ang position. Kung lahat ng parent ng element ay static, nakabase ang position ng element sa viewport (o browser window).</p>
+          </div>
+          <div class="stack margin-top--m" data-show-on-position="fixed" hidden>
+            <h3 class="fs-4">Fixed positioning</h3>
+            <p>Kagaya rin ito ng absolute positioning, pero laging sa viewport (o browser window) nakabase ang position nito.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

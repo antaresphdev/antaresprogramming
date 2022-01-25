@@ -1,0 +1,31 @@
+.blurred-decoration {
+  position: relative;
+  overflow-x: clip;
+
+  &::before,
+  &::after {
+    content: '';
+    aspect-ratio: 1;
+    position: absolute;
+    z-index: 0;
+    border-radius: 100%;
+
+    --blur-amount: 200vw;
+    width: calc(var(--blur-amount) / 2);
+    filter: blur(var(--blur-amount))
+  }
+
+  &::before {
+    background-color: hsl(var(--secondary-500) / 45%);
+    transform: translate(-25%, -25%);
+  }
+
+  &::after {
+    bottom: 0;
+    right: 0;
+    transform: translate(25%, 25%);
+    background-color: hsl(var(--primary-500) / 45%);
+  }
+
+
+}
