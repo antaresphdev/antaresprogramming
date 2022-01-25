@@ -1,6 +1,7 @@
 [
   { "text": "Frontpage", "url": "/" },
   { "text": "Articles", "url": "/articles" },
+  { "text": "Infographics", "url": "/slidesets" },
   { "text": "Courses", "url": "/courses", "hidden": true },
   { "text": "About", "url": "/About", "hidden": true }
 ]
