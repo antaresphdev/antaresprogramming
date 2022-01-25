@@ -8,13 +8,72 @@
 }
 
 .slideset-link {
-  display: contents;
+  display: grid;
+  aspect-ratio: 1;
+  overflow: clip;
+  text-decoration: none;
+  flex-basis: 25ch;
+  border-radius: calc(var(--ideal-radius) * 1.5);
+  @include box-shadow(12, 3, hsl(var(--d-contrast) / 5%));
+
+  img,
+  .slideset-details {
+    grid-row: 1/1;
+    grid-column: 1/1;
+  }
 
   img {
-    border-radius: var(--ideal-radius);
+    place-self: stretch;
     max-height: 25ch;
     overflow: clip;
-    @include box-shadow(12, 3, hsl(var(--d-contrast) / 5%));
+  }
+
+  .slideset-details {
+    @extend .dark;
+    align-self: flex-end;
+    background-color: hsl(var(--bg-primary) / 90%);
+    padding: var(--space);
+    display: grid;
+    position: relative;
+    overflow: clip;
+
+    &::before {
+      content: "";
+      background-image: linear-gradient(hsl(var(--bg-primary) / 75%), hsl(var(--bg-primary) / 75%)), var(--bg-image);
+      margin: calc(-1 * var(--space));
+      background-size: 25ch 25ch;
+      background-position: bottom center;
+    }
+
+    &::before,
+    & > * {
+      grid-row: 1/1;
+      grid-column: 1/1;
+    }
+
+    & > * {
+      z-index: 2;
+    }
+  }
+
+  .slideset-details,
+  .slideset-details::before,
+  .slideset__inner {
+    transition: transform 300ms;
+  }
+
+  .slideset__inner {
+    transition-delay: 100ms;
+  }
+
+  &:not(:hover):not(:focus-visible) {
+    :is(.slideset-details, .slideset__inner) {
+      transform: translateY(110%);
+    }
+
+    .slideset-details::before {
+      transform: translateY(-110%);
+    }
   }
 }
 

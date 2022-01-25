@@ -16,7 +16,7 @@ function copyGCashNumber(textboxID) {
 
   notifications.showStatus({
     title: "Copied!",
-    message: "Nasa clipboard mo na ang GCash number namin.",
+    message: "Nasa clipboard mo na ang kailangan mong info.",
     feathericon: "check-circle",
     type: "success",
   });

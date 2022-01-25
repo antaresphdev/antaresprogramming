@@ -43,14 +43,38 @@
     <footer class="stack padding--l">
       <div class="content-wrapper margin--auto">
         <h2 class="fs-4 text-center">Share</h2>
-        <div class="cluster center-justified padding">
-          <a class="button" href="{{ url }}">
-            <svg class="feathericon" aria-hidden="true">
-              <use href="/assets/images/feather-sprite.svg#link"></svg>
-              <span class="visually-hidden">Direct Link</span>
+        <ul class="margin-top--m cluster margin-inline--auto" style="list-style: none;">
+          <li>
+            <a 
+            href="https://www.facebook.com/sharer/sharer.php?u={{ site.domain }}{{ page.url }}" 
+            target="_blank"
+            rel="noopener"
+            class="padding--l button">
+              {% set feathericon = 'facebook' %}
+              {% include 'components/feathericon.njk' %}
+              <span class="sr-only">Share to Facebook</span>
             </a>
-          </div>
-        </div>
+          </li>
+          <li>
+            <a 
+            href="https://twitter.com/intent/tweet?url={{ site.domain }}{{ page.url }}" 
+            target="_blank"
+            rel="noopener"
+            class="padding--l button">
+              {% set feathericon = 'twitter' %}
+              {% include 'components/feathericon.njk' %}
+              <span class="sr-only">I-tweet ang infographic na ito</span>
+            </a>
+          </li>
+          <li>
+            <button class="padding--l button" data-copy="page-link">
+              {% set feathericon = 'clipboard' %}
+              {% include 'components/feathericon.njk' %}
+              <span class="sr-only">Kopyahin ang link</span>
+            </button>
+            <input type="text" id="page-link" value="{{ site.domain }}{{ page.url }}" class="sr-only" aria-hidden="true">
+          </li>
+        </ul>
       </footer>
     </main>
   {% endblock %}

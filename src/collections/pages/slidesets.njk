@@ -9,12 +9,17 @@ permalink: /slidesets/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber
 ---
 
 <h1 class="margin-inline--xl margin-block--none">Infographics</h1>
-<div class="padding--l" style="width: min(100ch, 100%); margin-inline: auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(25ch, 100%), 1fr))">
+<div class="padding--l" style="width: min(100ch, 100%); margin-inline: auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1ch;">
   {% for slide in collections.slidesets %}
     {% if not slide.data.hidden %}
-      <a href="{{ slide.url }}" class="slideset-link">
+      <a href="{{ slide.url }}" class="slideset-link" style="--bg-image: url('{{ slide.data.blurredCover }}')">
         <img src="{{ slide.data.cover }}" alt="{{ slide.data.title }}" class="slide-cover">
-        <span class="sr-only">{{ slide.data.title }}</span>
+        <div class="slideset-details">
+          <div class="slideset__inner">
+            <strong class="fs-5">{{ slide.data.title }}</strong>
+            <p class="margin--none">{{ slide.data.description }}</p>
+          </div>
+        </div>
       </a>
     {% endif %}
   {% endfor %}
