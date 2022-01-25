@@ -27,11 +27,11 @@ class NotificationManager {
     const notification = document.createElement("div");
     notification.setAttribute("role", "status");
     notification.setAttribute("aria-live", "polite");
-    notification.classList.add("notification", type);
+    notification.classList.add("toast", type);
 
     notification.innerHTML = `<svg class="feathericon"><use href="/assets/images/feather-sprite.svg#${feathericon}"></use></svg>`;
-    notification.innerHTML += `<span class="notification__title">${title}</span>`;
-    notification.innerHTML += `<span class="notification__message">${message}</span>`;
+    notification.innerHTML += `<span class="toast__title">${title}</span>`;
+    notification.innerHTML += `<span class="toast__message">${message}</span>`;
 
     this._element.appendChild(notification);
 

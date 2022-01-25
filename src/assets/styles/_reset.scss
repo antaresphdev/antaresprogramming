@@ -302,6 +302,7 @@ links:
 
 category: navigation
 */
+.no-list,
 nav ul {
   list-style: none;
   padding-left: 0;
@@ -319,6 +320,7 @@ links:
 
 category: navigation
 */
+.no-list li,
 nav li:before {
   content: "\200B";
   position: absolute;

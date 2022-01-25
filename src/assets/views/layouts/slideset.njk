@@ -4,6 +4,43 @@
   {% include "components/navigation.njk" %}
   <main class="slideset-contents" id="main" tabindex="-1">
     {{ content | safe }}
+    <div class="slide padding--l center-aligned">
+      <div class="stack center-justified">
+        <h2 class="text-align--center fs-4">I-share ang infographic na ito</h2>
+        <ul class="margin-top--m cluster margin-inline--auto" style="list-style: none;">
+          <li>
+            <a 
+            href="https://www.facebook.com/sharer/sharer.php?u={{ site.domain }}{{ page.url }}" 
+            target="_blank"
+            rel="noopener"
+            class="padding--l button">
+              {% set feathericon = 'facebook' %}
+              {% include 'components/feathericon.njk' %}
+              <span class="sr-only">Share to Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a 
+            href="https://twitter.com/intent/tweet?url={{ site.domain }}{{ page.url }}" 
+            target="_blank"
+            rel="noopener"
+            class="padding--l button">
+              {% set feathericon = 'twitter' %}
+              {% include 'components/feathericon.njk' %}
+              <span class="sr-only">I-tweet ang infographic na ito</span>
+            </a>
+          </li>
+          <li>
+            <button class="padding--l button" data-copy="page-link">
+              {% set feathericon = 'clipboard' %}
+              {% include 'components/feathericon.njk' %}
+              <span class="sr-only">Kopyahin ang link</span>
+            </button>
+            <input type="text" id="page-link" value="{{ site.domain }}{{ page.url }}" class="sr-only" aria-hidden="true">
+          </li>
+        </ul>
+      </div>
+    </div>
   </main>
 {% endblock %}
 
