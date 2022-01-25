@@ -1,0 +1,31 @@
+<section class="newsletter">
+  <form action="/newsletter/success" style="max-width: 65ch;" method="post" netlify>
+    <input type="hidden" name="form-name" value="form 1">
+    <div class="flex">
+      <div class="form-contents">
+        <h2 class="margin--none fs-2">Mag-subscribe sa aming newsletter</h2>
+        <p class="margin--none">Maging updated sa mga bagong post, videos, at events ng Antares Programming</p>
+
+        <div class="cluster">
+          <div class="input-field" style="flex-grow: 1; flex-basis: 15ch;">
+            <label for="first-name" class="required">First name</label>
+            <input class="form-control" required="" placeholder="Halimbawa: Francis" id="first-name" name="first-name" type="text" inputmode="text" autocomplete="given-name">
+          </div>
+          <div class="input-field" style="flex-grow: 1; flex-basis: 15ch;">
+            <label for="last-name" class="required">Last name</label>
+            <input class="form-control" required="" placeholder="Halimbawa: Rubio" id="last-name" name="last-name" type="text" inputmode="text" autocomplete="family-name">
+          </div>
+        </div>
+
+        <div class="input-field">
+          <label for="email" class="required">Email address</label>
+          <input class="form-control" required="" placeholder="Halimbawa: you@example.com" id="email" name="email" type="email" inputmode="email" autocomplete="email">
+        </div>
+
+        <div class="margin-inline--s">
+          <button class="primary button touch margin-left--auto">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>

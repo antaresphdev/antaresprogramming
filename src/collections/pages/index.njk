@@ -47,31 +47,7 @@ permalink: /
   <a href="/articles/" class="button secondary">Tingnan lahat</a>
 </div>
 
-<section class="newsletter">
-  <form action="/newsletter/success" style="max-width: 65ch;" method="post">
-    <input type="hidden" name="form-name" value="form 1">
-    <div class="flex">
-      <div class="form-contents">
-        <h2 class="margin--none fs-2">Mag-subscribe sa aming newsletter</h2>
-        <p class="margin--none">Maging updated sa mga bagong post, videos, at events ng Antares Programming</p>
-
-        <div class="input-field">
-          <label for="name" class="required">Pangalan</label>
-          <input class="form-control" required="" placeholder="Halimbawa: Francis Rubio" id="name" name="name" type="text" inputmode="text" autocomplete="name">
-        </div>
-
-        <div class="input-field">
-          <label for="email" class="required">Email address</label>
-          <input class="form-control" required="" placeholder="Halimbawa: you@example.com" id="email" name="email" type="email" inputmode="email" autocomplete="email">
-        </div>
-
-        <div class="margin-inline--s">
-          <button class="primary button touch margin-left--auto">Subscribe</button>
-        </div>
-      </div>
-    </div>
-  </form>
-</section>
+{% include "components/newsletter.njk" %}
 
 <section class="padding--l bordered box">
   <h2>Latest infographics</h2>
@@ -87,18 +63,4 @@ permalink: /
   </div>
 </section>
 
-<div class="padding--xxxl margin--auto" style="max-width: 100ch;">
-  <h2>Tumatanggap kami ng donations!</h2>
-
-  <p>Kung nakakatulong sa iyo ang content ng Antares Programming, puwede kang makatulong. Tumatanggap ang Antares Programming ng financial donations via GCash.</p>
-
-  <div class="transparent bordered rounded box padding">
-    <p>Sa GCash app, piliin ang <i>Send Money &gt; Express Send</i>. Ilagay ang number na ito, at ang amount na gusto mong i-donate.</p>
-
-    <label for="gcash-number" class="sr-only">G-cash Number</label>
-    <div class="form-group">
-      <input value="0906 313 7462" class="form-control" type="text" readonly id="gcash-number">
-      <button class="button secondary" data-copy="gcash-number">Copy</button>
-    </div>
-  </div>
-</div>
+{% include "components/donation-banner.njk" %}
