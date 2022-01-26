@@ -30,4 +30,8 @@ module.exports = {
       }
     };
   },
+
+  pluginRss: function () {
+    return { plugin: require("@11ty/eleventy-plugin-rss") }
+  }
 };
