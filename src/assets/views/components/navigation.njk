@@ -10,7 +10,18 @@
     {% for nav in navigation %}
       {% if not nav.hidden %}
         <li class="center-aligned cluster">
-          <a href="{{ nav.url }}" class="button fg--default">{{ nav.text }}</a>
+          <a href="{{ nav.url }}" class="button fg--default">
+            {% if nav.feathericon %}
+            {% set feathericon = nav.feathericon %}
+            {% include "components/feathericon.njk" %}
+            {% endif %}
+            {% if nav.text %}
+            <span>{{ nav.text }}</span>
+            {% endif %}
+            {% if nav.hiddenLabel %}
+            <span class="sr-only">{{ nav.hiddenLabel }}</span>
+            {% endif %}
+          </a>
         </li>
       {% endif %}
     {% endfor %}

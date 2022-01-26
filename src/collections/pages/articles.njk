@@ -55,3 +55,12 @@ permalink: /articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber 
     <a href="{{ pagination.href.next }}" class="button">Next</a>
   {% endif %}
 </div>
+
+<div class="stack padding--l text-align--center" style="--stack-gap: var(--space);align-items: center;">
+  <p class="fs-5">Maging updated sa mga bago naming article!</p>
+  <a href="/feed.xml" class="button primary">
+  {% set feathericon = 'rss' %}
+  {% include "components/feathericon.njk" %}
+  <span>Mag-subscribe sa RSS feed namin</span>
+  </a>
+</div>
