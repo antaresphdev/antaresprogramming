@@ -1,4 +1,5 @@
 const CleanCSS = require('clean-css')
+const format = require('date-fns/format')
 module.exports = {
   markdown: function (value) {
     let markdown = require("markdown-it")({
@@ -42,5 +43,8 @@ module.exports = {
           return "Sunday";
       }
     }
+  },
+  date: function (date, dateFormat) {
+    return format(date, dateFormat)
   }
 };
