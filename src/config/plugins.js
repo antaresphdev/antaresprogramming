@@ -23,6 +23,7 @@ module.exports = {
 
   purgeCss: function () {
     return {
+      isProduction: true,
       plugin: require("eleventy-plugin-purgecss"),
       options: {
         config: "./purgecss.config.js",

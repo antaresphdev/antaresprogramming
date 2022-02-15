@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/manicadamantium/antaresprogramming#readme",
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0-beta.1",
     "@babel/plugin-transform-runtime": "^7.16.5",
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.16.5",
@@ -60,6 +59,7 @@
     "webpack": "^5.65.0"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.3"
   }

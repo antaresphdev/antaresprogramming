@@ -12,17 +12,9 @@ permalink: /
     {% set item = posts[index] %}
     {% set hasImage = loop.index0 % 4 === 0 %}
     <article class="card{{ " has-image" if hasImage }}">
-      {% if hasImage %}
+      {% if hasImage and item.data.image %}
         <a href="{{ item.url }}">
-          {% respimg
-          src = item.data.image,
-          width = "600",
-          height = "337.5",
-          sizes = "300, 600, 900, 1200",
-          alt = item.data.title,
-          class = "card__image",
-          loading = "lazy"
- %}
+          <img src="{{ item.data.image }}" alt="" width="600" height="338">
         </a>
       {% endif %}
       <div class="card__body">
