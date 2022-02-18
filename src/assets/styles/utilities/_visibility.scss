@@ -16,13 +16,13 @@
 }
 
 .hide-on-mobile {
-  @media (max-width: 560px) {
+  @media (max-width: 800px) {
     display: none;
   }
 }
 
 .show-on-mobile {
-  @media (min-width: 561px) {
+  @media (min-width: 801px) {
     display: none;
   }
 }

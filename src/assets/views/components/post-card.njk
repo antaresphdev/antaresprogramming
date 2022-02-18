@@ -1,0 +1,22 @@
+<article class="card{{ " has-image" if hasImage }}">
+  {% if hasImage and item.data.image %}
+    <a class="card__image" href="{{ item.url }}">
+      <img src="{{ item.data.image }}" alt="" width="600" height="338">
+    </a>
+  {% endif %}
+  <div class="card__body">
+    <h2 class="card__title">
+      <a class="card__link" href="{{ item.url }}">{{ item.data.title }}</a>
+    </h2>
+    <p>{{ item.data.description }}</p>
+    <div class="spaced cluster">
+      {% if item.data.author and authors[item.data.author] %}
+        {% set author = authors[item.data.author] %}
+        <a href="/authors/{{ item.data.author }}/" class="fg-theme-color card__link">{{ author.name }}</a>
+      {% else %}
+        <span class="weight-bold">Anonymous</span>
+      {% endif %}
+      <time datetime="{{ item.date | machineReadableDate }}">{{ item.date | humanReadableDate }}</time>
+    </div>
+  </div>
+</article>

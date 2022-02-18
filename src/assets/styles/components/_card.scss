@@ -36,11 +36,20 @@
   @include box-shadow(15, 3, rgb(0 0 0 / 0.05));
 
   border-radius: calc(var(--ideal-radius) * 1.5);
-  flex-grow: 1;
   flex-basis: 55ch;
+  flex-grow: 1;
+  min-height: 35ch;
   object-fit: cover;
   object-position: center;
-  min-height: 35ch;
+  overflow: clip;
+  width: auto;
+
+  img {
+    width: 100%;
+    height: 35ch;
+    aspect-ratio: 0;
+    object-fit: cover;
+  }
 }
 
 .card__body {
