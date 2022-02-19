@@ -26,7 +26,7 @@ permalink: /
     {% for slide in collections.slidesets %}
       {% if not slide.data.hidden %}
         <a href="{{ slide.url }}" class="slideset-link" style="--bg-image: url('{{ slide.data.blurredCover }}')">
-          <img src="{{ slide.data.cover }}" alt="{{ slide.data.title }}" class="slide-cover">
+          <img src="{{ slide.data.cover }}" alt="{{ slide.data.title }}" class="slide-cover" width="500" height="500">
           <div class="slideset-details">
             <div class="slideset__inner">
               <strong class="fs-5">{{ slide.data.title }}</strong>
