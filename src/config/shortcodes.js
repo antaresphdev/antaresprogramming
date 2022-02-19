@@ -24,4 +24,5 @@ function getSrc(file, width) {
 module.exports = {
   srcset: (file, widths) => getSrcset(file, widths),
   src: (file, width) => getSrc(file, width),
+  currentYear: () => new Date().getFullYear()
 }
