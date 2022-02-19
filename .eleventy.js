@@ -15,9 +15,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode('srcset', srcset)
 
   // Get passthroughs from /src/config/passthroughs.js
-  Object.keys(passthroughs).forEach(passthroughName => {
-    eleventyConfig.addPassthroughCopy(passthroughs[passthroughName]())
-  })
+  const passthroughKeys = Object.keys(passthroughs)
+  if (passthroughKeys.length > 0)
+    passthroughKeys.forEach(passthroughName => {
+      eleventyConfig.addPassthroughCopy(passthroughs[passthroughName]())
+    })
 
   // Create collections from /src/config/collections.js
   Object.keys(collections).forEach(collectionName => {
@@ -35,19 +37,19 @@ module.exports = function (eleventyConfig) {
   })
 
   // Add Eleventy plugins from /src/config/plugins.js
-  let productionEnv = process.env.ELEVENTY_ENV === 'production'
+  let environmentIsProduction = process.env.ELEVENTY_ENV === 'production'
   Object.keys(plugins).forEach(pluginName => {
     let { plugin, options, isProduction } = plugins[pluginName]()
-    let shouldAddPlugin =
-      isProduction == null ? true : isProduction && productionEnv
+    let shouldAddPlugin = false
 
-    if (isProduction != null) {
-      shouldAddPlugin = isProduction && productionEnv
+    if (isProduction) {
+      shouldAddPlugin = environmentIsProduction
     } else {
       shouldAddPlugin = true
     }
 
     if (shouldAddPlugin) {
+      console.log('[PLUGIN] Adding plugin', pluginName)
       if (options) {
         eleventyConfig.addPlugin(plugin, options)
       } else {

@@ -4,8 +4,8 @@ description: Gamit ang modern techniques na ito, mas madali nang makagawa ng res
 author: teacherbuknoy
 image: /assets/images/posts/min-max-clamp/min-max-clamp.png
 seo_image:
-  og_image: /assets/images/posts/min-max-clamp/fb_image.png
-  twitter_image: /assets/images/posts/min-max-clamp/t witter_image.png
+  og: /assets/images/posts/min-max-clamp/fb_image.png
+  twitter: /assets/images/posts/min-max-clamp/twitter_image.png
 tags: 
   - html
   - deep dive
