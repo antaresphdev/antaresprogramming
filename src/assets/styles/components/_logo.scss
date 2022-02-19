@@ -37,4 +37,8 @@
   font-size: var(--type-size-5);
   text-transform: lowercase;
   transition: opacity 300ms;
+
+  @media (max-width: 380px) {
+    display: none;
+  }
 }

@@ -1,3 +1,5 @@
+import { removeChildren } from "../utilities/dom";
+
 class NotificationManager {
   /**
    * Creates an instance of NotificationManager.
@@ -7,6 +9,7 @@ class NotificationManager {
    */
   constructor(element) {
     this._element = element;
+    removeChildren(this._element)
   }
 
   /**

@@ -32,27 +32,19 @@
 .form-group {
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
+  border-radius: var(--ideal-radius);
+  overflow: clip;
+  border: 1px solid hsl(var(--primary-100));
 
   & > * {
-    border: 1px solid hsl(var(--fg-non-essential));
+    border: none;
     border-radius: 0;
-  }
-
-  & > *:not(:first-child):not(.button) {
-    border-left: 0;
-  }
-
-  .form-control {
     flex: 1;
   }
 
-  :first-child {
-    border-top-left-radius: var(--ideal-radius);
-    border-bottom-left-radius: var(--ideal-radius);
-  }
-
-  :last-child {
-    border-top-right-radius: var(--ideal-radius);
-    border-bottom-right-radius: var(--ideal-radius);
+  .form-control {
+    flex: 999;
+    max-width: 100%;
   }
 }

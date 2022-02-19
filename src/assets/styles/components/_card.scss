@@ -13,7 +13,7 @@
       border-radius: calc(var(--ideal-radius) * 2.5);
 
       .card__title {
-        font-size: var(--type-size-1);
+        @extend .fs-1;
       }
     }
   }
@@ -60,8 +60,9 @@
 }
 
 .card__title {
+  @extend .fs-3;
+  @extend .responsive;
   margin: 0;
-  font-size: var(--type-size-3);
   line-height: 1;
   @media (prefers-color-scheme: dark) {
     color: inherit;

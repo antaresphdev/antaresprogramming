@@ -8,7 +8,7 @@ pagination:
 permalink: /slidesets/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html
 ---
 
-<h1 class="margin-inline--xl margin-block--none">Infographics</h1>
+<h1 class="margin-inline--xl margin-block--none responsive">Infographics</h1>
 <div class="padding--l" style="width: min(100ch, 100%); margin-inline: auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1ch;">
   {% for slide in collections.slidesets %}
     {% if not slide.data.hidden %}

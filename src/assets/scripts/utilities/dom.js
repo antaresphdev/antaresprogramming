@@ -30,5 +30,16 @@ function createElement(tag) {
   return document.createElement(tag)
 }
 
+/**
+ * Removes all children of an element
+ *
+ * @param {Node} element
+ */
+function removeChildren(element) {
+  if (element.lastChild != null) {
+    element.removeChild(element.lastChild)
+  }
+}
 
-export { $, $$, createElement }
+
+export { $, $$, createElement, removeChildren }

@@ -64,11 +64,22 @@
 
 .popover {
   position: absolute;
-  width: fit-content;
+  width: 20ch;
   right: var(--space-l);
   top: 90%;
   background-color: hsl(var(--bg-primary));
   border-radius: var(--ideal-radius);
   box-shadow: 0 6px 12px hsl(var(--d-contrast) / 25%);
   border: 1px solid hsl(var(--bg-secondary));
+
+  li {
+    display: contents;
+  }
+
+  .button {
+    width: 100%;
+    display: flex;
+    text-align: start;
+    justify-content: start;
+  }
 }

@@ -4,5 +4,5 @@
   { "text": "Infographics", "url": "/slidesets" },
   { "text": "Courses", "url": "/courses", "hidden": true },
   { "text": "About", "url": "/About", "hidden": true },
-  { "feathericon": "rss", "url": "/feed.xml", "hiddenLabel": "RSS Feed" }
+  { "feathericon": "rss", "url": "/feed.xml", "hiddenLabel": "RSS Feed", "mobileLabel": "RSS Feed" }
 ]
