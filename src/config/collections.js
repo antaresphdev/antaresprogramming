@@ -34,4 +34,12 @@ module.exports = {
       "src/collections/slidesets/*.md",
     ]);
   },
+
+  courses: function (collection) {
+    return collection.getFilteredByGlob([
+      "src/collections/courses/**/*.html",
+      "src/collections/courses/**/*.njk",
+      "src/collections/courses/**/*.md",
+    ]);
+  }
 };

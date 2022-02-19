@@ -1,0 +1,4 @@
+{
+  "permalink": "/courses/{{ title | slugify }}/",
+  "layout": "course.njk"
+}
