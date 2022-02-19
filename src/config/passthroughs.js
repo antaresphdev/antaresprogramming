@@ -4,10 +4,7 @@ module.exports = {
   // },
 
   images: function () {
-    let environmentIsProduction = process.env.ELEVENTY_ENV === 'production'
-    environmentIsProduction = process.env.ELEVENTY_ENV === 'development' // remove this in production
-    if (environmentIsProduction) return { 'src/assets/images': 'assets/images' }
-    else return
+    return { 'src/assets/images': 'assets/images' }
   },
 
   fonts: function () {
