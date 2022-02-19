@@ -77,4 +77,18 @@ module.exports = {
       }
     }
   },
+
+  inlineCSS: function () {
+    return {
+      isProduction: true,
+      plugin: require('../plugins/inline-css/index'),
+      options: {
+        input: 'public/',
+        purgeCSS: {
+          config: './purgecss.config.js',
+          quiet: false
+        }
+      }
+    }
+  },
 }
