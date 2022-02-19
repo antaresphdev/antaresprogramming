@@ -18,7 +18,8 @@
           {% set authorDetails = authors[author] %}
           {% if authorDetails %}
             <div class="cluster center-aligned">
-              <img class="avatar" src="{{ authorDetails.photo }}" alt="{{ authorDetails.name }}'s photo" width="64" height="64">
+              {% set imgAlt %}{{ authorDetails.name }}'s photo{% endset %}
+              {% image authorDetails.photo, "avatar", authorDetails.name, "", [64] %}
               <address class="stack" style="font-style: normal;">
                 <a href="/authors/{{ author }}/" class="weight-bold fs-5">{{ authorDetails.name }}</a>
                 <span class="fs-6">{{ authorDetails.bio }}</span>

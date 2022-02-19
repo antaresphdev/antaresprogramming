@@ -1,7 +1,7 @@
 <article class="card{{ " has-image" if hasImage }}">
   {% if hasImage and item.data.image %}
     <a class="card__image" href="{{ item.url }}">
-      <img src="{{ item.data.image }}" alt="" width="600" height="338">
+      {% image item.data.image, "", "" %}
     </a>
   {% endif %}
   <div class="card__body">

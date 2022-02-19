@@ -12,7 +12,8 @@ permalink: /authors/{{ authorKey }}/index.html
 <div class="with-sidebar">
   <div class="sidebar padding--l" style="background: hsl(var(--bg-secondary) / 25%);">
     <div class="text-center" style="position: sticky;top: 7rem;">
-      <img src="{{ author.photo }}" alt="{{ author.name }}" class="circle m-block-end--m m-inline--auto" style="width: min(15ch, 100%);">
+      {% set options = { src: author.photo, classes: "circle", alt: author.name, sizes: "", widths: [260], width: 180, height: 180 } %}
+      <div class="m-block-end--m m-inline--auto" style="width: min(15ch, 100%)">{% img options %}</div>
       <h1 class="fs-4 m--none">{{ author.name }}</h1>
       <p class="m--none" style="font-size: calc(var(--type-size-5) - (var(--type-size-5) * 0.15))">{{ author.bio }}</p>
       <a class="d-block" href="{{ author.url }}">{{ author.url }}</a>

@@ -13,11 +13,12 @@ permalink: /authors/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber +
   {% for key in pagination.items %}
     {% set item = authors[key] %}
     <article class="card text-center gap--none jc--center" style="display: grid;">
-      <img src="{{ item.photo }}" alt="{{ item.name }}" class="circle m-block-end--m m-inline--auto" style="width: min(15ch, 100%);">
+      {% set options = { src: item.photo, classes: "circle", alt: item.name, sizes: "", widths: [260], width: 180, height: 180 } %}
+      <div class="m-block-end--m m-inline--auto" style="width: min(15ch, 100%)">{% img options %}</div>
       <h2 class="margin--none fs-5"><a href="/authors/{{ key }}">{{ item.name }}</a></h2>
       {% if item.bio %}
       <p class="margin--none">{{ item.bio }}</p>
       {% endif %}
     </article>
   {% endfor %}
-</div>
+</div> 
