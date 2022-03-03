@@ -4,8 +4,8 @@
   {% include "components/navigation.njk" %}
   <main class="post bleed" id="main" tabindex="-1">
     <header class="post__header" style="{% if image %}--post-cover: url('{{ image }}'){% endif %}">
-      <h1 class="post__title">{{ title }}</h1>
-      <p class="post__description">{{ description }}</p>
+      <h1 class="post__title">{{ title | safe }}</h1>
+      <p class="post__description">{{ description | safe }}</p>
       {% if tags %}
         <div class="cluster gap padding-block--s end-justified">
           {% for tag in tags %}
