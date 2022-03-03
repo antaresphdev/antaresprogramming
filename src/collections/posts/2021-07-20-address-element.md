@@ -1,6 +1,7 @@
 ---
-title: "<address>: Ang Contact Address Element"
+title: "&lt;address>: Ang Contact Address Element"
 description: Ang HTML tag na ito ang ginagamit para i-mark up ang contact information ng isang tao o organisasyon.
+permalink: /articles/address-ang-contact-address-element/
 image: /assets/images/posts/address-element/cover.png
 seo_image: /assets/images/posts/address-element/seo-cover.png
 author: teacherbuknoy
