@@ -1,6 +1,11 @@
 const Image = require('@11ty/eleventy-img')
 
 function img ({ src, classes, alt, sizes, widths, width, height, formats }) {
+
+  if (process.env.ELEVENTY_ENV === 'development') {
+    return `<img src="${src}" alt="${alt}" class="${classes}" width="${width}" height="${height}">`
+  }
+
   let prefix = 'src'
   let options = {
     widths: widths ? widths : [300, 600, 900, 1200],
