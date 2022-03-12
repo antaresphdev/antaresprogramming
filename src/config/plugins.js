@@ -78,7 +78,7 @@ module.exports = {
     }
   },
 
-  inlineCSS: function () {
+  /* inlineCSS: function () {
     return {
       isProduction: true,
       plugin: require('../plugins/inline-css/index'),
@@ -90,5 +90,5 @@ module.exports = {
         }
       }
     }
-  },
+  }, */
 }
