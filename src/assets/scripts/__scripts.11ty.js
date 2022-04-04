@@ -5,7 +5,9 @@
 const ENTRY_FILE_NAME = 'main.js'
 const ENTRY_POINTS = {
   index: './src/assets/scripts/index.js',
-  'slideset-position': './src/assets/scripts/slideset-position.js'
+  'slideset-position': './src/assets/scripts/slideset-position.js',
+  'controls-css': './src/assets/scripts/controls-css.js',
+  'hide-on-value': './src/assets/scripts/hide-on-value.js'
 }
 
 const fs = require('fs')

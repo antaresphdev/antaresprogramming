@@ -1,7 +1,7 @@
 .cluster {
-  display: flex;
+  display  : flex;
   flex-wrap: wrap;
-  gap: var(--cluster-gap, var(--space-xs));
+  gap      : var(--cluster-gap, var(--space-xs));
 
   &.spaced {
     justify-content: space-between;
@@ -21,6 +21,12 @@
 
   &.scrolling {
     flex-wrap: nowrap;
-    overflow: auto;
+    overflow : auto;
+  }
+
+  &.filled {
+    * {
+      flex-grow: 1;
+    }
   }
 }
