@@ -65,19 +65,58 @@ date: 2022-04-05
               data-css-property="object-fit"
               data-controls-css
               data-hide-on-value>
-              <option value="fill">fill</option>
-              <option value="cover">cover</option>
-              <option value="contain">contain</option>
-              <option value="none">none</option>
-              <option value="scale-down">scale-down</option>
-            </select>;
-          </span>
+            <option value="fill">fill</option>
+            <option value="cover">cover</option>
+            <option value="contain">contain</option>
+            <option value="none">none</option>
+            <option value="scale-down">scale-down</option>
+          </select>;
+            </span>
       </span>
+      <div class="indent declaration">
+        <label for="width" style="color: hsl(var(--success-300))">width</label>:
+            <input type="text" id="width" class="control" value="640px"
+              data-css-selector="#parent"
+              data-css-property="width"
+              data-controls-css>
+      </div>
+      <div class="indent declaration">
+        <label for="height" style="color: hsl(var(--success-300))">height</label>:
+            <input type="text" id="height" class="control" value="961px"
+              data-css-selector="#parent"
+              data-css-property="height"
+              data-controls-css>
+      </div>
       <span>}</span>
     </div>
-    <div class="margin-inline--auto" style="resize: horizontal; border: 2px dashed; overflow: hidden; position: relative; width: auto; height: 35ch; aspect-ratio: 640/961;">
+    <div id="parent" class="margin-inline--auto" style="resize: both; border: 2px dashed; overflow: hidden; position: relative; width: auto; height: 35ch; aspect-ratio: 640/961;">
       <img style="width: 100%; height: 100%; position: absolute; top: 0; left: 0;" src="/assets/images/slidesets/object-fit/cat.jpg" alt="Cat" id="img" width="640" height="961">
     </div>
+    <script>
+      const parent = document.getElementById('parent')
+      const txtHeight = document.getElementById('height')
+      const txtWidth = document.getElementById('width')
+
+      const observer = new ResizeObserver(entries => {
+        const entry = entries.find(entry => entry.target.matches('#parent'))
+        const {blockSize: height, inlineSize: width} = entry.borderBoxSize[0]
+
+        console.log(entry.borderBoxSize[0])
+
+//        observer.unobserve(entry.target)
+        console.log(`height: ${height.toFixed()}`)
+        console.log(`width: ${width.toFixed()}`)
+        if(txtHeight.matches(':not(:focus-visible)'))
+          txtHeight.value = `${height.toFixed()}px`
+        
+        if(txtWidth.matches(':not(:focus-visible)'))
+          txtWidth.value = `${width.toFixed()}px`
+
+        //observer.observe(entry.target)
+      })
+
+      observer.observe(parent)
+    </script>
   </div>
 </div>
 </section>
