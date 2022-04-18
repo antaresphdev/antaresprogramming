@@ -50,7 +50,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    {% eleventyGoogleFonts "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Livvic:ital,wght@0,400;0,700;1,400;1,700&display=swap" %}
+    {% eleventyGoogleFonts "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" %}
     <link rel="stylesheet" href="/assets/styles/styles.css">
     <style>
       {% block pageStyles %}
@@ -62,32 +62,6 @@
     {% block content %}
       {{ content | safe }}
     {% endblock %}
-
-    {% include "components/footer.njk" %}
-
-    <a href="#top" class="button circle primary fixed" style="bottom: var(--space-l);z-index: 999;right: var(--space-l);width: 5ch;align-items: center;">
-      <svg class="feathericon" aria-hidden="true">
-        <use href="/assets/images/feather-sprite.svg#chevron-up"></use>
-      </svg>
-      <span class="sr-only">Back to top</span>
-    </a>
-    <div class="notification-container" aria-live="polite" role="log" data-notification-container>
-      <div class="toast success" hidden="true">
-        <svg class="feathericon">
-          <use href="/assets/images/feather-sprite.svg#check-circle"></use>
-        </svg>
-        <span class="toast__title">This is a toast</span>
-        <span class="toast__message">We're just trying to display a toast. That's all.</span>
-      </div>
-    </div>
-
-    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-    <script src="/assets/scripts/index.js"></script>
-    {% if pageScripts %}
-      {% for script in pageScripts %}
-        <script src="/assets/scripts/{{ script }}"></script>
-      {% endfor %}
-    {% endif %}
 
     <script type="module">
       // Import the functions you need from the SDKs you need

@@ -1,4 +1,0 @@
-{
-  "permalink": "/slidesets/{{ title | slugify }}/index.html",
-  "layout": "slideset.njk"
-}

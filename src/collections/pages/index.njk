@@ -1,43 +1,29 @@
 ---
-title: Antares Programming
-description: For Filipino web developers
+title: Zirconium by Antares Programming
+description: The official component library by Antares Programming
 permalink: /
 ---
 
-<h1 class="sr-only">{{ title }}</h1>
+<h1>{{ title | safe }}</h1>
+<p>{{ description | safe }}</p>
 
-<section class="padding--l cards-grid">
-  {% set posts = collections.posts | reverse %}
-  {% for index in range(0, 4) %}
-    {% set item = posts[index] %}
-    {% set hasImage = loop.index0 % 4 === 0 %}
-    {% include 'components/post-card.njk' %}
+<h2>Basics</h2>
+<ol>
+  {% for item in collections.basics %}
+    <li><a href="{{ item.url }}">{{ item.data.title | safe }}</a></li>
   {% endfor %}
-</section>
-<div class="cluster center-justified padding">
-  <a href="/articles/" class="button secondary">Tingnan lahat</a>
-</div>
+</ol>
 
-{% include "components/newsletter.njk" %}
+<h2>Tokens</h2>
+<ol>
+  {% for item in collections.tokens %}
+    <li><a href="{{ item.url }}">{{ item.data.title | safe }}</a></li>
+  {% endfor %}
+</ol>
 
-<section class="padding--l bordered box">
-  <h2>Latest infographics</h2>
-  <div class="padding--l gap--l horizontal scroller" style="justify-content: center">
-    {% for slide in collections.slidesets %}
-      {% if not slide.data.hidden %}
-        <a href="{{ slide.url }}" class="slideset-link" style="--bg-image: url('{{ slide.data.blurredCover }}')">
-          {% set options = { src: slide.data.cover, classes: "slide-cover", alt: slide.data.title, sizes: "", widths: [300], width: 250, height: 250 } %}
-          {% img options %}
-          <div class="slideset-details">
-            <div class="slideset__inner">
-              <strong class="fs-5">{{ slide.data.title }}</strong>
-              <p class="margin--none">{{ slide.data.description }}</p>
-            </div>
-          </div>
-        </a>
-      {% endif %}
-    {% endfor %}
-  </div>
-</section>
-
-{% include "components/donation-banner.njk" %}
+<h2>Components</h2>
+<ol>
+  {% for item in collections.components %}
+    <li><a href="{{ item.url }}">{{ item.data.title | safe }}</a></li>
+  {% endfor %}
+</ol>

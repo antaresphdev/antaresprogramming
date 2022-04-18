@@ -11,35 +11,27 @@ module.exports = {
     ]);
   },
 
-  announcements: function (collection) {
+  basics: function (collection) {
     return collection.getFilteredByGlob([
-      "src/collections/announcements/*.html",
-      "src/collections/announcements/*.njk",
-      "src/collections/announcements/*.md",
+      "src/collections/basics/*.html",
+      "src/collections/basics/*.njk",
+      "src/collections/basics/*.md",
     ]);
   },
 
-  posts: function (collection) {
+  tokens: function (collection) {
     return collection.getFilteredByGlob([
-      "src/collections/posts/*.html",
-      "src/collections/posts/*.njk",
-      "src/collections/posts/*.md",
+      "src/collections/tokens/*.html",
+      "src/collections/tokens/*.njk",
+      "src/collections/tokens/*.md",
     ]);
   },
 
-  slidesets: function (collection) {
+  components: function (collection) {
     return collection.getFilteredByGlob([
-      "src/collections/slidesets/*.html",
-      "src/collections/slidesets/*.njk",
-      "src/collections/slidesets/*.md",
-    ]);
-  },
-
-  courses: function (collection) {
-    return collection.getFilteredByGlob([
-      "src/collections/courses/**/*.html",
-      "src/collections/courses/**/*.njk",
-      "src/collections/courses/**/*.md",
+      "src/collections/components/*.html",
+      "src/collections/components/*.njk",
+      "src/collections/components/*.md",
     ]);
   }
 };
