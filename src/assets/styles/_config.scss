@@ -1,103 +1,215 @@
-/* COLORS */
+/* RAW COLORS */
 :root {
-  --d-contrast: 0 0% 0%;
-  --d-default: 0 0% 20%;
-  --d-subtle: 0 0% 50%;
-  --d-non-essential: 0 0% 75%;
+  --white-1: 0 0% 98%;
+  --white-2: 0 0% 95%;
+  --white-3: 0 0% 85%;
+  --white-4: 0 0% 80%;
+  --white-5: 0 0% 75%;
 
-  --l-contrast: 0 0% 100%;
-  --l-default: 0 0% 80%;
-  --l-subtle: 0 0% 50%;
-  --l-non-essential: 0 0% 25%;
+  --black-1: 0 0% 80%;
+  --black-2: 0 0% 55%;
+  --black-3: 0 0% 30%;
+  --black-4: 0 0% 15%;
+  --black-5: 0 0% 7%;
 
-  --primary-100: 342 98% 80%;
-  --primary-300: 337 87% 68%;
-  --primary-500: 335 71% 56%;
-  --primary-700: 338 68% 44%;
-  --primary-900: 341 82% 31%;
+  --pink-1: 335 80% 85%;
+  --pink-2: 335 80% 65%;
+  --pink-3: 335 80% 55%;
+  --pink-4: 335 80% 35%;
+  --pink-5: 335 80% 15%;
 
-  --secondary-100: 53 100% 79%;
-  --secondary-300: 48 100% 71%;
-  --secondary-500: 43 94% 61%;
-  --secondary-700: 38 82% 46%;
-  --secondary-900: 33 100% 34%;
+  --yellow-1: 36 80% 85%;
+  --yellow-2: 36 80% 65%;
+  --yellow-3: 36 80% 55%;
+  --yellow-4: 36 80% 35%;
+  --yellow-5: 36 80% 15%;
 
-  --error-100: 5 100% 75%;
-  --error-300: 0 81% 63%;
-  --error-500: 357 68% 46%;
-  --error-700: 1 94% 33%;
-  --error-900: 0 100% 24%;
+  --green-1: 116 50% 85%;
+  --green-2: 116 50% 70%;
+  --green-3: 116 50% 50%;
+  --green-4: 116 50% 30%;
+  --green-5: 116 50% 10%;
 
-  --success-100: 82 100% 75%;
-  --success-300: 87 66% 58%;
-  --success-500: 92 68% 43%;
-  --success-700: 97 95% 29%;
-  --success-900: 102 100% 21%;
+  --red-1: 350 70% 90%;
+  --red-2: 350 70% 70%;
+  --red-3: 350 70% 50%;
+  --red-4: 350 70% 30%;
+  --red-5: 350 70% 10%;
 
-  --warning-100: 32 100% 75%;
-  --warning-300: 27 100% 66%;
-  --warning-500: 22 89% 56%;
-  --warning-700: 17 98% 40%;
-  --warning-900: 12 100% 33%;
-
-  @media (prefers-color-scheme: dark) {
-    --error-900: 5 100% 75%;
-    --error-700: 0 81% 63%;
-    --error-500: 357 68% 46%;
-    --error-300: 1 94% 33%;
-    --error-100: 0 100% 24%;
-
-    --success-900: 82 100% 75%;
-    --success-700: 87 66% 58%;
-    --success-500: 92 68% 43%;
-    --success-300: 97 95% 29%;
-    --success-100: 102 100% 21%;
-
-    --warning-900: 32 100% 75%;
-    --warning-700: 27 100% 66%;
-    --warning-500: 22 89% 56%;
-    --warning-300: 17 98% 40%;
-    --warning-100: 12 100% 33%;
-  }
+  --orange-1: 20 70% 90%;
+  --orange-2: 20 70% 70%;
+  --orange-3: 20 70% 50%;
+  --orange-4: 20 70% 30%;
+  --orange-5: 20 70% 10%;
 }
 
-/* FONTS */
+/* SEMANTIC COLORS */
+/* BG AND FG COLORS */
 :root {
-  --font-display: "Livvic", sans-serif;
-  --font-sans: "DM Sans", sans-serif;
-  --font-serif: "Livvic", serif;
-  --font-mono: "Recursive", monospace;
-  --font-body: var(--font-sans);
+  --l-bg-1: var(--white-1);
+  --l-bg-2: var(--white-2);
+  --l-bg-3: var(--white-3);
+  --l-bg-4: var(--white-4);
+  --l-bg-5: var(--white-5);
 
-  --type-size: 1rem;
-  --type-size-1: 4.209rem;
-  --type-size-2: 3.157rem;
-  --type-size-3: 2.369rem;
-  --type-size-4: 1.777rem;
-  --type-size-5: 1.333rem;
-  --type-size-6: 1rem;
-  --type-size-7: 0.75rem;
-  --type-size-8: 0.563rem;
-  --type-size-9: 0.422rem;
+  --d-bg-1: var(--black-5);
+  --d-bg-2: var(--black-4);
+  --d-bg-3: var(--black-3);
+  --d-bg-4: var(--black-2);
+  --d-bg-5: var(--black-1);
 
-  --content-width: 65ch;
+  --d-fg-1: var(--white-1);
+  --d-fg-2: var(--white-2);
+  --d-fg-3: var(--white-3);
+  --d-fg-4: var(--white-4);
+  --d-fg-5: var(--white-5);
+
+  --l-fg-1: var(--black-5);
+  --l-fg-2: var(--black-4);
+  --l-fg-3: var(--black-3);
+  --l-fg-4: var(--black-2);
+  --l-fg-5: var(--black-1);
 }
 
-/* SPACES */
+/* PRIMARY COLORS */
 :root {
-  --space-none: 0;
-  --space-auto: auto;
-  --space-xxxl: 4rem;
-  --space-xxl: 3rem;
-  --space-xl: 2rem;
-  --space-l: 1.5rem;
-  --space: 1rem;
-  --space-s: 0.75rem;
-  --space-xs: 0.5rem;
-  --space-xxs: 0.25rem;
-  --space-xxxs: 0.1rem;
+  --l-primary-1: var(--pink-1);
+  --l-primary-2: var(--pink-2);
+  --l-primary-3: var(--pink-3);
+  --l-primary-4: var(--pink-4);
+  --l-primary-5: var(--pink-5);
 
-  --space-m: var(--space); /* ALIAS */
+  --d-primary-1: var(--pink-5);
+  --d-primary-2: var(--pink-3);
+  --d-primary-3: var(--pink-3);
+  --d-primary-4: var(--pink-2);
+  --d-primary-5: var(--pink-1);
+}
 
-  --ideal-radius: 6px;
+/* SECONDARY COLORS */
+:root {
+  --l-secondary-1: var(--yellow-1);
+  --l-secondary-2: var(--yellow-2);
+  --l-secondary-3: var(--yellow-3);
+  --l-secondary-4: var(--yellow-4);
+  --l-secondary-5: var(--yellow-5);
+
+  --d-secondary-1: var(--yellow-5);
+  --d-secondary-2: var(--yellow-3);
+  --d-secondary-3: var(--yellow-3);
+  --d-secondary-4: var(--yellow-2);
+  --d-secondary-5: var(--yellow-1);
+}
+
+/* SUCCESS COLORS */
+:root {
+  --l-success-1: var(--green-1);
+  --l-success-2: var(--green-2);
+  --l-success-3: var(--green-3);
+  --l-success-4: var(--green-4);
+  --l-success-5: var(--green-5);
+
+  --d-success-1: var(--green-5);
+  --d-success-2: var(--green-3);
+  --d-success-3: var(--green-3);
+  --d-success-4: var(--green-2);
+  --d-success-5: var(--green-1);
+}
+
+/* WARNING COLORS */
+:root {
+  --l-warning-1: var(--orange-1);
+  --l-warning-2: var(--orange-2);
+  --l-warning-3: var(--orange-3);
+  --l-warning-4: var(--orange-4);
+  --l-warning-5: var(--orange-5);
+
+  --d-warning-1: var(--orange-5);
+  --d-warning-2: var(--orange-3);
+  --d-warning-3: var(--orange-3);
+  --d-warning-4: var(--orange-2);
+  --d-warning-5: var(--orange-1);
+}
+
+/* DANGER COLORS */
+:root {
+  --l-danger-1: var(--red-1);
+  --l-danger-2: var(--red-2);
+  --l-danger-3: var(--red-3);
+  --l-danger-4: var(--red-4);
+  --l-danger-5: var(--red-5);
+
+  --d-danger-1: var(--red-5);
+  --d-danger-2: var(--red-3);
+  --d-danger-3: var(--red-3);
+  --d-danger-4: var(--red-2);
+  --d-danger-5: var(--red-1);
+}
+
+/* LIGHT MODE COLORS */
+:root {
+  --bg-1: var(--l-bg-1);
+  --bg-2: var(--l-bg-2);
+  --bg-3: var(--l-bg-3);
+  --bg-4: var(--l-bg-4);
+  --bg-5: var(--l-bg-5);
+
+  --fg-1: var(--l-fg-1);
+  --fg-2: var(--l-fg-2);
+  --fg-3: var(--l-fg-3);
+  --fg-4: var(--l-fg-4);
+  --fg-5: var(--l-fg-5);
+
+  --primary-1: var(--l-primary-1);
+  --primary-2: var(--l-primary-2);
+  --primary-3: var(--l-primary-3);
+  --primary-4: var(--l-primary-4);
+  --primary-5: var(--l-primary-5);
+
+  --secondary-1: var(--l-secondary-1);
+  --secondary-2: var(--l-secondary-2);
+  --secondary-3: var(--l-secondary-3);
+  --secondary-4: var(--l-secondary-4);
+  --secondary-5: var(--l-secondary-5);
+
+  --success-1: var(--l-success-1);
+  --success-2: var(--l-success-2);
+  --success-3: var(--l-success-3);
+  --success-4: var(--l-success-4);
+  --success-5: var(--l-success-5);
+
+  --warning-1: var(--l-warning-1);
+  --warning-2: var(--l-warning-2);
+  --warning-3: var(--l-warning-3);
+  --warning-4: var(--l-warning-4);
+  --warning-5: var(--l-warning-5);
+
+  --danger-1: var(--l-danger-1);
+  --danger-2: var(--l-danger-2);
+  --danger-3: var(--l-danger-3);
+  --danger-4: var(--l-danger-4);
+  --danger-5: var(--l-danger-5);
+}
+
+/* SIZES */
+:root {
+  --space     : 1rem;
+  --space-xxxl: calc(var(--space) * 3);
+  --space-xxl : calc(var(--space) * 2.5);
+  --space-xl  : calc(var(--space) * 2);
+  --space-l   : calc(var(--space) * 1.5);
+  --space-m   : var(--space);
+  --space-s   : calc(var(--space) * 0.75);
+  --space-xs  : calc(var(--space) * 0.5);
+  --space-xxs : calc(var(--space) * 0.25);
+  --space-xxxs: calc(var(--space) * 0.1);
+}
+
+/* TYPEFACES */
+:root {
+  --font-display: "DM Sans", sans-serif;
+  --font-sans   : "DM Sans", sans-serif;
+  --font-serif  : "DM Sans", serif;
+  --font-mono   : "Recursive", monospace;
+  --font-body   : var(--font-sans);
 }

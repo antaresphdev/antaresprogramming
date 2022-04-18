@@ -5,15 +5,15 @@
   outline: 0.125rem solid transparent;
   outline-offset: -0.125rem;
 
-  --box-fg: hsl(var(--fg-default));
-  --box-bg: hsl(var(--bg-secondary) / 25%);
+  --box-fg: hsl(var(--fg-2));
+  --box-bg: hsl(var(--bg-2) / 25%);
 
   * {
     color: inherit;
   }
 
   &.transparent {
-    --box-bg: hsl(var(--bg-secondary) / 0%);
+    --box-bg: hsl(var(--bg-2) / 0%);
   }
 
   &.inverted {
@@ -22,7 +22,7 @@
   }
 
   &.bordered {
-    border: 1px solid var(--box-border, hsl(var(--bg-secondary)));
+    border: 1px solid var(--box-border, hsl(var(--bg-2)));
   }
 
   &.rounded {

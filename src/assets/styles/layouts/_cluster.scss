@@ -3,6 +3,10 @@
   flex-wrap: wrap;
   gap      : var(--cluster-gap, var(--space-xs));
 
+  .box + .box {
+    margin: 0;
+  }
+
   &.spaced {
     justify-content: space-between;
   }

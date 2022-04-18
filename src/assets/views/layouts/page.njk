@@ -2,6 +2,7 @@
 {% block content %}
   <a href="#main" class="skip-link">Skip to content</a>
   <main id="main" tabindex="-1">
+    <h1>{{ title | safe }}</h1>
     {{ content | safe }}
   </main>
 {% endblock %}

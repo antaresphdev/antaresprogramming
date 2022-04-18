@@ -1,43 +1,167 @@
-$bg-colors: primary, secondary, accent, exception;
-
 .bg {
-  @each $color in $bg-colors {
-    &--#{$color} {
-      background-color: hsl(var(--bg-#{$color}));
+  @for $i from 1 through 5 {
+    &-#{$i} {
+      background-color: hsl(var(--bg-#{$i}));
     }
 
-    @media (prefers-color-scheme: dark) {
-      &-d--#{$color} {
-        background-color: hsl(var(--bg-#{$color}));
-      }
+    &-primary-#{$i} {
+      background-color: hsl(var(--primary-#{$i}));
     }
 
-    @media (prefers-color-scheme: light) {
-      &-l--#{$color} {
-        background-color: hsl(var(--bg-#{$color}));
-      }
+    &-secondary-#{$i} {
+      background-color: hsl(var(--secondary-#{$i}));
+    }
+
+    &-success-#{$i} {
+      background-color: hsl(var(--success-#{$i}));
+    }
+
+    &-warning-#{$i} {
+      background-color: hsl(var(--warning-#{$i}));
+    }
+
+    &-danger-#{$i} {
+      background-color: hsl(var(--danger-#{$i}));
     }
   }
 }
 
-$fg-colors: contrast, default, subtle, non-essential;
+.l-bg {
+  @for $i from 1 through 5 {
+    &-#{$i} {
+      background-color: hsl(var(--l-bg-#{$i}));
+    }
+
+    &-primary-#{$i} {
+      background-color: hsl(var(--l-primary-#{$i}));
+    }
+
+    &-secondary-#{$i} {
+      background-color: hsl(var(--l-secondary-#{$i}));
+    }
+
+    &-success-#{$i} {
+      background-color: hsl(var(--l-success-#{$i}));
+    }
+
+    &-warning-#{$i} {
+      background-color: hsl(var(--l-warning-#{$i}));
+    }
+
+    &-danger-#{$i} {
+      background-color: hsl(var(--l-danger-#{$i}));
+    }
+  }
+}
+
+.d-bg {
+  @for $i from 1 through 5 {
+    &-#{$i} {
+      background-color: hsl(var(--d-bg-#{$i}));
+    }
+
+    &-primary-#{$i} {
+      background-color: hsl(var(--d-primary-#{$i}));
+    }
+
+    &-secondary-#{$i} {
+      background-color: hsl(var(--d-secondary-#{$i}));
+    }
+
+    &-success-#{$i} {
+      background-color: hsl(var(--d-success-#{$i}));
+    }
+
+    &-warning-#{$i} {
+      background-color: hsl(var(--d-warning-#{$i}));
+    }
+
+    &-danger-#{$i} {
+      background-color: hsl(var(--d-danger-#{$i}));
+    }
+  }
+}
 
 .fg {
-  @each $color in $fg-colors {
-    &--#{$color} {
-      color: hsl(var(--fg-#{$color}));
+  @for $i from 1 through 5 {
+    &-#{$i} {
+      color: hsl(var(--fg-#{$i}));
     }
 
-    @media (prefers-color-scheme: dark) {
-      &-d--#{$color} {
-        color: hsl(var(--fg-#{$color}));
-      }
+    &-primary-#{$i} {
+      color: hsl(var(--primary-#{$i}));
     }
 
-    @media (prefers-color-scheme: light) {
-      &-l--#{$color} {
-        color: hsl(var(--fg-#{$color}));
-      }
+    &-secondary-#{$i} {
+      color: hsl(var(--secondary-#{$i}));
+    }
+
+    &-success-#{$i} {
+      color: hsl(var(--success-#{$i}));
+    }
+
+    &-warning-#{$i} {
+      color: hsl(var(--warning-#{$i}));
+    }
+
+    &-danger-#{$i} {
+      color: hsl(var(--danger-#{$i}));
+    }
+  }
+}
+
+.l-fg {
+  @for $i from 1 through 5 {
+    &-#{$i} {
+      color: hsl(var(--l-fg-#{$i}));
+    }
+
+    &-primary-#{$i} {
+      color: hsl(var(--l-primary-#{$i}));
+    }
+
+    &-secondary-#{$i} {
+      color: hsl(var(--l-secondary-#{$i}));
+    }
+
+    &-success-#{$i} {
+      color: hsl(var(--l-success-#{$i}));
+    }
+
+    &-warning-#{$i} {
+      color: hsl(var(--l-warning-#{$i}));
+    }
+
+    &-danger-#{$i} {
+      color: hsl(var(--l-danger-#{$i}));
+    }
+  }
+}
+
+.d-fg {
+  @for $i from 1 through 5 {
+    &-#{$i} {
+      color: hsl(var(--d-fg-#{$i}));
+    }
+
+    &-primary-#{$i} {
+      color: hsl(var(--d-primary-#{$i}));
+    }
+
+    &-secondary-#{$i} {
+      color: hsl(var(--d-secondary-#{$i}));
+    }
+
+    &-success-#{$i} {
+      color: hsl(var(--d-success-#{$i}));
+    }
+
+    &-warning-#{$i} {
+      color: hsl(var(--d-warning-#{$i}));
+    }
+
+    &-danger-#{$i} {
+      color: hsl(var(--d-danger-#{$i}));
     }
   }
 }
