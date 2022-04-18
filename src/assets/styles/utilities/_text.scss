@@ -41,22 +41,19 @@
 /* #endregion */
 
 /* #region FONT SIZES */
-@for $size from 1 through 9 {
-  .fs-#{$size} {
-    font-size: var(--type-size-#{$size});
-
-    @if $size > 7 {
-      line-height: 1;
-    }
+.fs {
+  @for $size from 1 through 8 {
+    font-size: var(--font-size-#{$size});
   }
 
-  .fs-#{$size}.responsive {
-    font-size: clamp(
-      var(--type-size-#{$size + 1}),
-      #{10 - $size}vw,
-      var(--type-size-#{$size})
-    );
+  .fs-0 {
+    font-size: var(--font-size-0);
   }
+
+  .fs-00 {
+    font-size: var(--font-size-00);
+  }
+  
 }
 /* #endregion */
 

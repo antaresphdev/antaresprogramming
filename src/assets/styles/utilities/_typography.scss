@@ -1,0 +1,49 @@
+/* #region FONT SIZES */
+.fs, .font-size {
+  $font-sizes: "00", 0, 1, 2, 3, 4, 5, 6, 7;
+
+  @each $fs in $font-sizes {
+    &-#{$fs} {
+      font-size: var(--font-size-#{$fs});
+    }
+  }
+}
+
+/* #endregion */
+
+/* #region LINE HEIGHT */
+.lh, .line-height {
+  $line-heights: "00", 0, 1, 2, 3, 4, 5;
+
+  @each $weight in $line-heights {
+    &-#{$weight} {
+      line-height: var(--font-lineheight-#{$weight});
+    }
+  }
+}
+
+/* #endregion */
+
+/* #region LINE HEIGHT */
+.weight {
+  $weights: 100, 200, 300, 400, 500, 600, 700, 800, 900, bold, bolder, normal, lighter;
+
+  @each $weight in $weights {
+    &-#{$weight} {
+      font-weight: $weight;
+    }
+  }
+}
+
+/* #endregion */
+
+/* #region LINE HEIGHT */
+.ls, .letter-spacing {
+  @for $i from 0 through 7 {
+    &-#{$i} {
+      letter-spacing: var(--font-letterspacing-#{$i});
+    }
+  }
+}
+
+/* #endregion */
