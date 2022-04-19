@@ -75,3 +75,18 @@ title: Button
   {% include "components/feathericon.njk" %}
 </a>
 ```
+
+## Icon Buttons
+<a href="#!" class="button icon-only">
+  <span class="sr-only">Link styled as a button</span>
+  {% set feathericon = "download-cloud" %}
+  {% include "components/feathericon.njk" %}
+</a>
+
+```html
+<a href="#!" class="button icon-only">
+  <span class="sr-only">Link styled as a button</span>
+  {% set feathericon = "download-cloud" %}
+  {% include "components/feathericon.njk" %}
+</a>
+```

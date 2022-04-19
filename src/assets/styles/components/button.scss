@@ -84,4 +84,8 @@
       padding-right: var(--space-s);
     }
   }
+
+  &.icon-only {
+    padding: var(--space);
+  }
 }
