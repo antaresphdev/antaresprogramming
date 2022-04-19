@@ -254,3 +254,13 @@
   --font-letterspacing-6: .750em;
   --font-letterspacing-7: 1em;
 }
+
+/* RADIUS */
+:root {
+  $radius-factor: 2;
+
+  @for $i from 1 through 6 {
+    $radius       : math.pow($radius-factor, $i) * 2;
+    --radius-#{$i}: #{$radius}px;
+  }
+}

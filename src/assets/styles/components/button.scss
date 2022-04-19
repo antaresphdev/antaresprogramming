@@ -1,0 +1,87 @@
+.button {
+  background-color: hsl(var(--bg-2));
+  border          : none;
+  border-radius   : var(--radius-2);
+  color           : hsl(var(--primary-4));
+  cursor          : pointer;
+  display         : flex;
+  font-size       : 1rem;
+  font-weight     : 700;
+  outline         : 3px solid hsl(var(--primary-3) / 0);
+  outline-offset  : -3px;
+  padding-block   : var(--space-xs);
+  padding-inline  : var(--space-l);
+  text-decoration : none;
+  transition      : background-color 200ms, outline 200ms, outline-offset 200ms;
+  width           : -moz-fit-content;
+  width           : fit-content;
+
+  &:hover {
+    background-color: hsl(var(--white-3));
+  }
+
+  &:focus-visible {
+    outline-color : hsl(var(--primary-3));
+    outline-offset: 0;
+  }
+}
+
+.button.primary {
+  background-color: hsl(var(--primary-3));
+  box-shadow      : 0 4px 12px hsl(var(--primary-4) / 25%);
+  color           : hsl(var(--white-1));
+  outline-color   : hsl(var(--primary-1) / 0);
+
+  &:hover {
+    background-color: hsl(var(--primary-4));
+  }
+
+  &:focus-visible {
+    outline-color: hsl(var(--primary-4));
+  }
+}
+
+.button.secondary {
+  background-color: hsl(var(--primary-1));
+  color           : hsl(var(--primary-5));
+
+  &:hover {
+    background-color: hsl(var(--primary-2));
+  }
+}
+
+.button {
+  gap            : var(--space-xs);
+  align-items    : center;
+  justify-content: center;
+  text-align     : center;
+
+  * {
+    margin: 0;
+  }
+
+  .feathericon,
+  .icon,
+  .feather {
+    aspect-ratio: 1;
+    height      : 1rem;
+  }
+
+  &.has-icon {
+    &--start {
+      padding-inline-start: var(--space-s);
+    }
+
+    &--end {
+      padding-inline-end: var(--space-s);
+    }
+
+    &--left {
+      padding-left: var(--space-s);
+    }
+
+    &--right {
+      padding-right: var(--space-s);
+    }
+  }
+}
