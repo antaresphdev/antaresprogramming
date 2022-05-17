@@ -7,7 +7,7 @@ seo_image:
   og: /assets/images/posts/min-max-clamp/fb_image.png
   twitter: /assets/images/posts/min-max-clamp/twitter_image.png
 tags: 
-  - html
+  - css
   - deep dive
 ---
 
