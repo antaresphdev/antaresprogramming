@@ -6,6 +6,8 @@ permalink: /
 
 <h1 class="sr-only">{{ title }}</h1>
 
+{% include "components/pride-month-banner.njk" %}
+
 <section class="padding--l cards-grid">
   {% set posts = collections.posts | reverse %}
   {% for index in range(0, 4) %}

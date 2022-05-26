@@ -6,6 +6,10 @@ const observer = new IntersectionObserver((entries) => {
     .classList.toggle("bg--primary", !isIntersecting);
 
   document
+    .querySelector(".navigation-bar")
+    .classList.toggle("shadow", !isIntersecting);
+
+  document
     .querySelector(".navigation-bar ul")
     .classList.toggle("padding-block--xs", !isIntersecting);
 

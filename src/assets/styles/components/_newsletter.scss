@@ -1,27 +1,38 @@
 .newsletter {
-  display: grid;
-  min-height: 70vh;
-  place-items: center;
-  background-color: hsl(var(--primary-300));
-  background-image: radial-gradient(
-    circle at bottom left,
-    hsl(var(--primary-500)),
-    hsl(var(--primary-300))
-  );
-  margin-top: var(--space-xxl);
-  padding: var(--space-m);
+  display            : grid;
+  min-height         : 70vh;
+  place-items        : center;
+  background-color   : hsl(var(--primary-300));
+  /* background-image: radial-gradient(circle at bottom left,
+      hsl(var(--primary-500)),
+      hsl(var(--primary-300))); */
+  background-image   :
+    radial-gradient(circle at bottom left,
+      #f995c677,
+      #ff5c5c77,
+      #faaf7077,
+      #a1e7a177,
+      #78dddd77,
+      #9056e177,
+      #9a559b77,
+      #f995c677),
+    radial-gradient(circle at bottom left,
+      hsl(var(--primary-500)),
+      hsl(var(--primary-300)));
+  margin-top    : var(--space-xxl);
+  padding       : var(--space-m);
   --shadow-color: 346 60% 30%;
 }
 
 .newsletter__image {
   @extend .sidebar;
 
-  background-image: url("/assets/images/waiting.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-image   : url("/assets/images/waiting.png");
+  background-size    : contain;
+  background-repeat  : no-repeat;
   background-position: center;
-  min-height: 35ch;
-  flex-basis: 35ch;
+  min-height         : 35ch;
+  flex-basis         : 35ch;
 }
 
 .newsletter .form-contents {
@@ -31,10 +42,10 @@
 }
 
 .newsletter form {
-  padding: var(--space-l);
+  padding         : var(--space-l);
   background-color: hsl(var(--bg-primary));
-  border-radius: var(--ideal-radius);
-  max-width: calc(var(--content-width) * 1.5);
+  border-radius   : var(--ideal-radius);
+  max-width       : calc(var(--content-width) * 1.5);
 
   @include box-shadow(7, 1, hsl(var(--shadow-color) / 0.111));
 }
