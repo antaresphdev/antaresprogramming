@@ -9,6 +9,7 @@ permalink: /
 {% include "components/pride-month-banner.njk" %}
 
 <section class="padding--l cards-grid">
+  <h2>Mga Article</h2>
   {% set posts = collections.posts | reverse %}
   {% for index in range(0, 4) %}
     {% set item = posts[index] %}
@@ -20,7 +21,7 @@ permalink: /
   <a href="/articles/" class="button secondary">Tingnan lahat</a>
 </div>
 
-{% include "components/newsletter.njk" %}
+{#% include "components/newsletter.njk" %#}
 
 <section class="padding--l bordered box">
   <h2>Latest infographics</h2>

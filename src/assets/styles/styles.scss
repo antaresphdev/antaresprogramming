@@ -289,7 +289,8 @@ footer {
   background-repeat  : no-repeat;
 
   @media (min-width: 100ch) {
-    background-position: top -20vh left -40vw;
+    background-position: top -20vh left -10vw;
+    height             : 40vh;
   }
 }
 
@@ -312,11 +313,17 @@ footer {
     display                : inline;
     font-size              : var(--type-size-1);
     font-weight            : 900;
+    line-height            : 1;
+    -webkit-text-stroke    : 3px transparent;
   }
 
   p {
     width              : min(45ch, 100%);
     margin-inline-start: auto;
+  }
+
+  .button.primary {
+    margin-top: var(--space-l)
   }
 
   @media (min-width: 70ch) {
