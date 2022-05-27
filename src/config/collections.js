@@ -41,5 +41,13 @@ module.exports = {
       "src/collections/courses/**/*.njk",
       "src/collections/courses/**/*.md",
     ]);
+  },
+
+  pridePeople: function (collection) {
+    return collection.getFilteredByGlob([
+      "src/collections/pride-people/**/*.html",
+      "src/collections/pride-people/**/*.njk",
+      "src/collections/pride-people/**/*.md",
+    ]);
   }
 };

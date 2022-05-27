@@ -1,0 +1,77 @@
+---
+title: "Pride Month 2022"
+description: "Impormasyon tungkol sa Pride Month, at kung paano ka makakatulong na suportahan ang LGBTQ+ Community"
+permalink: /pride-month-2022/
+---
+
+<section class="pride-banner">
+  <div class="dark inner-banner">
+    <div class="stack">
+      <h2 class="title">
+        <div>Ipinagdiriwang ng Antares Programming ang</div>
+        <span class="title-highlight">Pride Month 2022</span>
+      </h2>
+    </div>
+  </div>
+  <p class="fs-5">Sinusuportahan ng Antares Programming ang laban para sa karapatang pantao ng mga miyembro ng LGBTQ+ community. Patuloy ang ating panawagan para sa paglaban sa diskriminasyon sa mga paaralan, lugar ng trabaho, at pampublikong mga lugar. Sinusuportahan din ng Antares Programming ang pagpapasa ng Anti-Discrimination o SOGIE Bill. Kinikilala rin ng Antares Programming na ang Pride Month ay isang anyo ng pagpoprotesta para sa mas maayos na pagtrato sa mga miyembro ng LGBTQ+ community sa isang panlipunan at legal na antas.</p>
+</section>
+
+<section class="padding--xl">
+  <h2 class="fs-4">Mga Mahahalagang Tao</h2>
+  <ul class="pride-people">
+    {% for item in collections.pridePeople %}
+      <li>
+        <a href="{{ item.url }}" class="pride-person">
+          <img src="{{ item.data.image }}" alt="{{ item.data.name }}">
+          <h3 class="pride-person__name">{{ item.data.name }}</h3>
+          <div class="cluster">
+            {% if item.data.death %}
+              <span class="pride-person__lifespan">{{ item.data.born }}-{{ item.data.death }}</span>
+            {% else %}
+              <span class="pride-person__lifespan">born {{ item.data.born }}</span>
+            {% endif %}
+            <span>·</span>
+            <div class="pride-person__sexuality">
+              {% set sexuality = lgbt[item.data.sexuality] %}
+              <img src="{{ sexuality.icon }}" alt="">
+              {{ sexuality.name }}
+            </div>
+          </div>
+          <p>{{ item.data.story }}</p>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+{#<div class="with-sidebar">
+  <aside class="sidebar padding--l" style="flex-basis: 40ch;">
+    {% set author = "teacherbuknoy" %}
+    {% set authorDetails = authors[author] %}
+    <div class="cluster center-aligned">
+      {% set imgAlt %}{{ authorDetails.name }}'s photo{% endset %}
+      {% image authorDetails.photo, "avatar", authorDetails.name, "", [64] %}
+      <address class="stack" style="font-style: normal;">
+        <a href="/authors/{{ author }}/" class="weight-bold fs-5">{{ authorDetails.name }}</a>
+        <span class="fs-6">{{ authorDetails.bio }}</span>
+      </address>
+    </div>
+  </aside>
+  <div class="not-sidebar content-grid">
+    <p>Nakikiisa ang Antares Programming sa pagdiriwang ng Pride Month 2022. Sa halip na makiuso, gusto ko sana, bilang creator ng project na ito, na gamitin ang platform na mayroon tayo para mag-share ng info tungkol sa mga problemang dinaranas ng mga miyembro ng LGBTQ+ community. Bilang bisexual, nararanasan ko mismo ang marami sa mga problemang ito. Kaya naman kahit sine-celebrate natin ang diversity ng mga taong nag-a-identify sa iba't ibang sexuality, gender identity, at gender expression, mahalaga rin na mabigyan natin ng liwanag ang mga problemang ito, pati na ang mga magagawa natin para makatulong.</p>
+
+    <h2>Mga Mahahalagang Tao sa Tech Industry</h2>
+    <p>Sa buong buwan ng June 2022, magpi-feature tayo sa ating mga official social media pages ng mga mahahalagang tao sa history ng tech industry na miyembro din ng LGBTQ+ community. Mahalagang makita ng lahat na noon pa man, may mga LGBTQ+ nang nag-e-exist, at nasa paligid natin sila, kasama nating gumagawa ng progress sa ating kasaysayan.</p>
+
+    <p>Sa trahedya ng kuwento ni Alan Turing, ang ama ng artificial intelligence at theoretical computer science, makikita natin na gaanoman kalaki ang maitulong ng isang LGBTQ+ sa kaniyang bansa, pati na sa pangkalahatang pag-unlad ng mundo, nakikita pa rin sila ng lipunan bilang mga mabababang uri ng tao dahil sa kanilang kasarian, pagkakakilanlan, at sekswalidad.</p>
+
+    <p>Sa kuwento naman ng maraming mga LGBTQ+ activists na gaya nina Edith Windsor, Lynn Conway, at Mary Ann Horton, makikita natin na kaya nating pagsabayin ang pagkakaroon ng impluwensya sa pag-unlad ng teknolohiya at pagsusulong ng kalayaan at karapatang pantao. At hindi rin kailangang magkaroon ng malalaking activity para makatulong. Gaya sa kaso ni Tim Cook, malaking tulong na ang paglaladlad niya publicly para makatulong na gawing normal ang pagkakaroon ng iba't ibang SOGIE.</p>
+
+    <p>Sa effort na ito, umaasa tayo na makapagsimula ng mga makabuluhan usapan na makakatulong sa lahat na pag-isipan ang current situation ng mundo para sa mga LGBTQ+ people.</p>
+
+    <h2>Ang puwede mong maitulong</h2>
+    <p>Kung ikaw ay ally, o isa ring miyembro ng LGBTQ+ community, maraming paraan para makatulong. Isa sa pinakamahalagang magagawa mo ay ang pagsuporta sa pagpapasa ng <a href=https://en.wikipedia.org/wiki/SOGIE_Equality_Bill">Anti-Discrimination Bill o SOGIE Equality Bill</a>. Isa itong batas na poprotekta sa <em>lahat</em>, hindi lang sa mga LGBTQ+, laban sa diskriminasyong nakabase sa sekswalidad, gender identity, o gender expression. Makakatulong ang pag-tweet, share, at pag-post mo ng iyong suporta para dito para maipaalam sa ating mga mambabatas na makakatulong ang batas na ito sa ating lahat.</p>
+
+
+  </div>
+</div>#}

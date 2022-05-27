@@ -332,3 +332,91 @@ footer {
     }
   }
 }
+
+.pride-person {
+  @extend .dark;
+
+  aspect-ratio         : 1;
+  border-radius        : var(--ideal-radius);
+  display              : grid;
+  grid-template-columns: 1fr;
+  grid-template-rows   : 1fr auto;
+  margin               : 0;
+  overflow             : hidden;
+  padding              : 0;
+  position             : relative;
+  text-decoration      : none;
+  transition           : box-shadow 300ms;
+
+  &:hover,
+  &:focus-visible {
+    box-shadow: 0 18px 25px #0003;
+    color     : hsl(var(--fg-default));
+    z-index   : 99;
+  }
+
+  &::before {
+    align-self      : stretch;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.0086472) 6.67%, rgba(0, 0, 0, 0.03551) 13.33%, rgba(0, 0, 0, 0.0816599) 20%, rgba(0, 0, 0, 0.147411) 26.67%, rgba(0, 0, 0, 0.231775) 33.33%, rgba(0, 0, 0, 0.331884) 40%, rgba(0, 0, 0, 0.442691) 46.67%, rgba(0, 0, 0, 0.557309) 53.33%, rgba(0, 0, 0, 0.668116) 60%, rgba(0, 0, 0, 0.768225) 66.67%, rgba(0, 0, 0, 0.852589) 73.33%, rgba(0, 0, 0, 0.91834) 80%, rgba(0, 0, 0, 0.96449) 86.67%, rgba(0, 0, 0, 0.991353) 93.33%, #000000 100%);
+    content         : '';
+    grid-column     : 1/2;
+    grid-row        : 2/5;
+    justify-self    : stretch;
+    margin-top      : -50%;
+    z-index         : 2;
+  }
+
+  &> :not(img) {
+    grid-column   : 1/2;
+    margin        : 0;
+    z-index       : 3;
+    padding-inline: var(--space-l);
+  }
+
+  &>img {
+    grid-column: 1/2;
+    grid-row   : 1/5;
+  }
+
+  &__name {
+    font-family: var(--font-body);
+    font-size  : var(--type-size-4);
+    grid-row   : 2;
+  }
+
+  &>.cluster {
+    grid-row: 3;
+  }
+
+  &>p {
+    grid-row      : 4;
+    padding-bottom: var(--space-l);
+    max-height    : 0;
+    opacity       : 0;
+    transition    : max-height 200ms, opacity 200ms;
+  }
+
+  &:is(:hover, :focus-visible)>p {
+    max-height: 20ch;
+    opacity   : 1;
+  }
+
+  &__sexuality {
+    align-items: center;
+    display    : flex;
+    gap        : 1ch;
+
+    img {
+      height: 0.95em;
+    }
+  }
+}
+
+.pride-people {
+  display              : grid;
+  gap                  : var(--space);
+  grid-template-columns: repeat(auto-fill, minmax(min(30ch, 100%), 1fr));
+  list-style           : none;
+  margin               : 0;
+  padding              : var(--space-xl);
+}
