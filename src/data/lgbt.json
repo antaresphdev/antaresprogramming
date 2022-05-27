@@ -10,5 +10,9 @@
   "trans": {
     "name": "Transgender",
     "icon": "/assets/images/pride/flags/trans.svg"
+  },
+  "lesbian": {
+    "name": "Lesbian",
+    "icon": "/assets/images/pride/flags/lesbian.svg"
   }
 }

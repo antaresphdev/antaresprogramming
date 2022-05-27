@@ -37,7 +37,7 @@ permalink: /pride-month-2022/
               {{ sexuality.name }}
             </div>
           </div>
-          <p>{{ item.data.story }}</p>
+          <p>{{ item.data.story | safe }}</p>
         </a>
       </li>
     {% endfor %}
