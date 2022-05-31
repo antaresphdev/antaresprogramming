@@ -15,12 +15,60 @@ permalink: /pride-month-2022/
   </div>
   <p class="fs-5">Sinusuportahan ng Antares Programming ang laban para sa karapatang pantao ng mga miyembro ng LGBTQ+ community. Patuloy ang ating panawagan para sa paglaban sa diskriminasyon sa mga paaralan, lugar ng trabaho, at pampublikong mga lugar. Sinusuportahan din ng Antares Programming ang pagpapasa ng Anti-Discrimination o SOGIE Bill. Kinikilala rin ng Antares Programming na ang Pride Month ay isang anyo ng pagpoprotesta para sa mas maayos na pagtrato sa mga miyembro ng LGBTQ+ community sa isang panlipunan at legal na antas.</p>
 </section>
+<section>
+  <div class="content-wrapper margin--auto padding-l">
+    <p>Hindi lang isang selebrasyon ang Pride Month. Isa itong protesta, isang panawagan para sa mas maayos na pagtrato sa mga lesbian, gay, bisexual, transgender, queer, intersex, asexual, at iba pang gaya nito (LGBTQIA+). Sa Pilipinas, maraming kaso ng hate crime, harrassment, karahasan, at pag-atake sa mga LGBTQIA+ ang naitala, kabilang na ang mga nakakaapekto sa mga lugar ng trabaho, paaralan, at pampublikong lugar.</p>
+    <p>Kapag pinagdiriwang natin ang Pride Month, nakikiisa tayo sa panawagan para sa pagbabago sa pagtrato sa mga LGBTQIA+. Nakikiisa tayo sa panawagan na magkaroon ng pagbabago sa kultura ng mga Pilipino na nakakasamá para sa mga LGBTQIA+. Pakikiisa rin ito sa panawagan sa mga mambabatas natin na protektahan ang LGBTQIA+ sa pamamagitan ng paggawa ng mga batas laban sa diskriminasyong nakabatay sa sexual orientation, gender identity, gender expression, at sex characteristics (SOGIESC). At higit sa lahat, sa pagdiriwang ng Pride Month, kinikilala mo ang mga sarili mong bias laban sa mga LGBTQIA+, at na responsibilidad mong baguhin at alisin ang mga ito.</p>
+  </div>
+
+  <p class="fs-4 content-wrapper margin-left--auto">Ang pagsuporta mo sa LGBTQIA+ community, at pakikiisa sa pagdiriwang ng Pride Month ay nangangahulugan na kaisa ka sa panawagan para sa mga batas na poprotekta sa komunidad ng LGBTQIA+.</p>
+</section>
 
 <section class="padding--xl">
+  <h2 class="fs-4">Mga Resources</h2>
+  <ul class="pride-people">
+    <li>
+      <a href="https://mmpride.org/" class="pride-person">
+        <img src="/assets/images/pride/resources/mmpride.png" alt="Website ng Metro Manila Pride">
+        <h3 class="pride-person__name">Metro Manila Pride</h3>
+        <div class="cluster">Website</div>
+        <p>Metro Manila Pride is a volunteer-managed, non-partisan, not-for-profit organization dedicated to educating, equipping and empowering the Filipino LGBTQIA+ and their communities to work towards a future that recognizes and respects the rights of LGBTQIA+ persons to a dignified life without discrimination and prejudice.</p>
+      </a>
+    </li>
+    <li>
+      <a href="https://upbabaylan.org/" class="pride-person">
+        <img src="/assets/images/pride/resources/upbabaylan.png" alt="Website ng UP Babaylan">
+        <h3 class="pride-person__name">UP Babaylan</h3>
+        <div class="cluster">Website</div>
+        <p>The longest-running LGBTQI student organization in Asia</p>
+      </a>
+    </li>
+    <li>
+      <a href="https://queerscientistsph.medium.com/" class="pride-person">
+        <img src="/assets/images/pride/resources/queerscientistph.png" alt="Website ng Queer Scientists PH">
+        <h3 class="pride-person__name">Queer Scientists PH</h3>
+        <div class="cluster">Website</div>
+        <p>Telling stories of queer Filipinos in STEM</p>
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/rrightsphl" class="pride-person">
+        <img src="/assets/images/pride/resources/rainbowrights.jpg" alt="Twitter account ng Rainbow Rights Philippines">
+        <h3 class="pride-person__name">Rainbow Rights Philippines</h3>
+        <div class="cluster">Twitter</div>
+        <p>Helping persons of diverse SOGIE though legal literacy and empowerment w/ respect to SOGIE and gender based laws and policies</p>
+      </a>
+    </li>
+
+
+  </ul>
+</section>
+
+{#<section class="padding--xl">
   <h2 class="fs-4">Mga Mahahalagang Tao</h2>
   <ul class="pride-people">
     {% for item in collections.pridePeople %}
-      <li>
+      <li class="{{ "featured" if item.data.featured }}">
         <a href="{{ item.url }}" class="pride-person">
           <img src="{{ item.data.image }}" alt="{{ item.data.name }}">
           <h3 class="pride-person__name">{{ item.data.name }}</h3>
@@ -42,7 +90,7 @@ permalink: /pride-month-2022/
       </li>
     {% endfor %}
   </ul>
-</section>
+</section>#}
 
 {#<div class="with-sidebar">
   <aside class="sidebar padding--l" style="flex-basis: 40ch;">

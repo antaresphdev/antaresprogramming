@@ -1,4 +1,5 @@
 ---
+eleventyExcludeFromCollections: true
 name: Christopher Strachey
 date: 2022-06-12
 sexuality: gay

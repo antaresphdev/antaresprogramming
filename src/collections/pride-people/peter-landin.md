@@ -1,4 +1,5 @@
 ---
+eleventyExcludeFromCollections: true
 name: Peter Landin
 date: 2022-06-11
 sexuality: bisexual

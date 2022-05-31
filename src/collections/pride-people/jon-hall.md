@@ -1,4 +1,5 @@
 ---
+eleventyExcludeFromCollections: true
 name: Jon Hall
 date: 2022-06-11
 sexuality: gay

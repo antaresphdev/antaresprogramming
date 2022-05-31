@@ -1,4 +1,5 @@
 ---
+eleventyExcludeFromCollections: true
 name: Mary Ann Horton
 date: 2022-06-11
 sexuality: trans

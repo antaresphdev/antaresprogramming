@@ -1,4 +1,5 @@
 ---
+eleventyExcludeFromCollections: true
 name: Edith Windsor
 date: 2022-06-11
 sexuality: lesbian

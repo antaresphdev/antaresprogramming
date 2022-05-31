@@ -1,4 +1,5 @@
 ---
+eleventyExcludeFromCollections: false
 name: Alan Turing
 date: 2022-06-21
 sexuality: gay

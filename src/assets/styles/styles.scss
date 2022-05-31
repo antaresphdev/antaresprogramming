@@ -374,8 +374,11 @@ footer {
   }
 
   &>img {
-    grid-column: 1/2;
-    grid-row   : 1/5;
+    aspect-ratio: 1;
+    grid-column : 1/2;
+    grid-row    : 1/5;
+    height      : 100%;
+    object-fit  : cover;
   }
 
   &__name {
@@ -389,10 +392,11 @@ footer {
   }
 
   &>p {
+    font-size     : 0.8rem;
     grid-row      : 4;
-    padding-bottom: var(--space-l);
     max-height    : 0;
     opacity       : 0;
+    padding-bottom: var(--space-l);
     transition    : max-height 200ms, opacity 200ms;
   }
 
@@ -415,8 +419,21 @@ footer {
 .pride-people {
   display              : grid;
   gap                  : var(--space);
-  grid-template-columns: repeat(auto-fill, minmax(min(30ch, 100%), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(23ch, 100%), 1fr));
   list-style           : none;
   margin               : 0;
   padding              : var(--space-xl);
+}
+
+.pride-people {
+  .featured {
+    position: relative;
+
+    &::before {
+      content : "Bago!";
+      position: absolute;
+      right   : 0;
+      top     : var(--space);
+    }
+  }
 }
