@@ -2,4 +2,8 @@
   from = "/infographics"
   to = "/slidesets"
   status = 301
-  
+
+[[redirects]]
+  from = "/pride-month-2022/"
+  to = "/pride-month/2022/"
+  status = 301

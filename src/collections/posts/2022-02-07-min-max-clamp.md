@@ -116,7 +116,7 @@ Dahil wala tayong `min-font-size` at `max-font-size` property, puwede nating gam
 
 Sa example na ito, na-achieve natin ang flexible na `font-size`. Pero masyado itong malaki, dahil 10% ng viewport ang `font-size` natin. Kapag ni-resize naman natin ang viewport, sumosobra naman ang liit nito. Kailangan nating mag-set ng maximum at minimum na `font-size`. Para dito, puwede nating gamitin ang `clamp()` function.
 
-![Kailangan ng clamp function ng tatlong comma-separated values. Minimum value ang una, preferred value (o flexible value) ang ikalawa, at maximum value ang ikatlo.](/assets/images/posts/min-max-clamp/clamp.svg)
+![Kailangan ng clamp function ng tatlong comma-separated values. Minimum value ang una, preferred value (o flexible value) ang ikalawa, at maximum value ang ikatlo.](/assets/images/posts/min-max-clamp/clamp.svg){.invert-on-dark}
 
 <div class="code-sample">
 

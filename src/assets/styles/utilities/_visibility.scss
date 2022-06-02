@@ -1,13 +1,13 @@
 .sr-only,
 .visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: auto;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+  border     : 0;
+  clip       : rect(0 0 0 0);
+  height     : auto;
+  margin     : 0;
+  overflow   : hidden;
+  padding    : 0;
+  position   : absolute;
+  width      : 1px;
   white-space: nowrap;
 }
 
@@ -24,5 +24,12 @@
 .show-on-mobile {
   @media (min-width: 801px) {
     display: none;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .invert-on-dark {
+    filter: invert(1);
   }
 }
