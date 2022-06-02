@@ -1,35 +1,50 @@
+{% set title %}{{ name }} · Antares Programming{% endset %}
 {% extends "layouts/base.njk" %}
 {% block content %}
   <a href="#main" class="skip-link">Skip to content</a>
   {% include "components/navigation.njk" %}
   <main class="post bleed" id="main" tabindex="-1">
-    <header class="post__header" style="{% if image %}--post-cover: url('{{ image }}'){% endif %}">
-      <h1 class="post__title">{{ title | safe }}</h1>
-      <p class="post__description">{{ description | safe }}</p>
-      {% if tags %}
+    <header class="post__header pride" style="{% if image %}--post-cover: url('{{ image }}'){% endif %}">
+      <img src="{{ image }}" alt="Tim Cook" class="person__image">
+      <h1 class="post__title">{{ name | safe }}</h1>
+      <p class="post__description">{{ story | safe }}</p>
+      {#% if tags %}
         <div class="cluster gap padding-block--s end-justified">
           {% for tag in tags %}
             <a href="/tags/{{ tag | slugify }}" class="topic">{{ tag }}</a>
           {% endfor %}
         </div>
-      {% endif %}
+      {% endif %#}
+
+      <div class="cluster padding-block--s">
+        {% if death %}
+          <span class="pride-person__lifespan">{{ born }}-{{ death }}</span>
+        {% else %}
+          <span class="pride-person__lifespan">born {{ born }}</span>
+        {% endif %}
+        <span>·</span>
+        <div class="pride-person__sexuality">
+          {% set sexuality = lgbt[sexuality] %}
+          <img src="{{ sexuality.icon }}" alt="">
+          {{ sexuality.name }}
+        </div>
+      </div>
+
       <div class="spaced cluster">
-        {% if author %}
-          {% set authorDetails = authors[author] %}
-          {% if authorDetails %}
-            <div class="cluster center-aligned">
-              {% set imgAlt %}{{ authorDetails.name }}'s photo{% endset %}
-              {% image authorDetails.photo,
-              "avatar",
-              authorDetails.name,
-              "",
-              [64] %}
-              <address class="stack" style="font-style: normal;">
-                <a href="/authors/{{ author }}/" class="weight-bold fs-5">{{ authorDetails.name }}</a>
-                <span class="fs-6">{{ authorDetails.bio }}</span>
-              </address>
-            </div>
-          {% endif %}
+        {% set authorDetails = authors["teacherbuknoy"] %}
+        {% if authorDetails %}
+          <div class="cluster center-aligned">
+            {% set imgAlt %}{{ authorDetails.name }}'s photo{% endset %}
+            {% image authorDetails.photo,
+            "avatar",
+            authorDetails.name,
+            "",
+            [64] %}
+            <address class="stack" style="font-style: normal;">
+              <a href="/authors/{{ author }}/" class="weight-bold fs-5">{{ authorDetails.name }}</a>
+              <span class="fs-6">{{ authorDetails.bio }}</span>
+            </address>
+          </div>
         {% endif %}
 
         <p>{{ content | readingTime }} read &middot; <time datetime="{{ page.date | machineReadableDate }}">{{ page.date | humanReadableDate }}</time>

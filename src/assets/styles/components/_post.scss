@@ -1,7 +1,6 @@
 .post__header {
   background-color: hsl(var(--bg-primary));
-  background-image: linear-gradient(
-      180deg,
+  background-image: linear-gradient(180deg,
       hsl(var(--bg-primary) / 0) 0%,
       hsl(var(--bg-primary) / 0.0086472) 6.67%,
       hsl(var(--bg-primary) / 0.03551) 13.33%,
@@ -17,23 +16,21 @@
       hsl(var(--bg-primary) / 0.91834) 80%,
       hsl(var(--bg-primary) / 0.96449) 86.67%,
       hsl(var(--bg-primary) / 0.991353) 93.33%,
-      hsl(var(--bg-primary)) 100%
-    ),
+      hsl(var(--bg-primary)) 100%),
     linear-gradient(var(--scrim-color), var(--scrim-color)),
     var(--post-cover, url(/assets/images/mesh-gradient.png));
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  min-height: 80vh;
-  padding: var(--space-xl);
-  padding-top: 10.5rem;
+  background-repeat  : no-repeat;
+  background-size    : cover;
+  display            : flex;
+  flex-direction     : column;
+  justify-content    : flex-end;
+  min-height         : 80vh;
+  padding            : var(--space-xl);
+  padding-top        : 10.5rem;
 
   @media (prefers-color-scheme: dark) {
-    background-image: linear-gradient(
-        180deg,
+    background-image: linear-gradient(180deg,
         hsl(var(--bg-primary) / 0) 0%,
         hsl(var(--bg-primary) / 0.0086472) 6.67%,
         hsl(var(--bg-primary) / 0.03551) 13.33%,
@@ -49,8 +46,7 @@
         hsl(var(--bg-primary) / 0.91834) 80%,
         hsl(var(--bg-primary) / 0.96449) 86.67%,
         hsl(var(--bg-primary) / 0.991353) 93.33%,
-        hsl(var(--bg-primary)) 100%
-      ),
+        hsl(var(--bg-primary)) 100%),
       linear-gradient(var(--scrim-color), var(--scrim-color)),
       var(--post-cover, url(/assets/images/mesh-gradient.png));
   }
@@ -67,7 +63,7 @@
 .post__title,
 .post__description {
   mix-blend-mode: multiply;
-  color: hsl(var(--fg-default));
+  color         : hsl(var(--fg-default));
 
   @media (prefers-color-scheme: dark) {
     mix-blend-mode: lighten;
@@ -79,25 +75,76 @@
 }
 
 .post__description {
-  font-size: var(--type-size-5);
+  font-size   : var(--type-size-5);
   margin-block: 0;
 }
 
 .circle {
-  aspect-ratio: 1;
+  aspect-ratio : 1;
   border-radius: 100%;
-  border: 3px solid hsl(var(--primary-500));
+  border       : 3px solid hsl(var(--primary-500));
 }
 
 .topic {
   background-color: hsl(var(--bg-secondary));
-  padding: var(--space-xxxs) var(--space-xs);
-  text-decoration: none;
-  border-radius: var(--ideal-radius);
-  width: -moz-fit-content;
-  width: fit-content;
+  padding         : var(--space-xxxs) var(--space-xs);
+  text-decoration : none;
+  border-radius   : var(--ideal-radius);
+  width           : -moz-fit-content;
+  width           : fit-content;
 
   &:is(a[href], button) {
     cursor: pointer;
+  }
+}
+
+
+/// MODIFICATIONS ///
+
+.post__header.pride {
+  display   : grid;
+  background: transparent;
+  position  : relative;
+
+  &::before {
+    background-image   : linear-gradient(180deg, hsl(var(--bg-primary)/0) 0, hsl(var(--bg-primary)/.0086472) 6.67%, hsl(var(--bg-primary)/.03551) 13.33%, hsl(var(--bg-primary)/.0816599) 20%, hsl(var(--bg-primary)/.147411) 26.67%, hsl(var(--bg-primary)/.231775) 33.33%, hsl(var(--bg-primary)/.331884) 40%, hsl(var(--bg-primary)/.442691) 46.67%, hsl(var(--bg-primary)/.557309) 53.33%, hsl(var(--bg-primary)/.668116) 60%, hsl(var(--bg-primary)/.768225) 66.67%, hsl(var(--bg-primary)/.852589) 73.33%, hsl(var(--bg-primary)/.91834) 80%, hsl(var(--bg-primary)/.96449) 86.67%, hsl(var(--bg-primary)/.991353) 93.33%, hsl(var(--bg-primary)) 100%), linear-gradient(var(--scrim-color), var(--scrim-color)), var(--post-cover, url(/assets/images/mesh-gradient.png));
+    background-position: center;
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    content            : '';
+    filter             : blur(20px);
+    height             : 100%;
+    left               : 0;
+    position           : absolute;
+    top                : 0;
+    width              : 100%;
+    z-index            : -1;
+  }
+
+  .person__image {
+    border-radius: var(--ideal-radius);
+    box-shadow   : 0 18px 25px #0005;
+    aspect-ratio : 1;
+    width        : min(25rem, 100%);
+    margin-bottom: var(--space);
+  }
+
+  @media (min-width: 45rem) {
+    grid-template-columns: 25rem minmax(25rem, 1fr);
+    grid-template-rows   : 1fr;
+    column-gap           : var(--space-xl);
+
+    &> :not(.person__image) {
+      grid-column: 2;
+    }
+
+    .person__image {
+      grid-row: 1/5;
+      margin  : 0;
+    }
+
+    .post__title {
+      align-self: end;
+    }
   }
 }
