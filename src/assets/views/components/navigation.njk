@@ -10,7 +10,7 @@
     {% for nav in navigation %}
       {% if not nav.hidden %}
         <li class="center-aligned cluster">
-          <a href="{{ nav.url }}" class="button fg--default">
+          <a href="{{ nav.url }}" class="button fg--default {{ "primary" if nav.primary }}">
             {% if nav.feathericon %}
               {% set feathericon = nav.feathericon %}
               {% include "components/feathericon.njk" %}

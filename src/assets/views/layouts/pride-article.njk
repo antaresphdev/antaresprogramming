@@ -6,7 +6,10 @@
   <main class="post bleed" id="main" tabindex="-1">
     <header class="post__header pride" style="{% if image %}--post-cover: url('{{ image }}'){% endif %}">
       <img src="{{ image }}" alt="Tim Cook" class="person__image">
-      <h1 class="post__title">{{ name | safe }}</h1>
+      <h1 class="post__title">
+        <div class="badge">Pride Month Special</div>
+        {{ name | safe }}
+      </h1>
       <p class="post__description">{{ story | safe }}</p>
       {#% if tags %}
         <div class="cluster gap padding-block--s end-justified">

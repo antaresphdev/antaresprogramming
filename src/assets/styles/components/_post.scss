@@ -129,6 +129,35 @@
     margin-bottom: var(--space);
   }
 
+  .badge {
+    // background-image   : linear-gradient(135deg, #ff007d, #fb3333, #f2872c, #5cb05c, #256ba8, #9056e1, #9a559b, #ee3590);
+    background-image: linear-gradient(135deg,
+        #ff007d 12.5%,
+        #fb3333 12.5%,
+        #fb3333 25%,
+        #f2872c 25%,
+        #f2872c 37.5%,
+        #5cb05c 37.5%,
+        #5cb05c 50%,
+        #256ba8 50%,
+        #256ba8 62.5%,
+        #9056e1 62.5%,
+        #9056e1 75%,
+        #9a559b 75%,
+        #9a559b 87.5%,
+        #ee3590 87.5%);
+    background-position: center;
+    background-size    : 150%;
+    border-radius      : 100px;
+    color              : hsl(var(--l-contrast));
+    font-family        : var(--font-sans);
+    font-size          : 1rem;
+    font-weight        : bold;
+    line-height        : 2;
+    padding-inline     : var(--space);
+    width              : -moz-fit-content;
+  }
+
   @media (min-width: 45rem) {
     grid-template-columns: 25rem minmax(25rem, 1fr);
     grid-template-rows   : 1fr;

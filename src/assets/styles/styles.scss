@@ -252,7 +252,7 @@ footer {
   padding-top      : var(--rainbow-height);
 
   @media (prefers-reduced-motion: no-preference) {
-    animation: navrainbow 10s infinite linear;
+    animation: navrainbow 30s infinite linear;
     background-image: linear-gradient(to right,
         #f995c6,
         #ff5c5c,
@@ -271,7 +271,7 @@ footer {
   }
 
   to {
-    background-position: top left 100vh;
+    background-position: top left 100vw;
   }
 }
 

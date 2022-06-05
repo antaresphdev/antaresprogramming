@@ -4,5 +4,6 @@
   { "text": "Infographics", "url": "/slidesets" },
   { "text": "Courses", "url": "/courses", "hidden": true },
   { "text": "About", "url": "/About", "hidden": true },
+  { "text": "Pride Month 2022", "url": "/pride-month/2022", "primary": true },
   { "feathericon": "rss", "url": "/feed.xml", "hiddenLabel": "RSS Feed", "mobileLabel": "RSS Feed" }
 ]
