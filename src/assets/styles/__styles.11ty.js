@@ -4,6 +4,7 @@
 // main entry point name
 const ENTRY_POINTS = {
   styles: "styles.scss",
+  pride: "pride.scss",
 };
 
 const path = require('path')

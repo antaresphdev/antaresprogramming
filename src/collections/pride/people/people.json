@@ -1,4 +1,4 @@
 {
   "permalink": "/pride-month/articles/{{ name | slugify }}/",
-  "layout": "pride-article.njk"
+  "layout": "pride/people.njk"
 }

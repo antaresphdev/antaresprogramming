@@ -66,6 +66,7 @@ permalink: /pride-month/2022/
 <section class="padding--xl">
   <h2 class="fs-4">Mga Mahahalagang Tao</h2>
   <ul class="pride-people">
+    {{ collections.length | dump }}
     {% for item in collections.pridePeople %}
       <li class="{{ "featured" if item.data.featured }}">
         <a href="{{ item.url }}" class="pride-person">

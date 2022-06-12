@@ -45,9 +45,9 @@ module.exports = {
 
   pridePeople: function (collection) {
     return collection.getFilteredByGlob([
-      "src/collections/pride-people/**/*.html",
-      "src/collections/pride-people/**/*.njk",
-      "src/collections/pride-people/**/*.md",
+      "src/collections/pride/people/*.html",
+      "src/collections/pride/people/*.njk",
+      "src/collections/pride/people/*.md",
     ]);
   }
 };

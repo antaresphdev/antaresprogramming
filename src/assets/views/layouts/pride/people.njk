@@ -1,0 +1,40 @@
+{% set title %}{{ name }} · Antares Programming{% endset %}
+{% set stylesheets = ['pride.css'] %}
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  <a href="#main" class="skip-link">Skip to content</a>
+  {% include "components/navigation.njk" %}
+  <main class="fullscreen-slider" id="main" tabindex="-1">
+    <div class="slides">
+      <header class="header slide has-blobs">
+        <img class="slide__person-image" src="{{ image }}" alt="{{ name }}">
+        <div class="stack">
+          <h1 class="slide__title">{{ name | safe }}</h1>
+          <p>{{ story | safe }}</p>
+          <dl class="slide__details">
+            <div class="cluster">
+              <dt>Born</dt>
+              <dd>{{ born }}</dd>
+            </div>
+            {% if death != nil %}
+              <div class="cluster">
+                <dt>Died</dt>
+                <dd>{{ death }}</dd>
+              </div>
+            {% endif %}
+            <div class="cluster">
+              <dt>Sexuality</dt>
+              <dd>{{ lgbt[sexuality].name }}</dd>
+            </div>
+          </dl>
+          <blockquote class="slide__blockquote" lang="en">
+            {% for item in quote %}
+              <p lang="{{ item.lang }}">{{ item.content | safe }}</p>
+            {% endfor %}
+          </blockquote>
+        </div>
+      </header>
+    </div>
+  </main>
+{% endblock %}

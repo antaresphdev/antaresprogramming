@@ -306,6 +306,7 @@ footer {
   }
 
   .title-highlight {
+    -moz-background-clip   : text;
     -webkit-background-clip: text;
     background-clip        : text;
     background-image       : radial-gradient(circle at top right, #f995c6, #ff5c5c, #faaf70, #a1e7a1, #78dddd, #9056e1, #9a559b, #f995c6);
