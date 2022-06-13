@@ -7,7 +7,7 @@
   {% include "components/navigation.njk" %}
   <main class="fullscreen-slider" id="main" tabindex="-1">
     <div class="slides">
-      <header class="header slide has-blobs">
+      <header class="header slide has-blobs" id="header-slide">
         <img class="slide__person-image" src="{{ image }}" alt="{{ name }}">
         <div class="stack">
           <h1 class="slide__title">{{ name | safe }}</h1>
@@ -35,6 +35,7 @@
           </blockquote>
         </div>
       </header>
+      {{ content | safe }}
     </div>
   </main>
 {% endblock %}
