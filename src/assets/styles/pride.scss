@@ -3,6 +3,10 @@
   scroll-padding  : 0;
 }
 
+body>footer {
+  display: none !important;
+}
+
 .button.primary.circle.fixed {
   display: none;
 }
@@ -23,11 +27,49 @@
 
 
 .fullscreen-slider {
-  margin-top: 0 !important;
-  min-height: 100vh;
+  margin-top        : 0 !important;
+  min-height        : 100vh;
+  display           : grid;
+  grid-template-rows: 1fr auto;
 
   .slide__title {
     font-size: clamp(var(--type-size-4), 10vw, var(--type-size-2));
+  }
+
+  .toc {
+    grid-row        : 2;
+    z-index         : 9;
+    position        : sticky;
+    bottom          : 0;
+    background-color: hsl(var(--bg-primary));
+
+    ul {
+      list-style: none;
+      display   : flex;
+    }
+
+    li {
+      flex: 1;
+    }
+  }
+
+  .toc__link {
+    align-items    : center;
+    display        : flex;
+    font-weight    : bold;
+    gap            : 1ch;
+    height         : 100%;
+    padding-inline : var(--space);
+    text-decoration: none;
+
+    .toc__link::before {
+      aspect-ratio : 1;
+      border       : 2px solid hsl(var(--secondary-500));
+      border-radius: 100%;
+      content      : '';
+      flex-basis   : 1.5ch;
+      flex-shrink  : 0;
+    }
   }
 }
 
@@ -61,11 +103,22 @@
   padding-top: 5.5rem;
 
   @media (min-width: 960px) {
-    display    : flex !important;
-    align-items: center;
+    display        : flex !important;
+    align-items    : center;
+    justify-content: center;
+    align-content  : center;
 
     &>* {
       flex: 1;
+    }
+
+    .slide__person-image {
+      max-width : 45ch;
+      max-height: 45ch;
+    }
+
+    .stack {
+      max-width: 45ch;
     }
   }
 }
@@ -157,6 +210,7 @@
 
 .stack.slide__content {
   justify-content: end;
+  gap            : var(--space);
 }
 
 #slide-1 {
@@ -176,9 +230,26 @@
 }
 
 #slide-2 {
+
+  @media (max-width: 959px) {
+    .slide__blockquote {
+      display: none;
+    }
+  }
+
   @media (min-width: 960px) {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows   : repeat(6, 1fr);
+
+    .slide__blockquote {
+      grid-row   : 4/-1;
+      grid-column: 1 / span 4;
+      z-index    : 1;
+      align-self : center;
+      padding    : var(--space-xl);
+      color      : hsl(var(--l-contrast));
+      text-shadow: 0 3px 5px #000a;
+    }
 
     .slide__content {
       background     : transparent;
@@ -188,6 +259,21 @@
       justify-self   : center;
       max-width      : 55ch;
       padding        : var(--space-xxl);
+    }
+  }
+}
+
+#slide-3 {
+  @media (min-width: 960px) {
+    grid-template-columns: repeat(12, 1fr);
+
+    .slide__content {
+      background : transparent;
+      color      : hsl(var(--l-default));
+      grid-column: 7/-1;
+      grid-row   : 2;
+      margin     : auto;
+      width      : 45ch;
     }
   }
 }

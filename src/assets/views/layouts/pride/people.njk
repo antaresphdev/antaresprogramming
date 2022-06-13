@@ -6,6 +6,15 @@
   <a href="#main" class="skip-link">Skip to content</a>
   {% include "components/navigation.njk" %}
   <main class="fullscreen-slider" id="main" tabindex="-1">
+    <nav class="dark toc">
+      <ul>
+        {% for item in toc %}
+          <li>
+            <a href="#{{ item.anchor }}" class="toc__link">{{ item.title | safe }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
     <div class="slides">
       <header class="header slide has-blobs" id="header-slide">
         <img class="slide__person-image" src="{{ image }}" alt="{{ name }}">
