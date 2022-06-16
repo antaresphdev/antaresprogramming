@@ -43,6 +43,8 @@ body>footer {
     bottom          : 0;
     background-color: hsl(var(--bg-primary));
 
+    display: none;
+
     ul {
       list-style: none;
       display   : flex;
@@ -62,13 +64,19 @@ body>footer {
     padding-inline : var(--space);
     text-decoration: none;
 
-    .toc__link::before {
+    &::before {
       aspect-ratio : 1;
       border       : 2px solid hsl(var(--secondary-500));
       border-radius: 100%;
       content      : '';
       flex-basis   : 1.5ch;
       flex-shrink  : 0;
+    }
+
+    &.active::before {
+      background-color: hsl(var(--secondary-500));
+      outline         : 2px solid hsl(var(--secondary-500));
+      outline-offset  : 2px;
     }
   }
 }

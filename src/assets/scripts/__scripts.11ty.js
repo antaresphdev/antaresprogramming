@@ -7,7 +7,8 @@ const ENTRY_POINTS = {
   index: './src/assets/scripts/index.js',
   'slideset-position': './src/assets/scripts/slideset-position.js',
   'controls-css': './src/assets/scripts/controls-css.js',
-  'hide-on-value': './src/assets/scripts/hide-on-value.js'
+  'hide-on-value': './src/assets/scripts/hide-on-value.js',
+  'pride': './src/assets/scripts/pride.js'
 }
 
 const fs = require('fs')

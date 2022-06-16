@@ -1,12 +1,13 @@
 {% set title %}{{ name }} · Antares Programming{% endset %}
 {% set stylesheets = ['pride.css'] %}
+{% set pageScripts = ['pride.js'] %}
 {% extends "layouts/base.njk" %}
 
 {% block content %}
   <a href="#main" class="skip-link">Skip to content</a>
   {% include "components/navigation.njk" %}
   <main class="fullscreen-slider" id="main" tabindex="-1">
-    <nav class="dark toc">
+    <nav class="dark toc" data-slide-toc>
       <ul>
         {% for item in toc %}
           <li>
