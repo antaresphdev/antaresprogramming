@@ -1,0 +1,17 @@
+---
+title: Instagram Links
+description: Galing ka ba sa Instagram account namin? Nandito ang lahat ng links na ipinost namin.
+permalink: /instagram/
+stylesheets: ['instagram.css']
+---
+
+<ul class="instagram-grid">
+  {% for item in instagram %}
+    <li>
+      <a href="{{ item.link }}" class="instagram-link">
+        <img src="{{ item.image }}" alt="{{ item.alt }}">
+        <span class="dark instagram-title">{{ item.title }}</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

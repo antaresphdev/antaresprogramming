@@ -5,6 +5,7 @@
 const ENTRY_POINTS = {
   styles: "styles.scss",
   pride: "pride.scss",
+  instagram: "instagram.scss",
 };
 
 const path = require('path')
