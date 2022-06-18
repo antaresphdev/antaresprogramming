@@ -20,10 +20,20 @@
     {
       "text": "Instagram",
       "url": "https://instagram.com/antaresprogramming"
-    },
-    {
-      "text": "Youtube",
-      "url": "https://youtube.com/c/antaresprogramming"
     }
-  ]
+  ],
+  "named_socials": {
+    "instagram": {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/antaresphdev/"
+    },
+    "facebook": {
+      "name": "Facebook",
+      "url": "https://www.facebook.com/antaresprogramming/"
+    },
+    "twitter": {
+      "name": "Twitter",
+      "url": "https://www.twitter.com/antaresphdev/"
+    }
+  }
 }

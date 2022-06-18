@@ -1,17 +1,18 @@
 .button {
+  align-items     : center;
   background-color: transparent;
-  border-radius: var(--ideal-radius);
-  border: 1px solid transparent;
-  color: hsl(var(--primary-700));
-  cursor: pointer;
-  display: flex;
-  font-size: 1rem;
-  font-weight: bold;
-  gap: 1ch;
-  justify-content: center;
-  padding: var(--space-s) var(--space-m);
-  text-align: center;
-  text-decoration: none;
+  border-radius   : var(--ideal-radius);
+  border          : 1px solid transparent;
+  color           : hsl(var(--primary-700));
+  cursor          : pointer;
+  display         : flex;
+  font-size       : 1rem;
+  font-weight     : bold;
+  gap             : 1ch;
+  justify-content : center;
+  padding         : var(--space-s) var(--space-m);
+  text-align      : center;
+  text-decoration : none;
 
   @media (prefers-color-scheme: dark) {
     color: hsl(var(--primary-300));
@@ -19,8 +20,8 @@
 
   &.primary {
     background-color: hsl(var(--primary-500));
-    color: hsl(var(--l-contrast));
-    border-color: hsl(var(--primary-500));
+    color           : hsl(var(--l-contrast));
+    border-color    : hsl(var(--primary-500));
 
     &:hover {
       background-color: hsl(var(--primary-700));
@@ -29,8 +30,8 @@
 
   &.secondary {
     background-color: hsl(var(--primary-100));
-    color: hsl(var(--primary-900));
-    border-color: hsl(var(--primary-300));
+    color           : hsl(var(--primary-900));
+    border-color    : hsl(var(--primary-300));
 
     &:hover {
       filter: brightness(1.25) saturate(1.2);
@@ -38,7 +39,7 @@
 
     @media (prefers-color-scheme: dark) {
       background-color: hsl(var(--primary-900));
-      color: hsl(var(--primary-100));
+      color           : hsl(var(--primary-100));
 
       &:hover {
         filter: saturate(1.25);
@@ -48,13 +49,13 @@
 }
 
 .button:hover {
-  box-shadow: none;
-  outline: none;
+  box-shadow      : none;
+  outline         : none;
   background-color: hsl(var(--primary-100) / 50%);
 }
 
 .button:focus-visible {
-  box-shadow: none;
+  box-shadow   : none;
   outline-color: hsl(var(--primary-500));
 
   &:is(:focus-visible) {
@@ -63,23 +64,23 @@
 }
 
 .popover {
-  position: absolute;
-  width: 20ch;
-  right: var(--space-l);
-  top: 90%;
+  position        : absolute;
+  width           : 20ch;
+  right           : var(--space-l);
+  top             : 90%;
   background-color: hsl(var(--bg-primary));
-  border-radius: var(--ideal-radius);
-  box-shadow: 0 6px 12px hsl(var(--d-contrast) / 25%);
-  border: 1px solid hsl(var(--bg-secondary));
+  border-radius   : var(--ideal-radius);
+  box-shadow      : 0 6px 12px hsl(var(--d-contrast) / 25%);
+  border          : 1px solid hsl(var(--bg-secondary));
 
   li {
     display: contents;
   }
 
   .button {
-    width: 100%;
-    display: flex;
-    text-align: start;
+    width          : 100%;
+    display        : flex;
+    text-align     : start;
     justify-content: start;
   }
 }

@@ -7,6 +7,8 @@
   margin-inline        : auto;
   padding              : var(--space);
   width                : min(100ch, 100%);
+  min-height           : 100vh;
+  justify-content      : center;
 }
 
 .instagram-link {
