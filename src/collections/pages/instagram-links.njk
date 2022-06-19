@@ -10,11 +10,13 @@ stylesheets: ['instagram.css']
 </header>
 <ul class="instagram-grid">
   {% for item in instagram | reverse %}
-    <li>
-      <a href="{{ item.link }}" class="instagram-link">
-        <img src="{{ item.image }}" alt="{{ item.alt }}">
-        <span class="dark instagram-title">{{ item.title }}</span>
-      </a>
-    </li>
+    {% if not item.exclude %}
+      <li>
+        <a href="{{ item.link }}" class="instagram-link">
+          <img src="{{ item.image }}" alt="{{ item.alt }}">
+          <span class="dark instagram-title">{{ item.title }}</span>
+        </a>
+      </li>
+    {% endif %}
   {% endfor %}
 </ul>

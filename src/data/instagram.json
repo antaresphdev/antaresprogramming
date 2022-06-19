@@ -9,6 +9,7 @@
     "image": "/assets/images/pride/people/alan-turing/ig.png",
     "link": "/pride-month/articles/alan-turing/",
     "alt": "Alan Turing",
-    "title": "Ang Kuwento ni Alan Turing"
+    "title": "Ang Kuwento ni Alan Turing",
+    "exclude": true
   }
 ]
