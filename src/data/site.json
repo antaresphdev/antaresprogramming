@@ -4,8 +4,8 @@
   "domain": "https://www.antaresph.dev",
   "seo": {
     "images": {
-      "og": "/assets/images/open-graph-cover.png",
-      "twitter": "/assets/images/twitter-cover.png"
+      "og": "/assets/images/og.png",
+      "twitter": "/assets/images/twitter.png"
     }
   },
   "socials": [
