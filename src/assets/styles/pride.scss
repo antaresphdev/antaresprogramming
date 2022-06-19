@@ -285,3 +285,27 @@ body>footer {
     }
   }
 }
+
+.slide:not(.header) {
+  @media (min-width: 960px) {
+    .slide__blockquote {
+      grid-row   : 4/-1;
+      grid-column: 1 / span 4;
+      z-index    : 1;
+      align-self : center;
+      padding    : var(--space-xl);
+      color      : hsl(var(--l-contrast));
+      text-shadow: 0 3px 5px #000a;
+    }
+
+    .slide__content {
+      background     : transparent;
+      grid-column    : 4/-1;
+      grid-row       : 1/5;
+      justify-content: center;
+      justify-self   : center;
+      max-width      : 55ch;
+      padding        : var(--space-xxl);
+    }
+  }
+}
