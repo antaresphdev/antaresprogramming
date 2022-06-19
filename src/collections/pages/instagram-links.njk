@@ -6,10 +6,10 @@ stylesheets: ['instagram.css']
 ---
 <header class="spaced cluster ai--center padding--m">
   <h1 class="fs-3">Mula sa aming Instagram page</h1>
-  <a target="_blank" rel="noopener" href="{{ site.named_socials.instagram.url }}" class="primary button">{{ site.named_socials.instagram.name }}</a>
+  <a target="_blank" rel="noopener" href="{{ site.named_socials.instagram.url }}" class="primary button">I-follow kami sa {{ site.named_socials.instagram.name }}</a>
 </header>
 <ul class="instagram-grid">
-  {% for item in instagram %}
+  {% for item in instagram | reverse %}
     <li>
       <a href="{{ item.link }}" class="instagram-link">
         <img src="{{ item.image }}" alt="{{ item.alt }}">
