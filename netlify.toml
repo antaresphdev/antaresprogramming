@@ -12,3 +12,8 @@
   from = "/pride-month/"
   to = "/pride-month/2022/"
   status = 301
+
+[[redirects]]
+  from = "/pride-month/articles/"
+  to = "/pride-month/2022/"
+  status = 301
