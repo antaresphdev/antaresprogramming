@@ -17,3 +17,7 @@
   from = "/pride-month/articles/"
   to = "/pride-month/2022/"
   status = 301
+
+[dev]
+  autoLaunch = false
+  port = 30
