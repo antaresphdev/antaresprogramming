@@ -1,50 +1,51 @@
 .input-field {
   display: grid;
   padding: var(--space-s);
-  gap: var(--space-xs);
+  gap    : var(--space-xs);
 }
 
 .required {
   &::after {
     content: "*";
-    color: hsl(var(--error-700));
+    color  : hsl(var(--error-700));
   }
 }
 
 .form-control {
-  padding: 1ch;
-  font-size: 1rem;
-  border: 1px solid hsl(var(--fg-non-essential));
+  padding         : 1ch;
+  font-family     : inherit;
+  font-size       : 1rem;
+  border          : 1px solid hsl(var(--fg-non-essential));
   background-color: hsl(var(--bg-primary));
-  color: hsl(var(--fg-default));
-  border-radius: var(--ideal-radius);
+  color           : hsl(var(--fg-default));
+  border-radius   : var(--ideal-radius);
 
   &:focus:not(:focus-visible) {
     outline: none;
   }
 
   &:focus-visible {
-    outline: 3px solid hsl(var(--primary-500));
+    outline       : 3px solid hsl(var(--primary-500));
     outline-offset: 3px;
   }
 }
 
 .form-group {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
+  display      : flex;
+  width        : 100%;
+  flex-wrap    : wrap;
   border-radius: var(--ideal-radius);
-  overflow: clip;
-  border: 1px solid hsl(var(--primary-100));
+  overflow     : clip;
+  border       : 1px solid hsl(var(--primary-100));
 
-  & > * {
-    border: none;
+  &>* {
+    border       : none;
     border-radius: 0;
-    flex: 1;
+    flex         : 1;
   }
 
   .form-control {
-    flex: 999;
+    flex     : 999;
     max-width: 100%;
   }
 }
