@@ -3,6 +3,11 @@
   scroll-padding  : 0;
 }
 
+body {
+  width     : 100vw;
+  overflow-x: hidden;
+}
+
 body>footer {
   display: none !important;
 }
