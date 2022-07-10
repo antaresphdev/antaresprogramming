@@ -123,6 +123,11 @@ h6 {
   }
 }
 
+strong,
+strong * {
+  font-weight: bold;
+}
+
 .feathericon {
   display        : inline-block;
   width          : 1.25em;
@@ -200,7 +205,7 @@ var,
 samp {
   font-family            : var(--font-mono);
   font-variation-settings: "MONO"1, "CASL"1, "CRSV"0;
-  font-weight            : 390;
+  font-weight            : inherit;
 }
 
 :root {

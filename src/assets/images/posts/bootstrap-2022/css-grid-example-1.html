@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example #1 - Bootstrap 2022</title>
+
+    <style>
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        max-width: 100vw;
+      }
+
+      .grid {
+        display: grid;
+        gap: 5px;
+        padding: 1rem;
+        grid-template-columns: 100px 15vw 10% 1fr 25vh 10rem 5ch 2fr;
+      }
+
+      .cell {
+        background-color: var(--bg-color, #0074e833);
+        border: 1px solid var(--border-color, #0074e8);
+        color: var(--border-color, #0074e8);
+        font-family: sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div style="--bg-color: #bc245c11; --border-color: #bc245c;" class="cell cell--px">100px</div>
+      <div style="--bg-color: #71c99111; --border-color: #71c991;" class="cell cell--vw">15vw</div>
+      <div style="--bg-color: #feb64111; --border-color: #b17f2d;" class="cell cell--percent">10%</div>
+      <div style="--bg-color: #9400a811; --border-color: #9400a8;" class="cell cell--rem">1fr</div>
+      <div style="--bg-color: #faac6f11; --border-color: #b17f2d;" class="cell cell--ch">25vh</div>
+      <div style="--bg-color: #b567a711; --border-color: #b567a7;" class="cell cell--vh">10rem</div>
+      <div style="--bg-color: #fb85a911; --border-color: #ae5c75;" class="cell cell--fr">5ch</div>
+      <div style="--bg-color: #aede9911; --border-color: #729164;" class="cell cell--2fr">2fr</div>
+    </div>
+  </body>
+</html>

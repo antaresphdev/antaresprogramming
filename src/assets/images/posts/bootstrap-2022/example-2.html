@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example #2 - Bootstrap 2022</title>
+
+    <style>
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        max-width: 100vw;
+      }
+
+      .grid {
+        display: grid;
+        gap: 5px;
+        padding: 1rem;
+        grid-template-columns: min(20ch, 50vw) max(15ch, 25%) clamp(25ch, 30vw, 150ch);
+      }
+
+      .cell {
+        background-color: var(--bg-color, #0074e833);
+        border: 1px solid var(--border-color, #0074e8);
+        color: var(--border-color, #0074e8);
+        font-family: sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div style="--bg-color: #bc245c11; --border-color: #bc245c;" class="cell cell--min">min(20ch, 50%)</div>
+      <div style="--bg-color: #71c99111; --border-color: #71c991;" class="cell cell--max">max(15ch, 25%)</div>
+      <div style="--bg-color: #feb64111; --border-color: #b17f2d;" class="cell cell--clamp">clamp(25ch, 30vw, 150ch)</div>
+    </div>
+  </body>
+</html>
