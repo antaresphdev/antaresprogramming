@@ -21,3 +21,11 @@
 [dev]
   autoLaunch = false
   port = 30
+
+# For shortened URLs:
+[[redirects]]
+  from = "/infographics-download"
+  to = "https://github.com/antaresphdev/infographics"
+  status = 301
+  force = true
+  headers = {X-From = "Netlify"}
