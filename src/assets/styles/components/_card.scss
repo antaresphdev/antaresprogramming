@@ -15,6 +15,10 @@
       .card__title {
         @extend .fs-1;
       }
+
+      .card__body {
+        align-self: center;
+      }
     }
   }
 }
@@ -22,7 +26,6 @@
 .card {
   padding: 1.75rem;
   gap: var(--space-l);
-  align-items: stretch;
   display: flex;
   flex-wrap: wrap;
   border-radius: var(--ideal-radius);
@@ -53,15 +56,20 @@
 }
 
 .card__body {
+  align-self: stretch;
+  display: flex;
   flex-basis: 0;
+  flex-direction: column;
   flex-grow: 999;
   min-width: 50%;
-  align-self: center;
+  
+  .card__description {
+    flex: 1;
+  }
 }
 
 .card__title {
   @extend .fs-3;
-  @extend .responsive;
   margin: 0;
   line-height: 1;
   @media (prefers-color-scheme: dark) {

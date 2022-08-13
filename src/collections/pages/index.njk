@@ -8,8 +8,8 @@ permalink: /
 
 {% include "components/pride-month-banner.njk" %}
 
-<section class="padding--l cards-grid">
-  <h2>Mga Article</h2>
+<section class="padding--l cards-grid container--small margin-inline--auto">
+  <h2 class="margin--none">Mga Article</h2>
   {% set posts = collections.posts | reverse %}
   {% for index in range(0, 4) %}
     {% set item = posts[index] %}

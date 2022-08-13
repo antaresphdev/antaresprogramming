@@ -8,7 +8,7 @@
     <h2 class="card__title">
       <a class="card__link" href="{{ item.url }}">{{ item.data.title | safe }}</a>
     </h2>
-    <p>{{ item.data.description | safe }}</p>
+    <p class="card__description">{{ item.data.description | safe }}</p>
     <div class="spaced cluster">
       {% if item.data.author and authors[item.data.author] %}
         {% set author = authors[item.data.author] %}
