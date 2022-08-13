@@ -195,6 +195,15 @@ a {
   }
 }
 
+/* sans-serif for UI elements */
+a, button, h1, h2, h3, h4, h5, h6, label[for] {
+  font-family: var(--font-sans);
+}
+
+p {
+  font-size: 1.15rem;
+}
+
 #main {
   &.bleed {
     margin-top: 0;

@@ -8,6 +8,7 @@
   font-family: "Fraunces";
   src: url("/assets/fonts/Fraunces-var.ttf") format("truetype");
   font-weight: 100 900;
+  font-variation-settings: "SOFT" 100, "WONK" 0, "wght" 350;
 }
 
 @font-face {
@@ -15,4 +16,5 @@
   src: url("/assets/fonts/Fraunces-ital-var.ttf") format("truetype");
   font-weight: 100 900;
   font-style: italic;
+  font-variation-settings: "SOFT" 100, "WONK" 0, "wght" 350;
 }
