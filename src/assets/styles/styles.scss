@@ -141,9 +141,10 @@ strong * {
 }
 
 a {
-  box-decoration-break: clone;
-  color               : hsl(var(--fg-default));
-  text-decoration     : underline solid hsl(var(--primary-500));
+  -webkit-box-decoration-break: clone;
+  box-decoration-break        : clone;
+  color                       : hsl(var(--fg-default));
+  text-decoration             : underline solid hsl(var(--primary-500));
 
   @media (prefers-color-scheme: dark) {
     color                : hsl(var(--primary-100));
@@ -196,7 +197,15 @@ a {
 }
 
 /* sans-serif for UI elements */
-a, button, h1, h2, h3, h4, h5, h6, label[for] {
+a,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label[for] {
   font-family: var(--font-sans);
 }
 
