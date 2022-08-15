@@ -1,26 +1,26 @@
 /* COLORS */
 :root {
-  --d-contrast: 0 0% 0%;
-  --d-default: 0 0% 20%;
-  --d-subtle: 0 0% 50%;
+  --d-contrast     : 0 0% 0%;
+  --d-default      : 0 0% 20%;
+  --d-subtle       : 0 0% 50%;
   --d-non-essential: 0 0% 75%;
 
-  --l-contrast: 0 0% 100%;
-  --l-default: 0 0% 80%;
-  --l-subtle: 0 0% 50%;
+  --l-contrast     : 0 0% 100%;
+  --l-default      : 0 0% 80%;
+  --l-subtle       : 0 0% 50%;
   --l-non-essential: 0 0% 25%;
 
-  --primary-100: 342 98% 80%;
-  --primary-300: 337 87% 68%;
-  --primary-500: 335 71% 56%;
-  --primary-700: 338 68% 44%;
-  --primary-900: 341 82% 31%;
+  --primary-100: 345 90% 85%;
+  --primary-300: 345 90% 65%;
+  --primary-500: 346 90% 45%;
+  --primary-700: 345 91% 25%;
+  --primary-900: 346 61% 15%;
 
-  --secondary-100: 53 100% 79%;
-  --secondary-300: 48 100% 71%;
-  --secondary-500: 43 94% 61%;
-  --secondary-700: 38 82% 46%;
-  --secondary-900: 33 100% 34%;
+  --secondary-100: 39 88% 90%;
+  --secondary-300: 43 100% 70%;
+  --secondary-500: 43 90% 50%;
+  --secondary-700: 38 100% 40%;
+  --secondary-900: 35 100% 15%;
 
   --error-100: 5 100% 75%;
   --error-300: 0 81% 63%;
@@ -64,12 +64,12 @@
 /* FONTS */
 :root {
   --font-display: "Figtree", sans-serif;
-  --font-sans: "Figtree", sans-serif;
-  --font-serif: "Fraunces", serif;
-  --font-mono: "Recursive", monospace;
-  --font-body: var(--font-serif);
+  --font-sans   : "Figtree", sans-serif;
+  --font-serif  : "Fraunces", serif;
+  --font-mono   : "Recursive", monospace;
+  --font-body   : var(--font-serif);
 
-  --type-size: 1rem;
+  --type-size  : 1rem;
   --type-size-1: 4.209rem;
   --type-size-2: 3.157rem;
   --type-size-3: 2.369rem;
@@ -88,16 +88,17 @@
   --space-none: 0;
   --space-auto: auto;
   --space-xxxl: 4rem;
-  --space-xxl: 3rem;
-  --space-xl: 2rem;
-  --space-l: 1.5rem;
-  --space: 1rem;
-  --space-s: 0.75rem;
-  --space-xs: 0.5rem;
-  --space-xxs: 0.25rem;
+  --space-xxl : 3rem;
+  --space-xl  : 2rem;
+  --space-l   : 1.5rem;
+  --space     : 1rem;
+  --space-s   : 0.75rem;
+  --space-xs  : 0.5rem;
+  --space-xxs : 0.25rem;
   --space-xxxs: 0.1rem;
 
-  --space-m: var(--space); /* ALIAS */
+  --space-m: var(--space);
+  /* ALIAS */
 
   --ideal-radius: 6px;
 }

@@ -41,3 +41,32 @@ $fg-colors: contrast, default, subtle, non-essential;
     }
   }
 }
+
+
+/* OTHER COLORS */
+$colors: error, success, warning, info, primary, secondary;
+$levels: 100, 300, 500, 700, 900;
+
+.fg {
+  @each $color in $colors {
+    &--#{$color} {
+      @each $level in $levels {
+        &-#{$level} {
+          color: hsl(var(--#{$color}-#{$level}));
+        }
+      }
+    }
+  }
+}
+
+.bg {
+  @each $color in $colors {
+    &--#{$color} {
+      @each $level in $levels {
+        &-#{$level} {
+          background-color: hsl(var(--#{$color}-#{$level}));
+        }
+      }
+    }
+  }
+}

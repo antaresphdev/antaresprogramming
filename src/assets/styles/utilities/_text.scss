@@ -22,6 +22,15 @@
 .weight-normal {
   font-weight: normal;
 }
+
+$weights: bold, bolder, normal, lighter, 100, 200, 300, 400, 500, 600, 700, 800, 900;
+.weight {
+  @each $weight in $weights {
+    &--#{$weight} {
+      font-weight: #{$weight};
+    }
+  }
+}
 /* #endregion */
 
 /* #region LETTER SPACING */

@@ -1,4 +1,4 @@
-<nav class="spaced cluster navigation-bar bg--primary" style="position: sticky; top: 0; width: 100%; z-index: 999; transition: background 300ms, box-shadow 300ms;">
+<!--nav-- class="spaced cluster navigation-bar bg--primary" style="position: sticky; top: 0; width: 100%; z-index: 999; transition: background 300ms, box-shadow 300ms;">
   <div class="logo">
     <img class="logo__image" src="/assets/images/logo.svg" alt="logo" width="64" height="64">
     <span class="logo__text">
@@ -55,5 +55,77 @@
       {% endfor %}
     </ul>
   </div>
-</nav>
+</!--nav-->
+
+<div class="navbar" data-navbar>
+  <div class="navbar__left">
+    <div class="navbar__artwork"></div>
+    <div class="navbar__stack">
+      <a class="navbar__link" href="/">antaresph.dev</a>
+      <span class="responsive fs-5 weight--bold fg--secondary-300 font-sans">Official Website</span>
+    </div>
+  </div>
+
+  <div class="navbar__right padding--xxs padding-right--xxs">
+    <div class="navbar__brand logo">
+      <img class="logo__image" src="/assets/images/logo.svg" alt="logo" width="64" height="64">
+      <a href="/" class="logo__text hide-on-mobile">
+        <span class="weight-bold">Antares</span>
+        <span>Programming</span>
+      </a>
+    </div>
+
+    <ul class="navbar__list hide-on-mobile">
+      {% for nav in navigation %}
+        {% if not nav.hidden %}
+          <li class="navbar__item">
+            <a href="{{ nav.url }}" class="navbar__button {{ "navbar__button--primary" if nav.primary }}">
+              {% if nav.feathericon %}
+                {% set feathericon = nav.feathericon %}
+                {% include "components/feathericon.njk" %}
+              {% endif %}
+              {% if nav.text %}
+                <span>{{ nav.text }}</span>
+              {% endif %}
+              {% if nav.hiddenLabel %}
+                <span class="sr-only">{{ nav.hiddenLabel }}</span>
+              {% endif %}
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    
+    <div class="relative show-on-mobile cluster center-aligned padding-right--xs">
+      <button class="navbar__button" data-popover="mobile-nav">
+        <svg class="feathericon">
+          <use href="/assets/images/feather-sprite.svg#menu"></use>
+        </svg>
+        <span class="sr-only">Toggle Menu</span>
+      </button>
+      <ul id="mobile-nav" class="cluster padding--s margin--none gap--none popover" hidden>
+        {% for nav in navigation %}
+          {% if not nav.hidden %}
+            <li class="center-aligned cluster">
+              <a href="{{ nav.url }}" class="button fg--default">
+                {% if nav.feathericon %}
+                  {% set feathericon = nav.feathericon %}
+                  {% include "components/feathericon.njk" %}
+                {% endif %}
+                {% if nav.mobileLabel %}
+                  <span>{{ nav.mobileLabel }}</span>
+                {% elif nav.text %}
+                  <span>{{ nav.text }}</span>
+                {% elif nav.hiddenLabel %}
+                  <span class="sr-only">{{ nav.hiddenLabel }}</span>
+                {% endif %}
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+</div>
 <div data-intersection-trigger></div>
