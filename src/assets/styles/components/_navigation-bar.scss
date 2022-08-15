@@ -3,6 +3,7 @@
   align-items     : center;
   background-color: hsl(var(--secondary-900));
   border-radius   : var(--navbar-radius);
+  box-shadow      : 0 10px 24px hsl(var(--secondary-900) / 25%);
   color           : hsl(var(--l-contrast));
   display         : flex;
   flex-wrap       : wrap;
