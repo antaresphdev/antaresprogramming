@@ -3,7 +3,6 @@
   align-items     : center;
   background-color: hsl(var(--secondary-900));
   border-radius   : var(--navbar-radius);
-  box-shadow      : 0 10px 24px hsl(var(--secondary-900) / 25%);
   color           : hsl(var(--l-contrast));
   display         : flex;
   flex-wrap       : wrap;
@@ -13,6 +12,12 @@
   position        : -webkit-sticky;
   position        : sticky;
   top             : var(--space);
+  transition      : box-shadow 300ms, width 200ms;
+  will-change     : width;
+
+  &.attached {
+    box-shadow: 0 10px 24px hsl(var(--secondary-900) / 50%);
+  }
 
   @media (min-width: 801px) and (max-width: 1098px) {
     top: -3.5rem;
