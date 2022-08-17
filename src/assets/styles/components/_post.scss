@@ -177,3 +177,99 @@
     }
   }
 }
+
+.post-card {
+  --rg                 : radial-gradient(ellipse at bottom right, hsl(var(--tc)), hsl(var(--tc)/50%), hsl(var(--tc)/0%));
+  --rg-1               : radial-gradient(circle at 75% 100%, hsl(var(--tc)), hsl(var(--tc)/50%), hsl(var(--tc)/0%));
+  --rg-2               : radial-gradient(circle at center 80%, hsl(var(--tc)), hsl(var(--tc)/50%), hsl(var(--tc)/0%));
+  --tc                 : var(--theme-color, var(--primary-100));
+  background-image     : var(--rg), var(--rg-1), var(--rg-2), var(--post-image);
+  background-position  : center;
+  background-repeat    : no-repeat;
+  background-size      : cover;
+  border-radius        : var(--space-l);
+  display              : grid;
+  grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
+  overflow             : auto;
+  width                : 100%;
+
+  &::before {
+    content   : '';
+    min-height: 10ch;
+  }
+
+  &__inner {
+    padding    : var(--space-l);
+    padding-top: 10ch;
+  }
+
+  &__metadata {
+    align-items: center;
+    display    : flex;
+    gap        : 1ch;
+    font-family: var(--font-sans);
+
+    &::before {
+      content         : '';
+      height          : 0.5ch;
+      width           : 0.5ch;
+      background-color: currentColor;
+      border-radius   : 100%;
+      order           : 1;
+    }
+  }
+
+  &__pubdate {
+    order: 2;
+  }
+
+  &__title {
+    margin   : 0;
+    font-size: clamp(var(--type-size-5), 10vw, var(--type-size-4));
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__tags {
+    margin         : 0;
+    padding        : 0;
+    display        : flex;
+    gap            : 1ch;
+    list-style     : none;
+    justify-content: end;
+
+    .tag {
+      background-color: hsl(var(--bg-primary) / 50%);
+      text-decoration : none;
+      padding-inline  : 1ch;
+      padding-block   : 0.5ch;
+      border-radius   : var(--ideal-radius);
+      text-transform  : uppercase;
+      font-weight     : bold;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.post-card-grid {
+  display              : grid;
+  gap                  : var(--space);
+  grid-template-columns: repeat(auto-fill, minmax(30ch, 1fr));
+  margin-inline        : auto;
+  padding              : var(--space-xl);
+  width                : min(180ch, 100%);
+
+  .post-card:nth-child(1),
+  .post-card:nth-child(4n+1) {
+    grid-column: 1/-1;
+  }
+}

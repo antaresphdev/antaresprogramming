@@ -10,7 +10,7 @@ permalink: /articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber 
 
 <h1 class="margin-inline--xl margin-block--none">Articles</h1>
 
-<div class="padding--l cards-grid container--small margin--auto">
+<div class="post-card-grid">
   {% set posts = collections.posts | reverse %}
   {% for item in pagination.items %}
     {% set hasImage = loop.index0 % 4 === 0 %}

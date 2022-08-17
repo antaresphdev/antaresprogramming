@@ -8,14 +8,15 @@ permalink: /
 
 {% include "components/pride-month-banner.njk" %}
 
-<section class="padding--l cards-grid container--small margin-inline--auto">
+<section class="padding--l container--small margin-inline--auto">
   <h2 class="margin--none">Mga Article</h2>
-  {% set posts = collections.posts | reverse %}
-  {% for index in range(0, 4) %}
-    {% set item = posts[index] %}
-    {% set hasImage = loop.index0 % 4 === 0 %}
-    {% include 'components/post-card.njk' %}
-  {% endfor %}
+  <div class="post-card-grid">{% set posts = collections.posts | reverse %}
+    {% for index in range(0, 4) %}
+      {% set item = posts[index] %}
+      {% set hasImage = loop.index0 % 4 === 0 %}
+      {% include 'components/post-card.njk' %}
+    {% endfor %}
+  </div>
 </section>
 <div class="cluster center-justified padding">
   <a href="/articles/" class="button secondary">Tingnan lahat</a>

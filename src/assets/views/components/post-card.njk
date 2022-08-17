@@ -1,22 +1,17 @@
-<article class="card{{ " has-image" if hasImage }}">
-  {% if hasImage and item.data.image %}
-    <a class="card__image" href="{{ item.url }}">
-      {% image item.data.image, "", "" %}
-    </a>
-  {% endif %}
-  <div class="card__body">
-    <h2 class="card__title">
-      <a class="card__link" href="{{ item.url }}">{{ item.data.title | safe }}</a>
-    </h2>
-    <p class="card__description">{{ item.data.description | safe }}</p>
-    <div class="spaced cluster">
-      {% if item.data.author and authors[item.data.author] %}
-        {% set author = authors[item.data.author] %}
-        <a href="/authors/{{ item.data.author }}/" class="fg-theme-color card__link">{{ author.name | safe }}</a>
-      {% else %}
-        <span class="weight-bold">Anonymous</span>
-      {% endif %}
-      <time datetime="{{ item.date | machineReadableDate }}">{{ item.date | humanReadableDate }}</time>
+<article class="post-card" style="--post-image: url('{{ item.data.image }}'); --theme-color: {{ item.data.imageColor }}">
+  <div class="post-card__inner">
+    <div class="post-card__metadata">
+      <div class="post-card__read-time">
+        {{ item.templateContent | readingTime }}
+      </div>
+      <time datetime="{{ item.date | machineReadableDate }}" class="post-card__pubdate">{{ item.date | humanReadableDate }}</time>
     </div>
+    <h3 class="post-card__title"><a href="{{ item.url }}">{{ item.data.title | safe }}</a></h3>
+    <p class="post-card__summary">{{ item.data.description | safe }}</p>
+    <ul class="post-card__tags">
+      {% for tag in item.data.tags %}
+        <li><a href="/tags/{{ tag }}/" class="tag">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
   </div>
 </article>
