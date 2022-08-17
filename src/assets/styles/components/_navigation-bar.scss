@@ -1,4 +1,5 @@
 .navbar {
+  --margin        : var(--space);
   --navbar-radius : calc(var(--ideal-radius) * 2);
   align-items     : center;
   background-color: hsl(var(--secondary-900));
@@ -8,16 +9,21 @@
   flex-wrap       : wrap;
   justify-content : space-between;
   line-height     : 1;
-  margin          : var(--space);
+  margin          : var(--margin);
   position        : -webkit-sticky;
   position        : sticky;
-  top             : var(--space);
-  transition      : box-shadow 300ms, width 200ms;
+  top             : var(--space-xxs);
+  transition      : box-shadow 300ms, width 200ms, margin 200ms;
   will-change     : width;
   z-index         : 999;
 
   &.attached {
     box-shadow: 0 10px 24px hsl(var(--secondary-900) / 50%);
+
+    @media (min-width: 801px) {
+      margin       : var(--space-xxs);
+      margin-inline: 10vw;
+    }
   }
 
   @media (min-width: 801px) and (max-width: 1098px) {
@@ -34,6 +40,17 @@
 
   &__left {
     padding-inline-end: var(--space);
+
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  &__right {
+    @media (max-width: 800px) {
+      flex           : 1;
+      justify-content: space-between !important;
+    }
   }
 
   &__right,
