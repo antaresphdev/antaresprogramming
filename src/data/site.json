@@ -34,6 +34,10 @@
     "twitter": {
       "name": "Twitter",
       "url": "https://www.twitter.com/antaresphdev/"
+    },
+    "email": {
+      "name": "Email",
+      "url": "mailto:devfrancisrubio@gmail.com"
     }
   },
   "donation": [

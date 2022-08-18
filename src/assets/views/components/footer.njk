@@ -1,10 +1,10 @@
-<footer class="stack">
-  <div class="spaced cluster padding--s bg--secondary">
+<footer class="stack font-sans">
+  <section class="spaced cluster padding--s bg--secondary">
     <p class="margin--none">&copy; 2022 Antares Programming</p>
     <p class="margin--none">Powered by <a href="https://11ty.dev" target="_blank" rel="noopener">Eleventy</a> and <a href="https://netlify.com" target="_blank" rel="noopener">Netlify</a>.</p>
-  </div>
-  <div class="cluster gap" style="background-color: hsl(var(--bg-secondary) / .75)">
-    <div class="stack padding">
+  </section>
+  <div class="cluster gap" style="background-color: hsl(var(--bg-secondary) / .75); --basis: 35ch;">
+    <section class="stack padding" style="flex: 1; flex-basis: 25ch'">
       <div class="logo">
         <img class="logo__image" src="/assets/images/logo.svg" alt="logo" width="64" height="64">
         <div class="stack">
@@ -17,20 +17,24 @@
       </div>
       {% set author = authors['teacherbuknoy'] %}
       <p>Ang Antares Programming ay project ni <a href="{{ author.url }}" target="_blank" rel="noopener">{{ author.name }}</a>.</p>
+    </section>
+    <div class="stack padding" id="social-media" style="flex: 1; flex-basis: 25ch'">
+      <section>
+        <h2 class="fs-5">Social Media</h2>
+        <div class="cluster gap--m margin-inline--l margin-block--l gap">
+          {% for item in site.socials %}
+            <a class="button" href="{{ item.url }}" target="_blank" rel="noopener">{{ item.text }}</a>
+          {% endfor %}
+        </div>
+      </section>
     </div>
-    <div class="stack padding" id="social-media">
-      <h2 class="fs-4">Social Media</h2>
-      <div class="stack margin-inline--l margin-block--l gap">
-        {% for item in site.socials %}
-          <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.text }}</a>
-        {% endfor %}
+    <section class="stack padding" id="social-media" style="flex: 1; flex-basis: 25ch'">
+      <h2 class="fs-5 margin--none">Join us!</h2>
+      <p class="margin--none">Interested in this project? Help us create more content!</p>
+      <div class="cluster margin-inline--l margin-block--l gap">
+        <a class="button" href="{{ site.named_socials.email.url }}">Send an email</a>
+        <a class="button" href="/authors">Authors</a>
       </div>
-    </div>
-    <div class="stack padding" id="social-media">
-      <h2 class="fs-4">About us</h2>
-      <div class="stack margin-inline--l margin-block--l gap">
-        <a href="/authors" target="_blank" rel="noopener">Authors</a>
-      </div>
-    </div>
+    </section>
   </div>
 </footer>
