@@ -2,6 +2,7 @@ import "./components/Animations";
 import { NotificationManager } from "./components/NotificationManager";
 import { $$, $ } from "./utilities/dom";
 import "./components/PopOver";
+import { TabSystem } from "./components/Tabs"
 
 const container = $("[data-notification-container]");
 const notifications = new NotificationManager(container);
@@ -29,3 +30,9 @@ $$("button[data-copy]").forEach((button) => {
     );
   }
 });
+
+document.addEventListener("DOMContentLoaded", e => {
+  document.documentElement.classList.remove('no-js')
+})
+
+document.querySelectorAll('[role=tablist]').forEach(tablist => new TabSystem(tablist))
