@@ -1,0 +1,47 @@
+.donation-banner {
+  padding: var(--space);
+
+  &__inner {
+    border-radius   : var(--space-xl);
+    background-color: hsl(var(--secondary-100));
+    padding         : var(--space-xl);
+    width           : min(100ch, 100%);
+    margin-inline   : auto;
+    margin-block    : var(--space-xl);
+  }
+
+  &__title {
+    color    : hsl(var(--secondary-900));
+    margin   : 0;
+    font-size: clamp(var(--type-size-4), 10vw, var(--type-size-3));
+  }
+
+  &__actions {
+    list-style     : none;
+    margin         : 0;
+    padding        : 0;
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: space-evenly;
+    gap            : var(--space);
+
+    li {
+      display   : flex;
+      flex-basis: 15ch;
+    }
+
+    [role="tab"] {
+      width: 100%;
+    }
+  }
+}
+
+.no-js {
+  [role="tabpanel"][hidden]:not(:target) {
+    display: none !important;
+  }
+
+  [role="tabpanel"]:target {
+    display: revert !important;
+  }
+}

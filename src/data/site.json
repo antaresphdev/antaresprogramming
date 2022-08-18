@@ -35,5 +35,51 @@
       "name": "Twitter",
       "url": "https://www.twitter.com/antaresphdev/"
     }
-  }
+  },
+  "donation": [
+    {
+      "name": "GCash",
+      "icon": "gcash",
+      "id": "gcash",
+      "details": {
+        "name": "Francis Rubio",
+        "actions": [
+          { "type": "copy", "target": "0906 313 7462" }
+        ]
+      }
+    },
+    {
+      "name": "PayPal",
+      "icon": "paypal",
+      "id": "paypal",
+      "details": {
+        "name": "Francis Rubio",
+        "actions": [
+          {
+            "type": "link",
+            "text": "Go to PayPal",
+            "target": "https://paypal.me/antaresprogramming"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UnionBank",
+      "icon": "unionbank",
+      "id": "unionbank",
+      "details": {
+        "name": "Francis L Rubio",
+        "actions": [
+          {
+            "type": "copy",
+            "target": "0917 656 1019"
+          },
+          {
+            "type": "copy",
+            "target": "devfrancisrubio@gmail.com"
+          }
+        ]
+      }
+    }
+  ]
 }

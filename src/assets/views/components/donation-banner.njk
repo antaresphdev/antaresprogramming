@@ -1,16 +1,47 @@
-<div class="margin--auto" style="width: min(75ch, 100%); padding: min(var(--space-xxxl), 10%);">
-  {% if not controlsOnly %}
-    <h2 class="responsive">Tumatanggap kami ng donations!</h2>
-    <p>Kung nakakatulong sa iyo ang content ng Antares Programming, puwede kang makatulong. Tumatanggap ang Antares Programming ng financial donations via GCash.</p>
-  {% endif %}
+<div class="donation-banner">
+  <div class="donation-banner__inner">
+    <h2 class="donation-banner__title">Tulungan ang Antares Programming</h2>
+    <p class="donation-banner__description">Tulungan kaming makapaglabas ng mas maraming content para sa mas marami pang developers. Tumatanggap kami ng donations!</p>
 
-  <div class="transparent bordered rounded box padding">
-    <p>Sa GCash app, piliin ang <i>Send Money &gt; Express Send</i>. Ilagay ang number na ito, at ang amount na gusto mong i-donate.</p>
+    <ul class="donation-banner__actions" role="tablist">
+      {% for method in site.donation %}
+        <li role="presentation">
+          <a role="tab" href="#tabpanel-{{ method.id }}" id="tab-{{ method.id }}" class="button has-icon--left secondary">
+            {% set icon = method.icon %}
+            {% include 'components/icon.njk' %}
+            {{ method.name }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+    {% for method in site.donation %}
+      <section class="padding-block--l" id="tabpanel-{{ method.id }}" role="tabpanel" aria-labelledby="tab-{{ method.id }}" hidden>
+        <h3 class="responsive fs-4 margin--none">{{ method.name }}</h3>
+        {% set details = method.details %}
+        <p class="font-sans margin--none">Account name: <strong>{{ details.name }}</strong>
+        </p>
 
-    <label for="gcash-number" class="sr-only">G-cash Number</label>
-    <div class="form-group">
-      <input value="0906 313 7462" class="form-control" type="text" readonly id="gcash-number">
-      <button class="button secondary" data-copy="gcash-number">Copy</button>
-    </div>
+        <div class="stack gap--m padding">
+          {% for action in details.actions %}
+            <form class="input-group" data-copy-on-submit>
+              <input type="text" id="text" data-copy value="{{ action.target }}" readonly>
+              {% if action.type == 'copy' %}
+                <button class="primary button">
+                  {% set feathericon = 'copy' %}
+                  {% include 'components/feathericon.njk' %}
+                Copy
+              </button>
+              {% elseif action.type == 'link' %}
+                <a href="{{ action.target }}" class="primary button" target="_blank" rel="noopener">
+                  {% set icon = method.icon %}
+                  {% include 'components/icon.njk' %}
+                  {{ action.text }}
+                </a>
+              {% endif %}
+            </form>
+          {% endfor %}
+        </div>
+      </section>
+    {% endfor %}
   </div>
 </div>

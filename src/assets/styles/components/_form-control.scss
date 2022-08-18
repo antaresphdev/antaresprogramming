@@ -49,3 +49,25 @@
     max-width: 100%;
   }
 }
+
+.input-group {
+  border       : 1px solid hsl(var(--primary-100));
+  border-radius: var(--ideal-radius);
+  display      : flex;
+  overflow     : auto;
+
+  &>* {
+    border       : 0;
+    border-radius: 0;
+  }
+
+  input,
+  select,
+  textarea {
+    @extend .form-control;
+
+    flex         : 1;
+    border       : 0;
+    border-radius: 0;
+  }
+}
