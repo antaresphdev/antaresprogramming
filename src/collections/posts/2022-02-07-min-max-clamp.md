@@ -2,7 +2,11 @@
 title: min(), max(), at clamp()
 description: Gamit ang modern techniques na ito, mas madali nang makagawa ng responsive web layouts.
 author: teacherbuknoy
-image: /assets/images/posts/min-max-clamp/min-max-clamp.png
+image: 
+  src: /assets/images/posts/min-max-clamp/min-max-clamp.png
+  color:
+    light: 39 88% 90%
+    dark: 22 80% 35%
 seo_image:
   og: /assets/images/posts/min-max-clamp/fb_image.png
   twitter: /assets/images/posts/min-max-clamp/twitter_image.png

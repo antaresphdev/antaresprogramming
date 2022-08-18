@@ -2,7 +2,11 @@
 title: "Mga link pabalik sa parent directory"
 description: "Isang quick post para maipakita kung paano magagamit ang '..' sa mga anchor tags."
 author: teacherbuknoy
-image: /assets/images/posts/creating-links-to-up-one-directory/cover.png
+image: 
+  src: /assets/images/posts/creating-links-to-up-one-directory/cover.png
+  color: 
+    light: 202 100% 77%
+    dark: 202 100% 27%
 tags: 
   - web development
 ---

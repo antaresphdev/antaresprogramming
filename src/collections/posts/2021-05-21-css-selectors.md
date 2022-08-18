@@ -1,7 +1,11 @@
 ---
 title: "Mga CSS Selector"
 description: Bukod sa HTML tags, puwede tayong gumamit ng patterns, o selectors, para sabihin sa CSS kung sa aling HTML elements lang mag-a-apply ang styling natin.
-image: /assets/images/posts/css-selectors/cover.png
+image: 
+  src: /assets/images/posts/css-selectors/cover.png
+  color:
+    light: 0 0% 93%
+    dark: 0 0% 13%
 seo_image: /assets/images/posts/css-selectors/seo-cover.png
 author: teacherbuknoy
 tags:

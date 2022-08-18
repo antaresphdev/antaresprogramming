@@ -1,7 +1,11 @@
 ---
 title: "Ang Box Sizing ng CSS"
 description: Pag-usapan natin kung paano nakaka-influence sa layout ang box sizing
-image: /assets/images/posts/box-sizing/cover.png
+image: 
+  src: /assets/images/posts/box-sizing/cover.png
+  color:
+    light: 35 100% 80%
+    dark:  35 100% 20%
 seo_image: /assets/images/posts/box-sizing/seo-cover.png
 author: teacherbuknoy
 tags:

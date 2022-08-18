@@ -182,7 +182,8 @@
   --rg                 : radial-gradient(ellipse at bottom right, hsl(var(--tc)), hsl(var(--tc)/50%), hsl(var(--tc)/0%));
   --rg-1               : radial-gradient(circle at 75% 100%, hsl(var(--tc)), hsl(var(--tc)/50%), hsl(var(--tc)/0%));
   --rg-2               : radial-gradient(circle at center 80%, hsl(var(--tc)), hsl(var(--tc)/50%), hsl(var(--tc)/0%));
-  --tc                 : var(--theme-color, var(--primary-100));
+  --tc                 : var(--theme-color);
+  --theme-color        : var(--theme-color-light, var(--primary-100));
   background-image     : var(--rg), var(--rg-1), var(--rg-2), var(--post-image);
   background-position  : center;
   background-repeat    : no-repeat;
@@ -192,6 +193,10 @@
   grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
   overflow             : auto;
   width                : 100%;
+
+  @media (prefers-color-scheme: dark) {
+    --theme-color: var(--theme-color-dark, var(--primary-700))
+  }
 
   &::before {
     content   : '';

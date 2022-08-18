@@ -1,7 +1,11 @@
 ---
 title: “Walang Disabled na Gagamit ng Website ko”
 description: "May misconception tayo na para lang sa persons with disability ang accessibility. Pero mahalaga na may pakialam tayong lahat tungkol dito."
-image: /assets/images/posts/walang-disabled-na-gagamit-ng-website-ko/cover.png
+image: 
+  src: /assets/images/posts/walang-disabled-na-gagamit-ng-website-ko/cover.png
+  color:
+    light: 93 79% 79%
+    dark:  93 59% 19%
 author: teacherbuknoy
 slug: /walang-disabled-na-gagamit-ng-website-ko/
 tags:

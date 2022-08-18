@@ -2,7 +2,11 @@
 title: "&lt;address>: Ang Contact Address Element"
 description: Ang HTML tag na ito ang ginagamit para i-mark up ang contact information ng isang tao o organisasyon.
 permalink: /articles/address-ang-contact-address-element/
-image: /assets/images/posts/address-element/cover.png
+image: 
+  src: /assets/images/posts/address-element/cover.png
+  color:
+    light: 199 79% 91%
+    dark: 217 46% 31%
 seo_image: /assets/images/posts/address-element/seo-cover.png
 author: teacherbuknoy
 tags: 

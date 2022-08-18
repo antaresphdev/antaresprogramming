@@ -1,7 +1,11 @@
 ---
 title: Ang display Property ng CSS
 description: Tingnan nating muli ang display property ng CSS.
-image: /assets/images/posts/ang-display-property-ng-css/cover.png
+image: 
+  src: /assets/images/posts/ang-display-property-ng-css/cover.png
+  color:
+    light: 110 100% 87%
+    dark:  110 100% 27%
 author: teacherbuknoy
 slug: /ang-display-property-ng-css/
 tags:
