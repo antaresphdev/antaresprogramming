@@ -190,7 +190,7 @@
   background-size      : cover;
   border-radius        : var(--space-l);
   display              : grid;
-  grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(35ch, 100%), 1fr));
   overflow             : auto;
   width                : 100%;
 
@@ -241,6 +241,10 @@
     }
   }
 
+  &__summary {
+    font-size: var(--type-size-6);
+  }
+
   &__tags {
     margin         : 0;
     padding        : 0;
@@ -273,8 +277,7 @@
   padding              : var(--space-xl);
   width                : min(180ch, 100%);
 
-  .post-card:nth-child(1),
-  .post-card:nth-child(4n+1) {
+  .post-card:is(.featured, :nth-child(1)) {
     grid-column: 1/-1;
   }
 }
